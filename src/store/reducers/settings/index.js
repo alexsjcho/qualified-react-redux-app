@@ -151,7 +151,7 @@ settings = {
               {
                 label: "Economic Buyer",
                 question: "Who's in charge of the budget for this project?",
-                type: "text-input",
+                type: "text",
                 comment: "",
                 required: true,
                 hasPersonas: true,
@@ -184,7 +184,7 @@ settings = {
             label: "What's The Decision Making Checklist?",
             question:
               "what are the top 3 must have for you to purchase a solution?",
-            type: "text-input-list",
+            type: "text-area",
             comment: "",
             required: true,
             hasPersonas: true
