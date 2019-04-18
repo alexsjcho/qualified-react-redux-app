@@ -8,7 +8,7 @@
           {
             "label": "Set questions to understand client's situation",
             "question": "Why are you considering our company's product?",
-            "type": "text input",
+            "type": "text",
             "options": [
               {
                 "value": "yes",
@@ -330,252 +330,267 @@
     }
   },
   "demo": {
-    "problem": {},
-    "implication": {},
-    "need": {},
-    "metrics": {},
-    "identifyPain": {},
-    "budget": {
-      "label": "Demo",
-      "comment": "Save presentation URL link",
-      "questions": [
-        {
-          "label": "Configure budget target",
-          "question": "Does this company has $15,000 budget?",
-          "type": "radio",
-          "options": [
-            {
-              "value": "yes",
-              "points": 10
-            },
-            {
-              "value": "no",
-              "points": 0
-            }
-          ],
-          "required": true,
-          "comment": ""
-        }
-      ]
+    "sections": {
+      "problem": {},
+      "implication": {},
+      "need": {},
+      "metrics": {},
+      "identifyPain": {},
+      "budget": {
+        "label": "Demo",
+        "comment": "Save presentation URL link",
+        "questions": [
+          {
+            "label": "Configure budget target",
+            "question": "Does this company has $15,000 budget?",
+            "type": "radio",
+            "options": [
+              {
+                "value": "yes",
+                "points": 10
+              },
+              {
+                "value": "no",
+                "points": 0
+              }
+            ],
+            "required": true,
+            "comment": ""
+          }
+        ]
+      },
+      "objections": {
+        "label": "Objections",
+        "questions": [
+          {
+            "label": "What is the severity of concern?",
+            "question": "What concerns the client has?",
+            "comment": "",
+            "type": "select",
+            "options": [
+              {
+                "value": "big",
+                "points": -5
+              },
+              {
+                "value": "medium",
+                "points": -4
+              },
+              {
+                "value": "small",
+                "points": -3
+              }
+            ]
+          }
+        ]
+      },
+      "nextMeeting": {
+        "label": "Next Meeting",
+        "questions": [
+          {
+            "label": "Set next meeting",
+            "question": "When is your next meeting?",
+            "type": "date",
+            "required": true,
+            "comment": ""
+          }
+        ],
+        "concerns": "requirements"
+      }
     },
-    "objections": {
-      "label": "Objections",
-      "questions": [
-        {
-          "label": "What is the severity of concern?",
-          "question": "What concerns the client has?",
-          "comment": "",
-          "type": "select",
-          "options": [
-            {
-              "value": "big",
-              "points": -5
-            },
-            {
-              "value": "medium",
-              "points": -4
-            },
-            {
-              "value": "small",
-              "points": -3
-            }
-          ]
-        }
-      ]
-    },
-    "nextMeeting": {
-      "label": "Next Meeting",
-      "questions": [
-        {
-          "label": "Set next meeting",
-          "question": "When is your next meeting?",
-          "type": "date",
-          "required": true,
-          "comment": ""
-        }
-      ],
-      "concerns": "requirements"
+    "score": {
+      "totalScore": ""
     }
   },
   "handleObstacles": {
-    "objections": {
-      "label": "Objections",
-      "questions": [
-        {
-          "label": "What is the severity of concern?",
-          "question": "What concerns the client has?",
-          "comment": "",
-          "type": "select",
-          "options": [
-            {
-              "value": "big",
-              "points": -5
-            },
-            {
-              "value": "medium",
-              "points": -4
-            },
-            {
-              "value": "small",
-              "points": -3
-            }
-          ]
-        }
-      ]
+    "sections": {
+      "objections": {
+        "label": "Objections",
+        "questions": [
+          {
+            "label": "What is the severity of concern?",
+            "question": "What concerns the client has?",
+            "comment": "",
+            "type": "select",
+            "options": [
+              {
+                "value": "big",
+                "points": -5
+              },
+              {
+                "value": "medium",
+                "points": -4
+              },
+              {
+                "value": "small",
+                "points": -3
+              }
+            ]
+          }
+        ]
+      },
+      "need": {
+        "label": "Need for Change",
+        "questions": [
+          {
+            "label": "Why do you need to change and fix this problem?",
+            "question": "how much money are you losing per month?",
+            "type": "select",
+            "options": [
+              {
+                "value": "yes",
+                "points": 10
+              },
+              {
+                "value": "no",
+                "points": 0
+              }
+            ],
+            "comment": "",
+            "required": true,
+            "hasPersonas": true
+          }
+        ],
+        "concerns": ""
+      },
+      "economicImpact": {
+        "label": "Impact of Purchase",
+        "questions": [
+          {
+            "label": "Consequences of customer's problems",
+            "question": "how much money are you losing per month?",
+            "type": "select",
+            "options": [
+              {
+                "value": "less than $500",
+                "points": 5
+              },
+              {
+                "value": "$500 - $2000",
+                "points": 10
+              },
+              {
+                "value": "more than $2000",
+                "points": 20
+              }
+            ],
+            "comment": "",
+            "required": true,
+            "hasPersonas": true
+          }
+        ],
+        "concerns": ""
+      },
+      "accessToAuthority": {
+        "label": "Access to Buyer Authority",
+        "questions": [
+          {
+            "questions": [
+              {
+                "label": "Buying Decision Maker",
+                "question": "Who are in charge of making this buying decision?",
+                "type": "text",
+                "comment": "",
+                "required": true,
+                "hasPersonas": true
+              }
+            ]
+          }
+        ]
+      },
+      "timeline": {
+        "label": "Timeline",
+        "questions": [
+          {
+            "label": "Set deal close timeline",
+            "question": "when do you want this change to happen?",
+            "type": "date",
+            "required": true
+          }
+        ],
+        "concerns": ""
+      },
+      "nextMeeting": {
+        "label": "Next Meeting",
+        "questions": [
+          {
+            "label": "Set next meeting",
+            "question": "When is your next meeting?",
+            "type": "date",
+            "required": true,
+            "comment": ""
+          }
+        ],
+        "concerns": "requirements"
+      }
     },
-    "need": {
-      "label": "Need for Change",
-      "questions": [
-        {
-          "label": "Why do you need to change and fix this problem?",
-          "question": "how much money are you losing per month?",
-          "type": "select",
-          "options": [
-            {
-              "value": "yes",
-              "points": 10
-            },
-            {
-              "value": "no",
-              "points": 0
-            }
-          ],
-          "comment": "",
-          "required": true,
-          "hasPersonas": true
-        }
-      ],
-      "concerns": ""
-    },
-    "economicImpact": {
-      "label": "Impact of Purchase",
-      "questions": [
-        {
-          "label": "Consequences of customer's problems",
-          "question": "how much money are you losing per month?",
-          "type": "select",
-          "options": [
-            {
-              "value": "less than $500",
-              "points": 5
-            },
-            {
-              "value": "$500 - $2000",
-              "points": 10
-            },
-            {
-              "value": "more than $2000",
-              "points": 20
-            }
-          ],
-          "comment": "",
-          "required": true,
-          "hasPersonas": true
-        }
-      ],
-      "concerns": ""
-    },
-    "accessToAuthority": {
-      "label": "Access to Buyer Authority",
-      "questions": [
-        {
-          "questions": [
-            {
-              "label": "Buying Decision Maker",
-              "question": "Who are in charge of making this buying decision?",
-              "type": "text",
-              "comment": "",
-              "required": true,
-              "hasPersonas": true
-            }
-          ]
-        }
-      ]
-    },
-    "timeline": {
-      "label": "Timeline",
-      "questions": [
-        {
-          "label": "Set deal close timeline",
-          "question": "when do you want this change to happen?",
-          "type": "date",
-          "required": true
-        }
-      ],
-      "concerns": ""
-    },
-    "nextMeeting": {
-      "label": "Next Meeting",
-      "questions": [
-        {
-          "label": "Set next meeting",
-          "question": "When is your next meeting?",
-          "type": "date",
-          "required": true,
-          "comment": ""
-        }
-      ],
-      "concerns": "requirements"
+    "score": {
+      "totalScore": ""
     }
   },
   "negotiation": {
-    "problem": {},
-    "implication": {},
-    "need": {},
-    "metrics": {},
-    "identifyPain": {},
-    "sellerPrice": {
-      "label": "Product Retail Value",
-      "questions": [
-        {
-          "label": "Seller Pricing Tier",
-          "comment": "",
-          "type": "select",
-          "options": [
-            {
-              "value": "original",
-              "points": "$10,000"
-            },
-            {
-              "value": "10% discount",
-              "points": "$9,000"
-            },
-            {
-              "value": "20%",
-              "points": "8,000"
-            },
-            {
-              "value": "bottom-line",
-              "points": "$7,000"
-            }
-          ]
-        }
-      ]
-    }
-  },
-  "buyerAskingPrice": {
-    "label": "Buyer Price Request",
-    "questions": [
-      {
-        "label": "Buyer Purchase Price Tier",
-        "comment": "",
-        "type": "select",
-        "options": [
+    "sections": {
+      "problem": {},
+      "implication": {},
+      "need": {},
+      "metrics": {},
+      "identifyPain": {},
+      "sellerPrice": {
+        "label": "Product Retail Value",
+        "questions": [
           {
-            "value": "original",
-            "points": "$10,000"
-          },
+            "label": "Seller Pricing Tier",
+            "comment": "",
+            "type": "select",
+            "options": [
+              {
+                "value": "original",
+                "points": "$10,000"
+              },
+              {
+                "value": "10% discount",
+                "points": "$9,000"
+              },
+              {
+                "value": "20%",
+                "points": "8,000"
+              },
+              {
+                "value": "bottom-line",
+                "points": "$7,000"
+              }
+            ]
+          }
+        ]
+      },
+      "buyerAskingPrice": {
+        "label": "Buyer Price Request",
+        "questions": [
           {
-            "value": "10% discount",
-            "points": "$9,000"
-          },
-          {
-            "value": "20%",
-            "points": "8,000"
+            "label": "Buyer Purchase Price Tier",
+            "comment": "",
+            "type": "select",
+            "options": [
+              {
+                "value": "original",
+                "points": "$10,000"
+              },
+              {
+                "value": "10% discount",
+                "points": "$9,000"
+              },
+              {
+                "value": "20%",
+                "points": "8,000"
+              }
+            ]
           }
         ]
       }
-    ]
+    },
+    "score": {
+      "totalScore": ""
+    }
   },
   "companies": [
     {
@@ -631,5 +646,5 @@
       ]
     }
   ],
-  "supportedInputs": ["radio", "select", "date", "text"]
+  "supportedInputs": ["radio", "select", "date", "text", "textarea"]
 }
