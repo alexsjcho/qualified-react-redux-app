@@ -3,10 +3,11 @@
     {
       "stageId": "qualification",
       "stageLabel": "Qualification",
-      "sections": {
-        "situation": {
+      "sections": [
+        {
+          "sectionId": "situation",
           "label": "Situational Questions",
-          "comment": "Placeholder",
+          "concerns": "Placeholder",
           "questions": [
             {
               "label": "Set questions to understand client's situation",
@@ -26,7 +27,8 @@
             }
           ]
         },
-        "problem": {
+        {
+          "sectionId": "problem",
           "label": "Problem",
           "questions": [
             {
@@ -54,7 +56,8 @@
           ],
           "concerns": ""
         },
-        "implication": {
+        {
+          "sectionId": "implication",
           "label": "Implications",
           "questions": [
             {
@@ -82,7 +85,8 @@
           ],
           "concerns": ""
         },
-        "need": {
+        {
+          "sectionId": "need",
           "label": "Need for Change",
           "questions": [
             {
@@ -106,7 +110,8 @@
           ],
           "concerns": ""
         },
-        "timeline": {
+        {
+          "sectionId": "timeline",
           "label": "Timeline",
           "questions": [
             {
@@ -118,7 +123,8 @@
           ],
           "concerns": ""
         },
-        "objections": {
+        {
+          "sectionId": "objections",
           "label": "Objections",
           "questions": [
             {
@@ -143,7 +149,8 @@
             }
           ]
         },
-        "nextMeeting": {
+        {
+          "sectionId": "nextMeeting",
           "label": "Next Meeting",
           "questions": [
             {
@@ -155,7 +162,7 @@
           ],
           "concerns": "requirements"
         }
-      },
+      ],
       "score": {
         "totalScore": ""
       }
