@@ -1,13 +1,11 @@
-import Settings from "./Settings";
-import { connect } from "react-redux";
+import Settings from './Settings'
+import { connect } from 'react-redux'
+import { getCurrentStage } from './selector'
 
-function mapStateToProps(state, ownProps) {
-  const stages = state.settings.get("stages").toArray();
-  const stageId = ownProps.match.params.stageId;
-  const currentStage = stages.find(stage => stage.get("stageId") === stageId);
+function mapStateToProps (state, ownProps) {
   return {
-    stage: currentStage
-  };
+    stage: getCurrentStage(state, ownProps)
+  }
 }
 
-export default connect(mapStateToProps)(Settings);
+export default connect(mapStateToProps)(Settings)
