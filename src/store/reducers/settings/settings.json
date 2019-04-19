@@ -7,7 +7,6 @@
         {
           "sectionId": "situation",
           "label": "Situational Questions",
-          "concerns": "Placeholder",
           "questions": [
             {
               "label": "Set questions to understand client's situation",
@@ -23,7 +22,9 @@
                   "points": 0
                 }
               ],
-              "required": true
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
@@ -49,12 +50,11 @@
                   "points": 20
                 }
               ],
-              "comment": "",
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
         {
           "sectionId": "implication",
@@ -78,12 +78,11 @@
                   "points": 20
                 }
               ],
-              "comment": "",
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
         {
           "sectionId": "need",
@@ -103,12 +102,11 @@
                   "points": 0
                 }
               ],
-              "comment": "",
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
         {
           "sectionId": "timeline",
@@ -118,10 +116,21 @@
               "label": "Set deal close timeline",
               "question": "when do you want this change to happen?",
               "type": "date-input",
-              "required": true
+              "options": [
+                {
+                  "value": "yes",
+                  "points": 10
+                },
+                {
+                  "value": "no",
+                  "points": 0
+                }
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
         {
           "sectionId": "objections",
@@ -130,7 +139,6 @@
             {
               "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
-              "comment": "",
               "type": "select",
               "options": [
                 {
@@ -145,7 +153,10 @@
                   "value": "small",
                   "points": -3
                 }
-              ]
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
@@ -157,10 +168,21 @@
               "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "date input",
-              "required": true
+              "options": [
+                {
+                  "value": "yes",
+                  "points": 10
+                },
+                {
+                  "value": "no",
+                  "points": 0
+                }
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
-          ],
-          "concerns": "requirements"
+          ]
         }
       ],
       "score": {
@@ -170,21 +192,23 @@
     {
       "stageId": "discovery",
       "stageLabel": "Discovery",
-      "sections": {
-        "metrics": {
+      "sections": [
+        {
+          "sectionId": "metrics",
           "label": "Customer Success Metrics",
           "questions": [
             {
               "label": "Set ideal customer personal?",
               "question": "who makes the buying decision?",
               "type": "text input",
+              "comment": "Placeholder",
               "required": true,
-              "hasPersonas": true,
-              "comment": ""
+              "hasPersonas": true
             }
           ]
         },
-        "economicBuyer": {
+        {
+          "sectionId": "economicBuyer",
           "label": "Economic Buyer",
           "questions": [
             {
@@ -194,7 +218,17 @@
                   "label": "Economic Buyer",
                   "question": "Who's in charge of the budget for this project?",
                   "type": "text",
-                  "comment": "",
+                  "options": [
+                    {
+                      "value": "yes",
+                      "points": 20
+                    },
+                    {
+                      "value": "no",
+                      "points": 0
+                    }
+                  ],
+                  "comment": "Placeholder",
                   "required": true,
                   "hasPersonas": true
                 }
@@ -202,7 +236,8 @@
             }
           ]
         },
-        "budget": {
+        {
+          "sectionId": "budget",
           "label": "Budget",
           "comment": "Placeholder",
           "questions": [
@@ -220,39 +255,62 @@
                   "points": 0
                 }
               ],
-              "required": true
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
-        "decisionCriteria": {
+        {
+          "sectionId": "decisonCriteria",
           "label": "Decision Criteria",
           "questions": [
             {
               "label": "What's The Decision Making Checklist?",
               "question": "what are the top 3 must have for you to purchase a solution?",
               "type": "text-area",
-              "comment": "",
+              "options": [
+                {
+                  "value": "yes",
+                  "points": 20
+                },
+                {
+                  "value": "no",
+                  "points": 0
+                }
+              ],
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "decisionProcess": {
+        {
+          "sectionId": "decisonProcess",
           "label": "Decision Process",
           "questions": [
             {
               "label": "Decision Process and Steps",
               "question": "how long is the decision making process and what are the steps?",
               "type": "list",
-              "comment": "",
+              "options": [
+                {
+                  "value": "yes",
+                  "points": 20
+                },
+                {
+                  "value": "no",
+                  "points": 0
+                }
+              ],
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "identifyPain": {
+        {
+          "sectionId": "identifyPain",
           "label": "Identify Pain",
           "questions": [
             {
@@ -273,14 +331,14 @@
                   "points": 20
                 }
               ],
-              "comment": "",
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "champion": {
+        {
+          "sectionId": "champion",
           "label": "Economic Buyer",
           "questions": [
             {
@@ -288,23 +346,36 @@
                 {
                   "label": "Champion",
                   "question": "Besides yourself, who else is pushing for this change?",
-                  "type": "text",
-                  "comment": "",
+                  "type": "select",
+                  "options": [
+                    {
+                      "value": "less than $500",
+                      "points": 5
+                    },
+                    {
+                      "value": "$500 - $2000",
+                      "points": 10
+                    },
+                    {
+                      "value": "more than $2000",
+                      "points": 20
+                    }
+                  ],
+                  "comment": "Placeholder",
                   "required": true,
                   "hasPersonas": true
                 }
               ]
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "objections": {
+        {
+          "sectionId": "objections",
           "label": "Objections",
           "questions": [
             {
               "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
-              "comment": "",
               "type": "select",
               "options": [
                 {
@@ -319,24 +390,42 @@
                   "value": "small",
                   "points": -3
                 }
-              ]
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
-        "nextMeeting": {
+        {
+          "sectionId": "nextMeeting",
           "label": "Next Meeting",
           "questions": [
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "date",
+              "options": [
+                {
+                  "value": "big",
+                  "points": -5
+                },
+                {
+                  "value": "medium",
+                  "points": -4
+                },
+                {
+                  "value": "small",
+                  "points": -3
+                }
+              ],
+              "comment": "Placeholder",
               "required": true,
-              "comment": ""
+              "hasPersonas": true
             }
-          ],
-          "concerns": "requirements"
+          ]
         }
-      },
+      ],
       "score": {
         "totalScore": ""
       }
@@ -344,15 +433,22 @@
     {
       "stageId": "demo",
       "stageLabel": "Demo",
-      "sections": {
-        "problem": {},
-        "implication": {},
-        "need": {},
-        "metrics": {},
-        "identifyPain": {},
-        "budget": {
+      "sections": [
+        {
+          "summary": [
+            {
+              "problem": {},
+              "implication": {},
+              "need": {},
+              "metrics": {},
+              "identifyPain": {}
+            }
+          ]
+        },
+
+        {
+          "sectionId": "budget",
           "label": "Demo",
-          "comment": "Save presentation URL link",
           "questions": [
             {
               "label": "Configure budget target",
@@ -361,57 +457,68 @@
               "options": [
                 {
                   "value": "yes",
-                  "points": 10
+                  "points": 20
                 },
                 {
                   "value": "no",
                   "points": 0
                 }
               ],
+              "comment": "Placeholder",
               "required": true,
-              "comment": ""
+              "hasPersonas": true
             }
           ]
         },
-        "objections": {
+        {
+          "sectionId": "objections",
           "label": "Objections",
           "questions": [
             {
               "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
-              "comment": "",
               "type": "select",
               "options": [
                 {
-                  "value": "big",
-                  "points": -5
+                  "value": "yes",
+                  "points": 20
                 },
                 {
-                  "value": "medium",
-                  "points": -4
-                },
-                {
-                  "value": "small",
-                  "points": -3
+                  "value": "no",
+                  "points": 0
                 }
-              ]
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
-        "nextMeeting": {
+        {
+          "sectionId": "nextMeeting",
           "label": "Next Meeting",
           "questions": [
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "date",
+              "options": [
+                {
+                  "value": "yes",
+                  "points": 20
+                },
+                {
+                  "value": "no",
+                  "points": 0
+                }
+              ],
+              "comment": "Placeholder",
               "required": true,
-              "comment": ""
+              "hasPersonas": true
             }
-          ],
-          "concerns": "requirements"
+          ]
         }
-      },
+      ],
       "score": {
         "totalScore": ""
       }
@@ -419,33 +526,33 @@
     {
       "stageId": "obstacles",
       "stageLabel": "Handle Obstacles",
-      "sections": {
-        "objections": {
-          "label": "Objections",
+      "sections": [
+        {
+          "sectionId": "obstacles",
+          "label": "Handle Obstacles",
           "questions": [
             {
               "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
-              "comment": "",
               "type": "select",
               "options": [
                 {
-                  "value": "big",
-                  "points": -5
+                  "value": "yes",
+                  "points": 20
                 },
                 {
-                  "value": "medium",
-                  "points": -4
-                },
-                {
-                  "value": "small",
-                  "points": -3
+                  "value": "no",
+                  "points": 0
                 }
-              ]
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
-        "need": {
+        {
+          "sectionId": "need",
           "label": "Need for Change",
           "questions": [
             {
@@ -462,14 +569,14 @@
                   "points": 0
                 }
               ],
-              "comment": "",
+              "comment": "Placeholder",
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "economicImpact": {
+        {
+          "sectionId": "economicImpact",
           "label": "Impact of Purchase",
           "questions": [
             {
@@ -494,10 +601,10 @@
               "required": true,
               "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "accessToAuthority": {
+        {
+          "sectionId": "accessToAuthority",
           "label": "Access to Buyer Authority",
           "questions": [
             {
@@ -506,6 +613,20 @@
                   "label": "Buying Decision Maker",
                   "question": "Who are in charge of making this buying decision?",
                   "type": "text",
+                  "options": [
+                    {
+                      "value": "main buyer",
+                      "points": 15
+                    },
+                    {
+                      "value": "secondary buyer",
+                      "points": 10
+                    },
+                    {
+                      "value": "influncer",
+                      "points": 5
+                    }
+                  ],
                   "comment": "",
                   "required": true,
                   "hasPersonas": true
@@ -514,32 +635,63 @@
             }
           ]
         },
-        "timeline": {
+        {
+          "sectionId": "timeline",
           "label": "Timeline",
           "questions": [
             {
               "label": "Set deal close timeline",
               "question": "when do you want this change to happen?",
               "type": "date",
-              "required": true
+              "options": [
+                {
+                  "value": "main buyer",
+                  "points": 15
+                },
+                {
+                  "value": "secondary buyer",
+                  "points": 10
+                },
+                {
+                  "value": "influncer",
+                  "points": 5
+                }
+              ],
+              "comment": "",
+              "required": true,
+              "hasPersonas": true
             }
-          ],
-          "concerns": ""
+          ]
         },
-        "nextMeeting": {
+        {
+          "sectionId": "nextMeeting",
           "label": "Next Meeting",
           "questions": [
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "date",
+              "options": [
+                {
+                  "value": "main buyer",
+                  "points": 15
+                },
+                {
+                  "value": "secondary buyer",
+                  "points": 10
+                },
+                {
+                  "value": "influncer",
+                  "points": 5
+                }
+              ],
+              "comment": "",
               "required": true,
-              "comment": ""
+              "hasPersonas": true
             }
-          ],
-          "concerns": "requirements"
+          ]
         }
-      },
+      ],
       "score": {
         "totalScore": ""
       }
@@ -547,65 +699,74 @@
     {
       "stageId": "negotiation",
       "stageLabel": "Negotiation",
-      "sections": {
-        "problem": {},
-        "implication": {},
-        "need": {},
-        "metrics": {},
-        "identifyPain": {},
-        "sellerPrice": {
+      "sections": [
+        {
+          "summary": [
+            {
+              "problem": {},
+              "implication": {},
+              "need": {},
+              "metrics": {},
+              "identifyPain": {}
+            }
+          ]
+        },
+
+        {
+          "sectionId": "sellerPrice",
           "label": "Product Retail Value",
           "questions": [
             {
               "label": "Seller Pricing Tier",
-              "comment": "",
               "type": "select",
               "options": [
                 {
-                  "value": "original",
-                  "points": "$10,000"
+                  "value": "main buyer",
+                  "points": 15
                 },
                 {
-                  "value": "10% discount",
-                  "points": "$9,000"
+                  "value": "secondary buyer",
+                  "points": 10
                 },
                 {
-                  "value": "20%",
-                  "points": "8,000"
-                },
-                {
-                  "value": "bottom-line",
-                  "points": "$7,000"
+                  "value": "influncer",
+                  "points": 5
                 }
-              ]
+              ],
+              "comment": "",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
-        "buyerAskingPrice": {
+        {
+          "sectionId": "buyerAskingPrice",
           "label": "Buyer Price Request",
           "questions": [
             {
               "label": "Buyer Purchase Price Tier",
-              "comment": "",
               "type": "select",
               "options": [
                 {
-                  "value": "original",
-                  "points": "$10,000"
+                  "value": "main buyer",
+                  "points": 15
                 },
                 {
-                  "value": "10% discount",
-                  "points": "$9,000"
+                  "value": "secondary buyer",
+                  "points": 10
                 },
                 {
-                  "value": "20%",
-                  "points": "8,000"
+                  "value": "influncer",
+                  "points": 5
                 }
-              ]
+              ],
+              "comment": "",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         }
-      },
+      ],
       "score": {
         "totalScore": ""
       }

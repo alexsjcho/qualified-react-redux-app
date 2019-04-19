@@ -6,14 +6,14 @@ export default class Question extends React.Component {
     event.preventDefault();
     const value = event.target.value;
     const { sectionId, index, setQuestionText } = this.props;
-    setQuestionText(value, sectionId, index);
+    setQuestionText("question", value, sectionId, index);
   };
 
   onLabelChange = event => {
     event.preventDefault();
     const value = event.target.value;
     const { sectionId, index, setLabelText } = this.props;
-    setLabelText(value, sectionId, index);
+    setLabelText("label", value, sectionId, index);
   };
 
   onCheckChange = event => {
@@ -23,12 +23,19 @@ export default class Question extends React.Component {
     setPersonas(value, sectionId, index);
   };
 
+  onCommentChange = event => {
+    event.preventDefault();
+    const value = event.target.value;
+    const { sectionId, index, setPersonas } = this.props;
+    setComment(value, sectionId, index);
+  };
+
   render() {
     const { sectionId, question, index, supportedInput } = this.props;
     const questionId = `${sectionId}-${index}`;
     return (
       <Container>
-        <Label for={`${questionId}-question`}>Text Area</Label>
+        <Label for={`${questionId}-question`}>Question label</Label>
         <Input
           onChange={onChange}
           type="textarea"
@@ -60,8 +67,8 @@ export default class Question extends React.Component {
           name={`${questionId}-has-personas`}
           checked={question.get("hasPersonas")}
         />
-        <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
 
+        <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
         <Input type="select" id={`${questionId}-input-type`}>
           {supportedInput.toArray().map(inputType => {
             return (
@@ -74,37 +81,49 @@ export default class Question extends React.Component {
           })}
         </Input>
 
-        <ul>
-          {question
-            .get("options")
-            .toArray()
-            .map((option, optionIndex) => {
-              return (
-                <li>
-                  <Label for={`${questionId}-${optionIndex}-value`}>
-                    Set option value
-                  </Label>
-                  <Input
-                    onChange={onChange}
-                    type="textarea"
-                    name="text"
-                    id={`${questionId}-${optionIndex}-value`}
-                    value={option.get("value")}
-                  />
-                  <Label for={`${questionId}-${optionIndex}-points`}>
-                    Set point value
-                  </Label>
-                  <Input
-                    onChange={onChange}
-                    type="textarea"
-                    name="text"
-                    id={`${questionId}-${optionIndex}-points`}
-                    value={option.get("point")}
-                  />
-                </li>
-              );
-            })}
-        </ul>
+        {(question.get("type") === "radio" ||
+          question.get("type") === "select") && (
+          <ul>
+            {question
+              .get("options")
+              .toArray()
+              .map((option, optionIndex) => {
+                return (
+                  <li>
+                    <Label for={`${questionId}-${optionIndex}-value`}>
+                      Set option value
+                    </Label>
+                    <Input
+                      onChange={onChange}
+                      type="textarea"
+                      name="text"
+                      id={`${questionId}-${optionIndex}-value`}
+                      value={option.get("value")}
+                    />
+                    <Label for={`${questionId}-${optionIndex}-points`}>
+                      Set point value
+                    </Label>
+                    <Input
+                      onChange={onChange}
+                      type="textarea"
+                      name="text"
+                      id={`${questionId}-${optionIndex}-points`}
+                      value={option.get("point")}
+                    />
+                  </li>
+                );
+              })}
+          </ul>
+        )}
+
+        <Label for={`${questionId}-comment-label`}>Comment label</Label>
+        <Input
+          onChange={onCommentChange}
+          type="textarea"
+          name="text"
+          id={`${questionId}-comment-label`}
+          value={question.get("comment")}
+        />
       </Container>
     );
   }
