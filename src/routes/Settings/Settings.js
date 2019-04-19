@@ -9,17 +9,15 @@ export default class Settings extends React.Component {
 
   render() {
     const { stage } = this.props;
-    const stageLabel = stage.get("stageLabel") || "yo";
+    const stageLabel = stage.stageLabel || "yo";
     return (
       <Container>
         <Form onSubmit={this.handleSubmit}>
           <h1>{stageLabel}</h1>
 
-          {stage
-            .get("sections")
-            .toArray()
+          {stage.sections
             .map(section => (
-              <Section section={section} key={section.get("sectionId")} />
+              <Section section={section} key={section.sectionId} />
             ))}
         </Form>
       </Container>
