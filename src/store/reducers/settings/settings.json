@@ -665,5 +665,5 @@
       ]
     }
   ],
-  "supportedInputs": ["radio", "select", "date", "text", "textarea"]
+  "supportedInputs": ["radio", "select", "date"]
 }
