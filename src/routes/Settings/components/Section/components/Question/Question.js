@@ -2,127 +2,185 @@ import React from "react";
 import { Container, Input, Label } from "reactstrap";
 
 export default class Question extends React.Component {
-  onChange = event => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      label: props.question.label,
+      question: props.question.question,
+      type: props.question.type,
+      options: props.question.options,
+      comment: props.question.comment,
+      required: props.question.required,
+      hasPersonas: props.question.hasPersonas
+    };
+  }
+
+  onQuestionChange = event => {
     event.preventDefault();
     const value = event.target.value;
-    const { sectionId, index, setQuestionText } = this.props;
-    setQuestionText("question", value, sectionId, index);
+    // setQuestionText("question", value, sectionId, index);
+    this.setState({
+      question: value
+    });
   };
 
   onLabelChange = event => {
     event.preventDefault();
     const value = event.target.value;
-    const { sectionId, index, setLabelText } = this.props;
-    setLabelText("label", value, sectionId, index);
+    // setLabelText("label", value, sectionId, index);
+    this.setState({
+      label: value
+    });
   };
 
-  onCheckChange = event => {
+  onIsRequiredChange = event => {
     event.preventDefault();
-    const value = event.target.value;
-    const { sectionId, index, setPersonas } = this.props;
-    setPersonas(value, sectionId, index);
+    const isChecked = !!event.target.checked;
+    // setPersonas(value, sectionId, index);
+    this.setState({
+      required: isChecked
+    });
+  };
+
+  onHasPersonaChange = event => {
+    event.preventDefault();
+    const hasPersona = !!event.target.checked;
+    // setPersonas(value, sectionId, index);
+    this.setState({
+      required: hasPersona
+    });
   };
 
   onCommentChange = event => {
     event.preventDefault();
     const value = event.target.value;
-    const { sectionId, index, setPersonas } = this.props;
-    setComment(value, sectionId, index);
+    // setComment(value, sectionId, index);
+    this.setState({
+      comment: value
+    });
+  };
+
+  onOptionValueChange = event => {
+    event.preventDefault();
+    const value = event.target.value;
+    const index = parseInt(event.target.dataset.index);
+    this.setState(prevState => {
+      const nextOptions = [...prevState.options];
+      nextOptions[index].value = value;
+      return { options: nextOptions };
+    });
+  };
+
+  onOptionPointChange = event => {
+    event.preventDefault();
+    const value = event.target.value;
+    const index = parseInt(event.target.dataset.index);
+    this.setState(prevState => {
+      const nextOptions = [...prevState.options];
+      nextOptions[index].points = parseInt(value);
+      return {
+        options: nextOptions
+      };
+    });
+  };
+
+  onInputTypeChange = event => {
+    event.preventDefault();
+    const value = event.target.value;
+    // setLabelText("label", value, sectionId, index);
+    this.setState({
+      type: value
+    });
   };
 
   render() {
-    const { sectionId, question, index, supportedInput } = this.props;
+    const { sectionId, index, supportedInput } = this.props;
     const questionId = `${sectionId}-${index}`;
     return (
       <Container>
         <Label for={`${questionId}-question`}>Question label</Label>
         <Input
-          onChange={onChange}
-          type="textarea"
-          name="text"
+          onChange={this.onQuestionChange}
+          type="text"
+          name="question"
           id={`${questionId}-question`}
-          value={question.get("question")}
+          value={this.state.question}
         />
 
         <Label for={`${questionId}-input-label`}>Input label</Label>
         <Input
-          onChange={onLabelChange}
-          type="textarea"
-          name="text"
+          onChange={this.onLabelChange}
+          type="text"
+          name="inputlabel"
           id={`${questionId}-input-label`}
-          value={question.get("label")}
+          value={this.state.label}
         />
 
         <Input
-          onChange={onCheckChange}
+          onChange={this.onIsRequiredChange}
           type="checkbox"
           name={`${questionId}-is-required`}
-          checked={question.get("required")}
+          checked={this.state.required}
         />
         <Label for={`${questionId}-is-required`}>Is it required?</Label>
 
         <Input
-          onChange={onCheckChange}
+          onChange={this.onHasPersonaChange}
           type="checkbox"
           name={`${questionId}-has-personas`}
-          checked={question.get("hasPersonas")}
+          checked={this.state.hasPersonas}
         />
 
         <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
-        <Input type="select" id={`${questionId}-input-type`}>
-          {supportedInput.toArray().map(inputType => {
-            return (
-              <option
-                key={inputType}
-                selected={question.get("type") === inputType}>
-                {inputType}
-              </option>
-            );
+        <Input
+          type="select"
+          id={`${questionId}-input-type`}
+          onChange={this.onInputTypeChange}
+          value={this.state.type}>
+          {supportedInput.map(inputType => {
+            return <option key={inputType}>{inputType}</option>;
           })}
         </Input>
 
-        {(question.get("type") === "radio" ||
-          question.get("type") === "select") && (
+        {(this.state.type === "radio" || this.state.type === "select") && (
           <ul>
-            {question
-              .get("options")
-              .toArray()
-              .map((option, optionIndex) => {
-                return (
-                  <li>
-                    <Label for={`${questionId}-${optionIndex}-value`}>
-                      Set option value
-                    </Label>
-                    <Input
-                      onChange={onChange}
-                      type="textarea"
-                      name="text"
-                      id={`${questionId}-${optionIndex}-value`}
-                      value={option.get("value")}
-                    />
-                    <Label for={`${questionId}-${optionIndex}-points`}>
-                      Set point value
-                    </Label>
-                    <Input
-                      onChange={onChange}
-                      type="textarea"
-                      name="text"
-                      id={`${questionId}-${optionIndex}-points`}
-                      value={option.get("point")}
-                    />
-                  </li>
-                );
-              })}
+            {this.state.options.map((option, optionIndex) => {
+              return (
+                <li key={optionIndex}>
+                  <Label for={`${questionId}-${optionIndex}-value`}>
+                    Set option value
+                  </Label>
+                  <Input
+                    onChange={this.onOptionValueChange}
+                    type="textarea"
+                    name="optionvalue"
+                    id={`${questionId}-${optionIndex}-value`}
+                    value={option.value}
+                    data-index={optionIndex}
+                  />
+                  <Label for={`${questionId}-${optionIndex}-points`}>
+                    Set point value
+                  </Label>
+                  <Input
+                    onChange={this.onOptionPointChange}
+                    type="textarea"
+                    name="optionpoints"
+                    id={`${questionId}-${optionIndex}-points`}
+                    value={option.point}
+                  />
+                </li>
+              );
+            })}
           </ul>
         )}
 
         <Label for={`${questionId}-comment-label`}>Comment label</Label>
         <Input
-          onChange={onCommentChange}
+          onChange={this.onCommentChange}
           type="textarea"
-          name="text"
+          name="comment"
           id={`${questionId}-comment-label`}
-          value={question.get("comment")}
+          value={this.state.comment}
         />
       </Container>
     );
