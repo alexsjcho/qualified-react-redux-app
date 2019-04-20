@@ -11,7 +11,7 @@
             {
               "label": "Set questions to understand client's situation",
               "question": "Why are you considering our company's product?",
-              "type": "text",
+              "type": "radio",
               "options": [
                 {
                   "value": "yes",

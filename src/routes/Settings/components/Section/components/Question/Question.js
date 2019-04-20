@@ -35,19 +35,21 @@ export default class Question extends React.Component {
 
   onIsRequiredChange = event => {
     event.preventDefault();
-    const isChecked = !!event.target.checked;
     // setPersonas(value, sectionId, index);
-    this.setState({
-      required: isChecked
+    this.setState(prevState => {
+      return {
+        required: !prevState.required
+      };
     });
   };
 
   onHasPersonaChange = event => {
     event.preventDefault();
-    const hasPersona = !!event.target.checked;
     // setPersonas(value, sectionId, index);
-    this.setState({
-      required: hasPersona
+    this.setState(prevState => {
+      return {
+        hasPersonas: !prevState.hasPersonas
+      };
     });
   };
 
@@ -77,7 +79,7 @@ export default class Question extends React.Component {
     const index = parseInt(event.target.dataset.index);
     this.setState(prevState => {
       const nextOptions = [...prevState.options];
-      nextOptions[index].points = parseInt(value);
+      nextOptions[index].points = parseInt(value) || 0;
       return {
         options: nextOptions
       };
@@ -115,23 +117,28 @@ export default class Question extends React.Component {
           id={`${questionId}-input-label`}
           value={this.state.label}
         />
+        <div>
+          <Input
+            onClick={this.onIsRequiredChange}
+            type="checkbox"
+            name={`${questionId}-is-required`}
+            id={`${questionId}-is-required`}
+            checked={this.state.required}
+          />
+          <Label for={`${questionId}-is-required`}>Is it required?</Label>
+        </div>
 
-        <Input
-          onChange={this.onIsRequiredChange}
-          type="checkbox"
-          name={`${questionId}-is-required`}
-          checked={this.state.required}
-        />
-        <Label for={`${questionId}-is-required`}>Is it required?</Label>
+        <div>
+          <Input
+            onClick={this.onHasPersonaChange}
+            type="checkbox"
+            name={`${questionId}-has-personas`}
+            id={`${questionId}-has-personas`}
+            checked={this.state.hasPersonas}
+          />
+          <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
+        </div>
 
-        <Input
-          onChange={this.onHasPersonaChange}
-          type="checkbox"
-          name={`${questionId}-has-personas`}
-          checked={this.state.hasPersonas}
-        />
-
-        <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
         <Input
           type="select"
           id={`${questionId}-input-type`}
@@ -152,7 +159,7 @@ export default class Question extends React.Component {
                   </Label>
                   <Input
                     onChange={this.onOptionValueChange}
-                    type="textarea"
+                    type="text"
                     name="optionvalue"
                     id={`${questionId}-${optionIndex}-value`}
                     value={option.value}
@@ -163,10 +170,11 @@ export default class Question extends React.Component {
                   </Label>
                   <Input
                     onChange={this.onOptionPointChange}
-                    type="textarea"
+                    type="text"
                     name="optionpoints"
                     id={`${questionId}-${optionIndex}-points`}
-                    value={option.point}
+                    value={option.points}
+                    data-index={optionIndex}
                   />
                 </li>
               );
