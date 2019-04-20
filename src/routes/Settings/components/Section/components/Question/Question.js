@@ -2,99 +2,73 @@ import React from "react";
 import { Container, Input, Label } from "reactstrap";
 
 export default class Question extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      label: props.question.label,
-      question: props.question.question,
-      type: props.question.type,
-      options: props.question.options,
-      commentPlaceholder: props.question.commentPlaceholder,
-      required: props.question.required,
-      hasPersonas: props.question.hasPersonas
-    };
-  }
-
+  
   onQuestionChange = event => {
-    event.preventDefault();
+    const { updateQuestion, index, question } = this.props
     const value = event.target.value;
-    // setQuestionText("question", value, sectionId, index);
-    this.setState({
-      question: value
-    });
+    const newQuestion = { ...question }
+    newQuestion.question = value
+    updateQuestion(index, newQuestion)
   };
 
   onLabelChange = event => {
-    event.preventDefault();
+    const { updateQuestion, index, question } = this.props
     const value = event.target.value;
-    // setLabelText("label", value, sectionId, index);
-    this.setState({
-      label: value
-    });
-  };
-
-  onIsRequiredChange = event => {
-    // setPersonas(value, sectionId, index);
-    this.setState(prevState => {
-      return {
-        required: !prevState.required
-      };
-    });
-  };
-
-  onHasPersonaChange = event => {
-    // setPersonas(value, sectionId, index);
-    this.setState(prevState => {
-      return {
-        hasPersonas: !prevState.hasPersonas
-      };
-    });
-  };
-
-  onCommentPlaceholderChange = event => {
-    event.preventDefault();
-    const value = event.target.value;
-    // setcommentPlaceholder(value, sectionId, index);
-    this.setState({
-      commentPlaceholder: value
-    });
-  };
-
-  onOptionValueChange = event => {
-    event.preventDefault();
-    const value = event.target.value;
-    const index = parseInt(event.target.dataset.index);
-    this.setState(prevState => {
-      const nextOptions = [...prevState.options];
-      nextOptions[index].value = value;
-      return { options: nextOptions };
-    });
-  };
-
-  onOptionPointChange = event => {
-    event.preventDefault();
-    const value = event.target.value;
-    const index = parseInt(event.target.dataset.index);
-    this.setState(prevState => {
-      const nextOptions = [...prevState.options];
-      nextOptions[index].points = parseInt(value) || 0;
-      return {
-        options: nextOptions
-      };
-    });
+    const newQuestion = { ...question }
+    newQuestion.label = value
+    updateQuestion(index, newQuestion)
   };
 
   onInputTypeChange = event => {
-    event.preventDefault();
+    const { updateQuestion, index, question } = this.props
     const value = event.target.value;
-    // setLabelText("label", value, sectionId, index);
-    this.setState({
-      type: value
-    });
+    const newQuestion = { ...question }
+    newQuestion.type = value
+    updateQuestion(index, newQuestion)
+  };
+
+  onCommentPlaceholderChange = event => {
+    const { updateQuestion, index, question } = this.props
+    const value = event.target.value;
+    const newQuestion = { ...question }
+    newQuestion.commentPlaceholder = value
+    updateQuestion(index, newQuestion)
+  };
+
+  onIsRequiredChange = event => {
+    const { updateQuestion, index, question } = this.props
+    const newQuestion = { ...question }
+    newQuestion.required = !question.required
+    updateQuestion(index, newQuestion)
+  };
+
+  onHasPersonaChange = event => {
+    const { updateQuestion, index, question } = this.props
+    const newQuestion = { ...question }
+    newQuestion.hasPersonas = !question.hasPersonas
+    updateQuestion(index, newQuestion)
+  };
+
+  onOptionValueChange = event => {
+    const { updateQuestion, index, question } = this.props
+    const value = event.target.value;
+    const optionIndex = parseInt(event.target.dataset.index);
+    const newQuestion = { ...question }
+    newQuestion.options[optionIndex].value = value
+    updateQuestion(index, newQuestion)
+  };
+
+  onOptionPointChange = event => {
+    const { updateQuestion, index, question } = this.props
+    const value = event.target.value;
+    const optionIndex = parseInt(event.target.dataset.index);
+    const newQuestion = { ...question }
+    newQuestion.options[optionIndex].points = parseInt(value) || 0
+    updateQuestion(index, newQuestion)
   };
 
   render() {
-    const { sectionId, index, supportedInput } = this.props;
+    const { sectionId, index, supportedInput, question } = this.props;
     const questionId = `${sectionId}-${index}`;
     return (
       <Container>
@@ -104,7 +78,7 @@ export default class Question extends React.PureComponent {
           type="text"
           name="question"
           id={`${questionId}-question`}
-          value={this.state.question}
+          value={question.question}
         />
 
         <Label for={`${questionId}-input-label`}>Input label</Label>
@@ -113,22 +87,22 @@ export default class Question extends React.PureComponent {
           type="text"
           name="inputlabel"
           id={`${questionId}-input-label`}
-          value={this.state.label}
+          value={question.label}
         />
 
         <Input
           type="select"
           id={`${questionId}-input-type`}
           onChange={this.onInputTypeChange}
-          value={this.state.type}>
+          value={question.type}>
           {supportedInput.map(inputType => {
             return <option key={inputType}>{inputType}</option>;
           })}
         </Input>
 
-        {(this.state.type === "radio" || this.state.type === "select") && (
+        {(question.type === "radio" || question.type === "select") && (
           <ul>
-            {this.state.options.map((option, optionIndex) => {
+            {question.options.map((option, optionIndex) => {
               return (
                 <li key={optionIndex}>
                   <Label for={`${questionId}-${optionIndex}-value`}>
@@ -165,7 +139,7 @@ export default class Question extends React.PureComponent {
             type="checkbox"
             name={`${questionId}-is-required`}
             id={`${questionId}-is-required`}
-            checked={this.state.required}
+            checked={question.required}
           />
           <Label for={`${questionId}-is-required`}>Is it required?</Label>
         </div>
@@ -176,7 +150,7 @@ export default class Question extends React.PureComponent {
             type="checkbox"
             name={`${questionId}-has-personas`}
             id={`${questionId}-has-personas`}
-            checked={this.state.hasPersonas}
+            checked={question.hasPersonas}
           />
           <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
         </div>
@@ -187,7 +161,7 @@ export default class Question extends React.PureComponent {
           type="text"
           name="commentPlaceholder"
           id={`${questionId}-commentPlaceholder-label`}
-          value={this.state.commentPlaceholder}
+          value={question.commentPlaceholder}
         />
       </Container>
     );
