@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Input, Label } from "reactstrap";
 
-export default class Question extends React.Component {
+export default class Question extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,7 +9,7 @@ export default class Question extends React.Component {
       question: props.question.question,
       type: props.question.type,
       options: props.question.options,
-      comment: props.question.comment,
+      commentPlaceholder: props.question.commentPlaceholder,
       required: props.question.required,
       hasPersonas: props.question.hasPersonas
     };
@@ -51,12 +51,12 @@ export default class Question extends React.Component {
     });
   };
 
-  onCommentChange = event => {
+  onCommentPlaceholderChange = event => {
     event.preventDefault();
     const value = event.target.value;
-    // setComment(value, sectionId, index);
+    // setcommentPlaceholder(value, sectionId, index);
     this.setState({
-      comment: value
+      commentPlaceholder: value
     });
   };
 
@@ -115,27 +115,6 @@ export default class Question extends React.Component {
           id={`${questionId}-input-label`}
           value={this.state.label}
         />
-        <div>
-          <Input
-            onChange={this.onIsRequiredChange}
-            type="checkbox"
-            name={`${questionId}-is-required`}
-            id={`${questionId}-is-required`}
-            checked={this.state.required}
-          />
-          <Label for={`${questionId}-is-required`}>Is it required?</Label>
-        </div>
-
-        <div>
-          <Input
-            onChange={this.onHasPersonaChange}
-            type="checkbox"
-            name={`${questionId}-has-personas`}
-            id={`${questionId}-has-personas`}
-            checked={this.state.hasPersonas}
-          />
-          <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
-        </div>
 
         <Input
           type="select"
@@ -180,13 +159,35 @@ export default class Question extends React.Component {
           </ul>
         )}
 
-        <Label for={`${questionId}-comment-label`}>Comment label</Label>
+        <div>
+          <Input
+            onChange={this.onIsRequiredChange}
+            type="checkbox"
+            name={`${questionId}-is-required`}
+            id={`${questionId}-is-required`}
+            checked={this.state.required}
+          />
+          <Label for={`${questionId}-is-required`}>Is it required?</Label>
+        </div>
+
+        <div>
+          <Input
+            onChange={this.onHasPersonaChange}
+            type="checkbox"
+            name={`${questionId}-has-personas`}
+            id={`${questionId}-has-personas`}
+            checked={this.state.hasPersonas}
+          />
+          <Label for={`${questionId}-has-personas`}>Are there personas?</Label>
+        </div>
+
+        <Label for={`${questionId}-commentPlaceholder-label`}>Comment Placeholder label</Label>
         <Input
-          onChange={this.onCommentChange}
-          type="textarea"
-          name="comment"
-          id={`${questionId}-comment-label`}
-          value={this.state.comment}
+          onChange={this.onCommentPlaceholderChange}
+          type="text"
+          name="commentPlaceholder"
+          id={`${questionId}-commentPlaceholder-label`}
+          value={this.state.commentPlaceholder}
         />
       </Container>
     );
