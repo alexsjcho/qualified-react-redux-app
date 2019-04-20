@@ -1,6 +1,6 @@
 import React from "react";
 import Section from '../Section'
-import { Container, Form } from "reactstrap";
+import { Container, Form, Input } from "reactstrap";
 
 export default class Stage extends React.PureComponent {
 
@@ -37,6 +37,7 @@ export default class Stage extends React.PureComponent {
             .map((section, index) => (
               <Section section={section} sectionIndex={index} key={section.sectionId} updateSection={this.updateSection} />
             ))}
+          <Input type='submit' value='Save Stage' />
         </Form>
       </Container>
     );
