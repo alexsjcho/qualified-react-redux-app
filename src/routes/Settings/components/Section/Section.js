@@ -1,10 +1,10 @@
-import React from "react";
-import { FormGroup } from "reactstrap";
-import Question from "./components/Question";
+import React from 'react'
+import { FormGroup } from 'reactstrap'
+import Question from './components/Question'
 
-export default class Section extends React.Component {
-  render() {
-    const { section } = this.props;
+export default class Section extends React.PureComponent {
+  render () {
+    const { section } = this.props
 
     return (
       <FormGroup>
@@ -15,12 +15,12 @@ export default class Section extends React.Component {
               question={question}
               index={index}
               sectionId={section.sectionId}
-              supportedInput={["radio", "select", "date"]}
+              supportedInput={['radio', 'select', 'date']}
               key={`${section.sectionId}-question-${index}`}
             />
-          );
+          )
         })}
       </FormGroup>
-    );
+    )
   }
 }

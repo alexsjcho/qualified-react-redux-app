@@ -2,7 +2,7 @@ import React from "react";
 import Section from "./components/Section";
 import { Container, Form } from "reactstrap";
 
-export default class Settings extends React.Component {
+export default class Settings extends React.PureComponent {
   handleSubmit = event => {
     event.preventDefault();
   };
