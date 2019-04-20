@@ -1,5 +1,3 @@
-// Create const actions, types
-
 export const ACTION_TYPES = {
   SUBMIT_STAGE: 'SUBMIT_STAGE'
 }

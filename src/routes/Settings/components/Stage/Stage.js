@@ -12,7 +12,9 @@ export default class Stage extends React.PureComponent {
   }
   
   handleSubmit = event => {
+    const { submitStage } = this.props
     event.preventDefault();
+    submitStage(this.state.stage)
   };
 
   updateSection = (sectionIndex, section) => {
