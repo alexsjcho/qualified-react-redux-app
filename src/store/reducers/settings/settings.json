@@ -211,29 +211,24 @@
           "sectionId": "economicBuyer",
           "label": "Economic Buyer",
           "questions": [
-            {
-              "comment": "Placeholder",
-              "questions": [
-                {
-                  "label": "Economic Buyer",
-                  "question": "Who's in charge of the budget for this project?",
-                  "type": "text",
-                  "options": [
-                    {
-                      "value": "yes",
-                      "points": 20
-                    },
-                    {
-                      "value": "no",
-                      "points": 0
-                    }
-                  ],
-                  "comment": "Placeholder",
-                  "required": true,
-                  "hasPersonas": true
-                }
-              ]
-            }
+              {
+                "label": "Economic Buyer",
+                "question": "Who's in charge of the budget for this project?",
+                "type": "text",
+                "options": [
+                  {
+                    "value": "yes",
+                    "points": 20
+                  },
+                  {
+                    "value": "no",
+                    "points": 0
+                  }
+                ],
+                "comment": "Placeholder",
+                "required": true,
+                "hasPersonas": true
+              }
           ]
         },
         {
@@ -342,30 +337,26 @@
           "label": "Economic Buyer",
           "questions": [
             {
-              "questions": [
+              "label": "Champion",
+              "question": "Besides yourself, who else is pushing for this change?",
+              "type": "select",
+              "options": [
                 {
-                  "label": "Champion",
-                  "question": "Besides yourself, who else is pushing for this change?",
-                  "type": "select",
-                  "options": [
-                    {
-                      "value": "less than $500",
-                      "points": 5
-                    },
-                    {
-                      "value": "$500 - $2000",
-                      "points": 10
-                    },
-                    {
-                      "value": "more than $2000",
-                      "points": 20
-                    }
-                  ],
-                  "comment": "Placeholder",
-                  "required": true,
-                  "hasPersonas": true
+                  "value": "less than $500",
+                  "points": 5
+                },
+                {
+                  "value": "$500 - $2000",
+                  "points": 10
+                },
+                {
+                  "value": "more than $2000",
+                  "points": 20
                 }
-              ]
+              ],
+              "comment": "Placeholder",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
@@ -608,30 +599,26 @@
           "label": "Access to Buyer Authority",
           "questions": [
             {
-              "questions": [
+              "label": "Buying Decision Maker",
+              "question": "Who are in charge of making this buying decision?",
+              "type": "text",
+              "options": [
                 {
-                  "label": "Buying Decision Maker",
-                  "question": "Who are in charge of making this buying decision?",
-                  "type": "text",
-                  "options": [
-                    {
-                      "value": "main buyer",
-                      "points": 15
-                    },
-                    {
-                      "value": "secondary buyer",
-                      "points": 10
-                    },
-                    {
-                      "value": "influncer",
-                      "points": 5
-                    }
-                  ],
-                  "comment": "",
-                  "required": true,
-                  "hasPersonas": true
+                  "value": "main buyer",
+                  "points": 15
+                },
+                {
+                  "value": "secondary buyer",
+                  "points": 10
+                },
+                {
+                  "value": "influncer",
+                  "points": 5
                 }
-              ]
+              ],
+              "comment": "",
+              "required": true,
+              "hasPersonas": true
             }
           ]
         },
