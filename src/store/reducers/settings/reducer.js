@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable'
-import ACTION_TYPES from '../../action/settings'
+import { ACTION_TYPES } from '../../action/settings'
 
 let reducer = {}
 
