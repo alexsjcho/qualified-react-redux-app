@@ -34,7 +34,6 @@ export default class Question extends React.Component {
   };
 
   onIsRequiredChange = event => {
-    event.preventDefault();
     // setPersonas(value, sectionId, index);
     this.setState(prevState => {
       return {
@@ -44,7 +43,6 @@ export default class Question extends React.Component {
   };
 
   onHasPersonaChange = event => {
-    event.preventDefault();
     // setPersonas(value, sectionId, index);
     this.setState(prevState => {
       return {
@@ -119,7 +117,7 @@ export default class Question extends React.Component {
         />
         <div>
           <Input
-            onClick={this.onIsRequiredChange}
+            onChange={this.onIsRequiredChange}
             type="checkbox"
             name={`${questionId}-is-required`}
             id={`${questionId}-is-required`}
@@ -130,7 +128,7 @@ export default class Question extends React.Component {
 
         <div>
           <Input
-            onClick={this.onHasPersonaChange}
+            onChange={this.onHasPersonaChange}
             type="checkbox"
             name={`${questionId}-has-personas`}
             id={`${questionId}-has-personas`}
