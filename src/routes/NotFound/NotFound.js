@@ -1,6 +1,6 @@
 import React from "react";
 
-const gifURL = "https://media.giphy.com/media/xT1Ra4NsEubfoyjvIk/giphy.gif";
+const gifURL = "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif";
 
 export default () => {
   return (

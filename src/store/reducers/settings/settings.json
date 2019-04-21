@@ -211,24 +211,24 @@
           "sectionId": "economicBuyer",
           "label": "Economic Buyer",
           "questions": [
-              {
-                "label": "Economic Buyer",
-                "question": "Who's in charge of the budget for this project?",
-                "type": "text",
-                "options": [
-                  {
-                    "value": "yes",
-                    "points": 20
-                  },
-                  {
-                    "value": "no",
-                    "points": 0
-                  }
-                ],
-                "commentPlaceholder": "Placeholder",
-                "required": true,
-                "hasPersonas": true
-              }
+            {
+              "label": "Economic Buyer",
+              "question": "Who's in charge of the budget for this project?",
+              "type": "text",
+              "options": [
+                {
+                  "value": "yes",
+                  "points": 20
+                },
+                {
+                  "value": "no",
+                  "points": 0
+                }
+              ],
+              "commentPlaceholder": "Placeholder",
+              "required": true,
+              "hasPersonas": true
+            }
           ]
         },
         {
@@ -425,18 +425,6 @@
       "stageId": "demo",
       "stageLabel": "Demo",
       "sections": [
-        {
-          "summary": [
-            {
-              "problem": {},
-              "implication": {},
-              "need": {},
-              "metrics": {},
-              "identifyPain": {}
-            }
-          ]
-        },
-
         {
           "sectionId": "budget",
           "label": "Demo",
@@ -687,18 +675,6 @@
       "stageId": "negotiation",
       "stageLabel": "Negotiation",
       "sections": [
-        {
-          "summary": [
-            {
-              "problem": {},
-              "implication": {},
-              "need": {},
-              "metrics": {},
-              "identifyPain": {}
-            }
-          ]
-        },
-
         {
           "sectionId": "sellerPrice",
           "label": "Product Retail Value",

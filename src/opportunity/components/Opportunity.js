@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import Dashboard from "./Dashboard/index";
+import StageTabs from "./StageTabs";
 
 class Opportunity extends Component {
   render() {
     return (
       <div>
-        <h1>Opportunity</h1>
+        <Dashboard />
+        <StageTabs />
       </div>
     );
   }
