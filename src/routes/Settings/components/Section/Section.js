@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormGroup } from 'reactstrap'
-import Question from './components/Question'
+import Question from '../Question'
 
 export default class Section extends React.PureComponent {
 

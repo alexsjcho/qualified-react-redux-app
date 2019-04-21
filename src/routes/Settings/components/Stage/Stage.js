@@ -27,6 +27,15 @@ export default class Stage extends React.PureComponent {
     })
   }
 
+  componentDidUpdate (prevProps) {
+    const { stage } = this.props
+    if (prevProps.stage !== stage) {
+      this.setState({
+        stage
+      })
+    }
+  }
+
   render() {
     const { stage } = this.state;
     const stageLabel = stage.stageLabel;
