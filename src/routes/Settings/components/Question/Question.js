@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Input, Label } from "reactstrap";
+import { SUPPORTED_INPUTS } from '../../../../shared/utils'
 
 export default class Question extends React.PureComponent {
   
@@ -68,7 +69,7 @@ export default class Question extends React.PureComponent {
   };
 
   render() {
-    const { sectionId, index, supportedInput, question } = this.props;
+    const { sectionId, index, question } = this.props;
     const questionId = `${sectionId}-${index}`;
     return (
       <Container>
@@ -95,7 +96,7 @@ export default class Question extends React.PureComponent {
           id={`${questionId}-input-type`}
           onChange={this.onInputTypeChange}
           value={question.type}>
-          {supportedInput.map(inputType => {
+          {SUPPORTED_INPUTS.map(inputType => {
             return <option key={inputType}>{inputType}</option>;
           })}
         </Input>

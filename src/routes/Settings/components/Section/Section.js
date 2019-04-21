@@ -23,7 +23,6 @@ export default class Section extends React.PureComponent {
               question={question}
               index={index}
               sectionId={section.sectionId}
-              supportedInput={['radio', 'select', 'date']}
               key={`${section.sectionId}-question-${index}`}
               updateQuestion={this.updateQuestion}
             />

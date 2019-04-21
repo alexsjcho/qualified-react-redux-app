@@ -1,5 +1,7 @@
 const SETTINGS_KEY = 'settings'
 
+export const SUPPORTED_INPUTS = ['radio', 'select', 'date']
+
 /**
  * Save the settings state into localStorage
  * @param  {Object} settings The settings object to save
