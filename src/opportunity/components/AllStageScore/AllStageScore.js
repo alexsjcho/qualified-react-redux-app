@@ -1,11 +1,12 @@
 import React from "react";
 
 import { Progress } from "reactstrap";
+import Container from "react-bootstrap/Container";
 
 export default class AllStageScore extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <div className="text-center">Various (40) of 55</div>
         <Progress multi>
           <Progress bar value="5" max={55}>
@@ -21,7 +22,7 @@ export default class AllStageScore extends React.Component {
             10
           </Progress>
         </Progress>
-      </div>
+      </Container>
     );
   }
 }

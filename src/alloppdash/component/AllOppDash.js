@@ -32,7 +32,7 @@ export default class AllOppDash extends React.PureComponent {
           <tr>
             <td>2</td>
             <td>Fintech Start Up Q4 2018</td>
-            <td>Salesloft</td>
+            <td>Lending Club</td>
             <td>11/23/2018</td>
             <td>$123,000</td>
             <td>Handle Obstacles</td>
