@@ -91,15 +91,19 @@
             {
               "label": "Why do you need to change and fix this problem?",
               "question": "how much money are you losing per month?",
-              "type": "text input",
+              "type": "radio",
               "options": [
                 {
-                  "value": "yes",
+                  "value": "less than $500",
+                  "points": 5
+                },
+                {
+                  "value": "$500 - $2000",
                   "points": 10
                 },
                 {
-                  "value": "no",
-                  "points": 0
+                  "value": "more than $2000",
+                  "points": 20
                 }
               ],
               "commentPlaceholder": "Placeholder",
@@ -115,7 +119,7 @@
             {
               "label": "Set deal close timeline",
               "question": "when do you want this change to happen?",
-              "type": "date-input",
+              "type": "radio",
               "options": [
                 {
                   "value": "yes",
@@ -167,7 +171,7 @@
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
-              "type": "date input",
+              "type": "radio",
               "options": [
                 {
                   "value": "yes",
@@ -186,7 +190,7 @@
         }
       ],
       "score": {
-        "totalScore": ""
+        "totalScore": "90"
       }
     },
     {
@@ -418,7 +422,7 @@
         }
       ],
       "score": {
-        "totalScore": ""
+        "totalScore": "60"
       }
     },
     {
@@ -499,7 +503,7 @@
         }
       ],
       "score": {
-        "totalScore": ""
+        "totalScore": "40"
       }
     },
     {
@@ -668,7 +672,7 @@
         }
       ],
       "score": {
-        "totalScore": ""
+        "totalScore": "50"
       }
     },
     {
@@ -731,7 +735,7 @@
         }
       ],
       "score": {
-        "totalScore": ""
+        "totalScore": "30"
       }
     }
   ],

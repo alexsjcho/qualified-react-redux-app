@@ -1,3 +1,3 @@
-import DisplayNews from "./DisplayNews";
+import DisplayNews from "./components/GetNewsInput";
 
 export default DisplayNews;
