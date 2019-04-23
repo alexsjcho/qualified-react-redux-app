@@ -1,14 +1,17 @@
 import React from "react";
 
-import AllOppDash from "../../alloppdash/component/AllOppDash";
+import Container from "react-bootstrap/Container";
+import AllOppDash from "./components/AllOppDash";
+import Button from "react-bootstrap/Button";
+import CreateOppModal from "./components/CreateOppModal";
 
-export default class Accounts extends React.Component {
+export default class Accounts extends React.PureComponent {
   render() {
     return (
-      <div>
-        <h1>All Opportunities</h1>
+      <Container>
         <AllOppDash />
-      </div>
+        <CreateOppModal />
+      </Container>
     );
   }
 }

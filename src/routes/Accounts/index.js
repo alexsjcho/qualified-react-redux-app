@@ -1,3 +1,10 @@
 import Accounts from "./Accounts";
+import { connect } from "react-redux";
 
-export default Accounts;
+function mapStateToProps() {}
+const mapDispatchToProps = {};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Accounts);
