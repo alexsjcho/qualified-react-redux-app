@@ -34,8 +34,7 @@ export function getSettings() {
  */
 export function insertOpportunity(initialOpportunityValues) {
   const opportunityId = uuid();
-  let opportunities = window.localStorage.getItem(OPPORTUNITIES_KEY) || "[]";
-  opportunities = JSON.parse(opportunities);
+  let opportunities = getAllOpportunities();
   opportunities.push({ ...initialOpportunityValues, opportunityId });
   window.localStorage.setItem(OPPORTUNITIES_KEY, JSON.stringify(opportunities));
   return opportunityId;
@@ -46,11 +45,21 @@ export function insertOpportunity(initialOpportunityValues) {
  */
 
 export function loadOpportunity(opportunityId) {
-  let opportunities = window.localStorage.getItem(OPPORTUNITIES_KEY) || "[]";
-  opportunities = JSON.parse(opportunities);
+  let opportunities = getAllOpportunities();
   let opportunity = opportunities.find(function(opportunity) {
     return opportunity.opportunityId === opportunityId;
   });
 
   return opportunity || null;
+}
+
+/**
+ * This function loads all opportunities from localstorage to AllOppDash
+ * TODO: Add docs
+ */
+export function getAllOpportunities() {
+  let opportunities = window.localStorage.getItem(OPPORTUNITIES_KEY) || "[]";
+  opportunities = JSON.parse(opportunities);
+
+  return opportunities;
 }

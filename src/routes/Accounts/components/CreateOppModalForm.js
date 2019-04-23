@@ -68,6 +68,7 @@ export default class CreateOppModalForm extends React.PureComponent {
                   name="companyName"
                   type="text"
                   placeholder="AirBnb"
+                  required
                 />
               </Form.Group>
 

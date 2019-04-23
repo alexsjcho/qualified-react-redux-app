@@ -17,11 +17,18 @@ export default class Accounts extends React.PureComponent {
     }
   }
 
+  componentDidMount() {
+    this.props.loadAllOpportunities();
+  }
+
   render() {
     return (
       <Container>
         <AppNavBar />
-        <AllOppDash />
+        <AllOppDash
+          allStageTotalScore={this.props.allStageTotalScore}
+          opportunitiesList={this.props.opportunitiesList || []}
+        />
         <CreateOppModalForm createOpportunity={this.props.createOpportunity} />
       </Container>
     );

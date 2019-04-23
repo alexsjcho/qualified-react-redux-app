@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
+import OpportunityRow from "../OpportunityRow";
 
 export default class AllOppDash extends React.PureComponent {
   render() {
@@ -16,8 +17,8 @@ export default class AllOppDash extends React.PureComponent {
               <th>Close Date</th>
               <th>Dollar Value</th>
               <th>Stage</th>
-
               <th>Score</th>
+              <th />
             </tr>
           </thead>
           <tbody>
@@ -28,8 +29,11 @@ export default class AllOppDash extends React.PureComponent {
               <td>9/12/2018</td>
               <td>$23,000</td>
               <td>Negotiation</td>
-
               <td>122/200</td>
+              <td>
+                <button type="button">Edit</button>
+                <button type="button">Delete</button>
+              </td>
             </tr>
             <tr>
               <td>2</td>
@@ -41,6 +45,17 @@ export default class AllOppDash extends React.PureComponent {
 
               <td>144/200</td>
             </tr>
+
+            {this.props.opportunitiesList.map((opportunity, index) => {
+              return (
+                <OpportunityRow
+                  key={opportunity.opportunityId}
+                  index={index}
+                  opportunity={opportunity}
+                  allStageTotalScore={this.props.allStageTotalScore}
+                />
+              );
+            })}
           </tbody>
         </Table>
       </Container>
