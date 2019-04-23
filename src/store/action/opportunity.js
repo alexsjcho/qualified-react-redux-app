@@ -1,4 +1,4 @@
-import { insertOpportunity, loadOpportunity } from '../../shared/utils'
+import { loadOpportunity } from '../../shared/utils'
 
 export const ACTION_TYPES = {
   SET_OPPORTUNITY: 'SET_OPPORTUNITY'

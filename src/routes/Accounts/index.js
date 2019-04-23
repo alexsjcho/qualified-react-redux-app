@@ -1,6 +1,6 @@
 import Accounts from './Accounts'
 import { connect } from 'react-redux'
-import { createOpportunity } from '../../store/action/opportunity'
+import { createOpportunity } from '../../store/action/alloppdash'
 import { getCreatedOpportunityId } from '../../shared/selectors'
 
 function mapStateToProps (state) {
