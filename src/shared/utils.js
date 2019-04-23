@@ -1,5 +1,4 @@
 import uuid from "uuid";
-import opportunity from "../store/reducers/opportunity";
 
 const SETTINGS_KEY = "settings";
 const OPPORTUNITIES_KEY = "opportunities";

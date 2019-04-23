@@ -18,21 +18,13 @@ export default class AppNavBar extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link>
-                <Link to="/"> Home </Link>
-              </Nav.Link>
+              <Link to="/"> Home </Link>
 
-              <Nav.Link>
-                <Link to="/demo"> Opportunities </Link>
-              </Nav.Link>
+              <Link to="/demo"> Opportunities </Link>
 
-              <Nav.Link>
-                <Link to="/accounts"> Accounts </Link>
-              </Nav.Link>
+              <Link to="/accounts"> Accounts </Link>
 
-              <Nav.Link>
-                <Link to="/settings"> Setting </Link>
-              </Nav.Link>
+              <Link to="/settings"> Setting </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

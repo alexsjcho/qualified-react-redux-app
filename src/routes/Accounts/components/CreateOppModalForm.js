@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 
-export default class CreateOppModal extends React.PureComponent {
+export default class CreateOppModalForm extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 
@@ -11,7 +11,8 @@ export default class CreateOppModal extends React.PureComponent {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: false
+      show: false,
+      formData: {}
     };
   }
 
@@ -23,29 +24,39 @@ export default class CreateOppModal extends React.PureComponent {
     this.setState({ show: true });
   }
 
-  handleFormSubmit(event) {
+  handleFormSubmit = event => {
     event.preventDefault();
-    this.setState({
-      formData: []
+    const { createOpportunity } = this.props;
+    const form = event.target;
+    createOpportunity({
+      companyName: form.companyName.value,
+      opportunityName: form.opportunityName.value,
+      closeDate: form.closeDate.value,
+      moneyValue: form.moneyValue.value
     });
-  }
+  };
 
   render() {
     return (
-      <>
-        <Form onSubmit={this.handleFormSubmit}>
-          <Button variant="outline-primary" onClick={this.handleShow}>
-            Create Opportunity
-          </Button>
+      <div>
+        <Button variant="outline-primary" onClick={this.handleShow}>
+          Create Opportunity
+        </Button>
 
-          <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Form
+            as="form"
+            onSubmit={this.handleFormSubmit}
+            style={{ marginTop: "15px" }}>
             <Modal.Header closeButton>
               <Modal.Title>Opportunity Details</Modal.Title>
             </Modal.Header>
+
             <Modal.Body>
               <Form.Group controlId="formOpportunityName">
                 <Form.Label>Opportunity Name</Form.Label>
                 <Form.Control
+                  name="opportunityName"
                   type="text"
                   placeholder="AirBnB Finance Department Q3 2019"
                 />
@@ -53,35 +64,40 @@ export default class CreateOppModal extends React.PureComponent {
 
               <Form.Group controlId="formCompanyName">
                 <Form.Label>Company Name</Form.Label>
-                <Form.Control type="text" placeholder="AirBnb" />
+                <Form.Control
+                  name="companyName"
+                  type="text"
+                  placeholder="AirBnb"
+                />
               </Form.Group>
 
               <Form.Group controlId="formCloseDate">
                 <Form.Label>Close Date</Form.Label>
-                <Form.Control type="number" placeholder="9-03-2019" />
+                <Form.Control
+                  name="closeDate"
+                  type="date"
+                  placeholder="9-03-2019"
+                />
               </Form.Group>
 
               <Form.Group controlId="formDollarValue">
-                <Form.Label>DollarValue</Form.Label>
-                <Form.Control type="number" placeholder="$15,000" />
-              </Form.Group>
-
-              <Form.Group controlId="formStage">
-                <Form.Label>Stage</Form.Label>
-                <Form.Control type="text" placeholder="Qualification" />
+                <Form.Label>Dollar Value</Form.Label>
+                <Form.Control
+                  name="moneyValue"
+                  type="number"
+                  placeholder="$15,000"
+                />
               </Form.Group>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>
+              <Button onClick={this.handleClose} variant="secondary">
                 Close
               </Button>
-              <Button variant="primary" onClick={this.handleClose}>
-                Submit
-              </Button>
+              <Form.Control type="submit" variant="primary" value="Submit" />
             </Modal.Footer>
-          </Modal>
-        </Form>
-      </>
+          </Form>
+        </Modal>
+      </div>
     );
   }
 }

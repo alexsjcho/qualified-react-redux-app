@@ -6,16 +6,23 @@ import CreateOppModalForm from "./components/CreateOppModalForm";
 import AppNavBar from "../../shared/components/AppNavBar";
 
 export default class Accounts extends React.PureComponent {
+  componentDidUpdate(prevProps) {
+    if (
+      this.props.createdOpportunityId &&
+      prevProps.createdOpportunityId !== this.props.createdOpportunityId
+    ) {
+      this.props.history.push(
+        `/opportunity/${this.props.createdOpportunityId}`
+      );
+    }
+  }
+
   render() {
     return (
       <Container>
-        <Container>
-          <AppNavBar />
-        </Container>
-        <Container>
-          <AllOppDash />
-          <CreateOppModalForm />
-        </Container>
+        <AppNavBar />
+        <AllOppDash />
+        <CreateOppModalForm createOpportunity={this.props.createOpportunity} />
       </Container>
     );
   }
