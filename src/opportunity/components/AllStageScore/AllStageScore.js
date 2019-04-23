@@ -7,7 +7,7 @@ export default class AllStageScore extends React.Component {
   render() {
     return (
       <Container>
-        <div className="text-center">Various (40) of 55</div>
+        <div className="text-center">Total Opportunity Score (40) of 55</div>
         <Progress multi>
           <Progress bar value="5" max={55}>
             5

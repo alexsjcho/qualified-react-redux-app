@@ -6,7 +6,9 @@ export default class DisplayNews extends React.Component {
   render() {
     return (
       <div>
-        <h3>DisplayNews</h3>
+        <h4 style={{ marginTop: "2rem" }} className="text-center">
+          Search News
+        </h4>
         <GetNewsInput />
         <NewsList />
       </div>

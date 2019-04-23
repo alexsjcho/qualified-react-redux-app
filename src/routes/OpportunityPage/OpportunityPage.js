@@ -12,29 +12,3 @@ export default class OpportunityPage extends React.PureComponent {
     );
   }
 }
-
-// Negotiation Stage  Summary UI Render
-// {
-//     "summary": [
-//       {
-//         "problem": {},
-//         "implication": {},
-//         "need": {},
-//         "metrics": {},
-//         "identifyPain": {}
-//       }
-//     ]
-//   },
-
-// Demo Stage  Summary UI Render
-//    {
-//     "summary": [
-//       {
-//         "problem": {},
-//         "implication": {},
-//         "need": {},
-//         "metrics": {},
-//         "identifyPain": {}
-//       }
-//     ]
-//   },

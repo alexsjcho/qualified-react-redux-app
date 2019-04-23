@@ -8,10 +8,11 @@ export default class QualifiedScore extends React.Component {
 
     return (
       <div>
-        <div className="text-center">
+        <div className="text-center">Stage Score</div>
+        <Progress value={valueLabel} max={maxLabel}>
+          {" "}
           {valueLabel} of {maxLabel}
-        </div>
-        <Progress value={valueLabel} max={maxLabel} />
+        </Progress>
       </div>
     );
   }

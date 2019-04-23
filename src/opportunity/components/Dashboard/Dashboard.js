@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 import AllStageScore from "../AllStageScore/AllStageScore";
-import DisplayNews from "../DisplayNews";
+import DisplayNews from "../DisplayNews/DisplayNews";
 
 export default class Dashboard extends React.Component {
   render() {
@@ -14,7 +14,8 @@ export default class Dashboard extends React.Component {
           <Col>
             <AllStageScore />
           </Col>
-
+        </Row>
+        <Row>
           <Col>
             <DisplayNews />
           </Col>

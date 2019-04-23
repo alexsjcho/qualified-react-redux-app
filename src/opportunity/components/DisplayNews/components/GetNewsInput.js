@@ -30,8 +30,11 @@ export default class GetNewsInput extends React.Component {
           value={this.state.searchQuery}>
           <Row>
             <Col>
-              <Form.Label>Search News</Form.Label>
-              <Form.Control size="sm" type="text" placeholder="Square" />
+              <Form.Control
+                size="sm"
+                type="text"
+                placeholder="Search a company ex. Square"
+              />
             </Col>
           </Row>
         </Form>
