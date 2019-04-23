@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 
-export default class GetNewsInput extends React.Component {
+export default class NewsSearchBar extends React.Component {
   state = {
     searchQuery: ""
   };
