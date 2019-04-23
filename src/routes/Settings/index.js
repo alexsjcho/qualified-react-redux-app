@@ -1,23 +1,23 @@
-import Settings from "./Settings";
-import { connect } from "react-redux";
-import { getCurrentStage, getSettings, getTotalScore } from "./selector";
-import { submitStage, updateStageScore } from "../../store/action/settings";
-import withImmutablePropsToJS from "with-immutable-props-to-js";
+import Settings from './Settings'
+import { connect } from 'react-redux'
+import { getCurrentStage, getSettings, getTotalScore } from '../../shared/selectors'
+import { submitStage, updateStageScore } from '../../store/action/settings'
+import withImmutablePropsToJS from 'with-immutable-props-to-js'
 
 const mapDispatchToProps = {
   submitStage,
   updateStageScore
-};
+}
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps (state, ownProps) {
   return {
     stage: getCurrentStage(state, ownProps),
     settings: getSettings(state),
     totalScore: getTotalScore(state, ownProps)
-  };
+  }
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withImmutablePropsToJS(Settings));
+)(withImmutablePropsToJS(Settings))
