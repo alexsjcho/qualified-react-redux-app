@@ -20,7 +20,7 @@ export default class AppNavBar extends React.Component {
             <Nav className="mr-auto">
               <Link to="/"> Home </Link>
 
-              <Link to="/demo"> Opportunities </Link>
+              <Link to="/opportunity"> Opportunities </Link>
 
               <Link to="/accounts"> Accounts </Link>
 
