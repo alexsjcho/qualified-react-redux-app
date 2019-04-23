@@ -1,10 +1,10 @@
-import opportunity from "./opportunity";
-// import allOppDash from './allOppDash'
-import settings from "./settings";
-import { combineReducers } from "redux-immutable";
+import opportunity from './opportunity'
+import allOppDash from './allOppDash'
+import settings from './settings'
+import { combineReducers } from 'redux-immutable'
 
 export default combineReducers({
   opportunity,
-  // allOppDash,
+  allOppDash,
   settings
-});
+})
