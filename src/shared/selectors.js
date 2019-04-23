@@ -5,7 +5,7 @@ const getStageId = (state, props) => props.match.params.stageId
 
 export const getSettings = state => state.get('settings')
 
-export const getCreatedOpportunityId = state => state.get('opportunity').get('createdOpportunityId')
+export const getCreatedOpportunityId = state => state.get('allOppDash').get('createdOpportunityId')
 
 export const getCurrentStage = createSelector(
   [getStages, getStageId],
