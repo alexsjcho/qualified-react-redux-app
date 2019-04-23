@@ -22,7 +22,7 @@ export default class GetNewsInput extends React.Component {
   render() {
     const { onInputChange, onFormSubmit } = this.state;
     return (
-      <Container>
+      <Container style={{ marginBottom: "1rem" }}>
         <Form
           onSubmit={onFormSubmit}
           onChange={onInputChange}
