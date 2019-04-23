@@ -6,7 +6,7 @@ export default class AllOppDash extends React.PureComponent {
   render() {
     return (
       <Container>
-        <h1>All Opportunities</h1>
+        <h1>All Accounts</h1>
         <Table striped bordered hover responsive size="sm">
           <thead>
             <tr>

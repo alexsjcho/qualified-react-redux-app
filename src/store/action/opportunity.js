@@ -15,12 +15,12 @@ export function setOpportunity(opportunity) {
 }
 
 export function createOpportunity(initialOpportunityValues) {
-  const {
-    companyName,
-    opportunityName,
-    closeDate,
-    moneyValue
-  } = initialOpportunityValues;
+  // const {
+  //   companyName,
+  //   opportunityName,
+  //   closeDate,
+  //   moneyValue
+  // } = initialOpportunityValues;
 
   const opportunityId = insertOpportunity(initialOpportunityValues);
 

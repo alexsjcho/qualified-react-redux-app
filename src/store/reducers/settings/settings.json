@@ -399,19 +399,15 @@
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
-              "type": "date",
+              "type": "radio",
               "options": [
                 {
-                  "value": "big",
-                  "points": -5
+                  "value": "yes",
+                  "points": 20
                 },
                 {
-                  "value": "medium",
-                  "points": -4
-                },
-                {
-                  "value": "small",
-                  "points": -3
+                  "value": "no",
+                  "points": 0
                 }
               ],
               "commentPlaceholder": "Placeholder",
@@ -463,12 +459,16 @@
               "type": "select",
               "options": [
                 {
-                  "value": "yes",
-                  "points": 20
+                  "value": "big",
+                  "points": -5
                 },
                 {
-                  "value": "no",
-                  "points": 0
+                  "value": "medium",
+                  "points": -4
+                },
+                {
+                  "value": "small",
+                  "points": -3
                 }
               ],
               "commentPlaceholder": "Placeholder",
@@ -484,11 +484,11 @@
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
-              "type": "date",
+              "type": "radio",
               "options": [
                 {
                   "value": "yes",
-                  "points": 20
+                  "points": 10
                 },
                 {
                   "value": "no",
@@ -621,7 +621,7 @@
             {
               "label": "Set deal close timeline",
               "question": "when do you want this change to happen?",
-              "type": "date",
+              "type": "radio",
               "options": [
                 {
                   "value": "main buyer",
@@ -649,7 +649,7 @@
             {
               "label": "Set next meeting",
               "question": "When is your next meeting?",
-              "type": "date",
+              "type": "radio",
               "options": [
                 {
                   "value": "main buyer",

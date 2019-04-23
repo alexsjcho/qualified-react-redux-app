@@ -27,7 +27,10 @@ export function getSettings() {
 /**
  * Insert a new opportunity entry into the database.
  * @param {Object} initialOpportunityValues here too
- * @param {String} initialOpportunityValues.companyName bla bla bla
+ * @param {String} initialOpportunityValues.companyName
+ *  @param {String} initialOpportunityValues.opportunityName
+ * @param {Number} initialOpportunityValues.closeDate,
+ * @param {Number} initialOpportunityValues.moneyValue
  * @returns {String} The ID of the new function
  */
 export function insertOpportunity(initialOpportunityValues) {

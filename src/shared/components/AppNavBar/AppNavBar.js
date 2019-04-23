@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 export default class AppNavBar extends React.Component {
   render() {
     return (
-      <Container>
+      <Container style={{ marginBottom: "33px" }}>
         <Navbar
           bg="dark"
           variant="dark"
@@ -18,10 +18,21 @@ export default class AppNavBar extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Link to="/"> Home </Link>
-              <Link to="/demo"> Opportunities </Link>
-              <Link to="/settings"> Setting </Link>
-              <Link to="/accounts"> Accounts </Link>
+              <Nav.Link>
+                <Link to="/"> Home </Link>
+              </Nav.Link>
+
+              <Nav.Link>
+                <Link to="/demo"> Opportunities </Link>
+              </Nav.Link>
+
+              <Nav.Link>
+                <Link to="/accounts"> Accounts </Link>
+              </Nav.Link>
+
+              <Nav.Link>
+                <Link to="/settings"> Setting </Link>
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
