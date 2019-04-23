@@ -30,10 +30,6 @@ export default class AllOppDash extends React.PureComponent {
               <td>$23,000</td>
               <td>Negotiation</td>
               <td>122/200</td>
-              <td>
-                <button type="button">Edit</button>
-                <button type="button">Delete</button>
-              </td>
             </tr>
             <tr>
               <td>2</td>
@@ -53,6 +49,7 @@ export default class AllOppDash extends React.PureComponent {
                   index={index}
                   opportunity={opportunity}
                   allStageTotalScore={this.props.allStageTotalScore}
+                  history={this.props.history}
                 />
               );
             })}

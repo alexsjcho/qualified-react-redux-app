@@ -1,6 +1,14 @@
 import React from "react";
 
 export default class OpportunityRow extends React.PureComponent {
+  goToOpportunity = e => {
+    const {
+      history,
+      opportunity: { opportunityId }
+    } = this.props;
+    history.push(`/opportunity/${opportunityId}`);
+  };
+
   render() {
     const {
       opportunity: {
@@ -8,7 +16,6 @@ export default class OpportunityRow extends React.PureComponent {
         opportunityName,
         closeDate,
         moneyValue,
-        opportunityId,
         currentStage,
         stages = []
       },
@@ -29,7 +36,9 @@ export default class OpportunityRow extends React.PureComponent {
         <td>{currentStage}</td>
         <td>{`${stagesScore}/${allStageTotalScore}`}</td>
         <td>
-          <button type="button">Edit</button>
+          <button type="button" onClick={this.goToOpportunity}>
+            Edit
+          </button>
           <button type="button">Delete</button>
         </td>
       </tr>

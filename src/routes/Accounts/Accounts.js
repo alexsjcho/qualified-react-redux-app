@@ -28,6 +28,7 @@ export default class Accounts extends React.PureComponent {
         <AllOppDash
           allStageTotalScore={this.props.allStageTotalScore}
           opportunitiesList={this.props.opportunitiesList || []}
+          history={this.props.history}
         />
         <CreateOppModalForm createOpportunity={this.props.createOpportunity} />
       </Container>
