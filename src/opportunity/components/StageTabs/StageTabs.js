@@ -35,6 +35,9 @@ export default class StageTabs extends React.Component {
                 <Nav.Item>
                   <Nav.Link eventKey="5">Negotiation</Nav.Link>
                 </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="6">Summary</Nav.Link>
+                </Nav.Item>
               </Nav>
             </Col>
             <Col sm={9}>
@@ -57,9 +60,15 @@ export default class StageTabs extends React.Component {
                 </Tab.Pane>
                 <Tab.Pane eventKey="4">
                   <QualifiedScore />
+                  <InfoTabDash />
                   <StageForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="5">
+                  <QualifiedScore />
+                  <InfoTabDash />
+                  <StageForm />
+                </Tab.Pane>
+                <Tab.Pane eventKey="6">
                   <QualifiedScore />
                   <InfoTabDash />
                   <StageForm />
