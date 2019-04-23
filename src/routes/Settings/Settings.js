@@ -3,6 +3,7 @@ import Stage from "./components/Stage";
 import { saveSettings } from "../../shared/utils";
 import AppNavBar from "../../shared/components/AppNavBar";
 import Container from "react-bootstrap/Container";
+import Badge from "react-bootstrap/Badge";
 
 export default class Settings extends React.PureComponent {
   componentDidUpdate(prevProps) {
@@ -24,9 +25,10 @@ export default class Settings extends React.PureComponent {
     return (
       <Container>
         <AppNavBar />
-        <div style={{ marginTop: "25px", fontSize: "18px" }}>
-          Total Possible Score: <span>{totalScore}</span>
-        </div>
+        <Badge style={{ marginTop: "25px", fontSize: "13px" }} variant="info">
+          Total Possible Score: {totalScore}
+        </Badge>
+
         <Stage stage={stage} submitStage={submitStage} />
       </Container>
     );

@@ -14,12 +14,12 @@ export default class AppNavBar extends React.Component {
           fixed="top"
           collapseOnSelect
           expand="lg">
-          <Navbar.Brand>Qualified</Navbar.Brand>
+          <Navbar.Brand>
+            <Link to="/"> Qualified </Link>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Link to="/"> Home </Link>
-
               <Link to="/opportunity"> Opportunities </Link>
 
               <Link to="/accounts"> Accounts </Link>

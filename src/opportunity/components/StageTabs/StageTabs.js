@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import StageForm from "../StageForm";
 import QualifiedScore from "../QualifiedScore/QualifiedScore";
+import PainPoints from "../StageForm/components/PainPoints";
 
 // import Question from "../../../routes/Settings/components/Question";
 // import Stage from "../../../routes/Settings/components/Stage";
@@ -34,9 +35,6 @@ export default class StageTabs extends React.Component {
                 <Nav.Item>
                   <Nav.Link eventKey="5">Negotiation</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                  <Nav.Link eventKey="6">Summary</Nav.Link>
-                </Nav.Item>
               </Nav>
             </Col>
             <Col sm={9}>
@@ -53,6 +51,7 @@ export default class StageTabs extends React.Component {
                   <StageForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="3">
+                  <PainPoints />
                   <QualifiedScore />
                   <StageForm />
                 </Tab.Pane>
@@ -61,10 +60,7 @@ export default class StageTabs extends React.Component {
                   <StageForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="5">
-                  <QualifiedScore />
-                  <StageForm />
-                </Tab.Pane>
-                <Tab.Pane eventKey="6">
+                  <PainPoints />
                   <QualifiedScore />
                   <StageForm />
                 </Tab.Pane>
