@@ -1,12 +1,10 @@
-import { fromJS } from "immutable";
-import reducer from "./reducer";
+import { fromJS } from 'immutable'
+import reducer from './reducer'
 
-const initialState = fromJS({
-  createdOpportunityId: undefined
-});
+const initialState = fromJS({})
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   return reducer[action.type]
     ? reducer[action.type](state, action.payload)
-    : state;
+    : state
 }
