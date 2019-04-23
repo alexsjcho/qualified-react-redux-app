@@ -2,9 +2,21 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Table from "react-bootstrap/Table";
 import OpportunityRow from "../OpportunityRow";
+import account from "../../data/account.json";
 
 export default class AllOppDash extends React.PureComponent {
   render() {
+    const {
+      closeDateData,
+      companyNameData,
+      moneyValueData,
+      // opportunityIdData,
+      opportunityNameData,
+      currentStageData,
+      scoreData,
+      indexData
+    } = account;
+
     return (
       <Container>
         <h1>All Accounts</h1>
@@ -23,23 +35,13 @@ export default class AllOppDash extends React.PureComponent {
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
-              <td>Sales Start-Up Q3 2018</td>
-              <td>Salesloft</td>
-              <td>9/12/2018</td>
-              <td>$23,000</td>
-              <td>Negotiation</td>
-              <td>122/200</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Fintech Start Up Q4 2018</td>
-              <td>Lending Club</td>
-              <td>11/23/2018</td>
-              <td>$123,000</td>
-              <td>Handle Obstacles</td>
-
-              <td>144/200</td>
+              <td>{indexData}</td>
+              <td>{opportunityNameData}</td>
+              <td>{companyNameData}</td>
+              <td> {closeDateData}</td>
+              <td>{moneyValueData}</td>
+              <td>{currentStageData}</td>
+              <td>{scoreData}</td>
             </tr>
 
             {this.props.opportunitiesList.map((opportunity, index) => {

@@ -17,8 +17,7 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <Route path="/accounts" exact component={Accounts} />
           <Route
-            path="/opportunity/:opportunityId"
-            exact
+            path="/opportunity/:opportunityId/:stageId?"
             component={OpportunityPage}
           />
           <Route path="/settings/:stageId" component={Settings} />

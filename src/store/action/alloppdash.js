@@ -8,7 +8,7 @@ export const ACTION_TYPES = {
 export function createOpportunity(initialOpportunityValues) {
   const opportunityId = insertOpportunity({
     ...initialOpportunityValues,
-    currentStage: "Qualification"
+    currentStage: "qualification"
   });
 
   return {
