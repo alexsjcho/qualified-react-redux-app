@@ -1,17 +1,26 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 import NewsItem from "./NewsItem";
 
 export default class NewsList extends React.Component {
   render() {
+    // const renderedNewsList = news.map(new => {
+    //   return (
+    //     <NewsItem
+    //     key={news.source.id}
+
+    //     />
+    //   )
+    // })
+
     return (
       <Container>
         <Row>
-          <Col>
-            <NewsItem />
-          </Col>
+          <NewsItem />
+          <NewsItem />
+          <NewsItem />
         </Row>
       </Container>
     );
