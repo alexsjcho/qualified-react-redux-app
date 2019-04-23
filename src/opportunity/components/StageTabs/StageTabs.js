@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import StageForm from "../StageForm";
 import QualifiedScore from "../QualifiedScore/QualifiedScore";
-import PainPoints from "../StageForm/components/PainPoints";
+import InfoTabDash from "../StageForm/components/InfoTabDash";
 
 // import Question from "../../../routes/Settings/components/Question";
 // import Stage from "../../../routes/Settings/components/Stage";
@@ -51,8 +51,8 @@ export default class StageTabs extends React.Component {
                   <StageForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="3">
-                  <PainPoints />
                   <QualifiedScore />
+                  <InfoTabDash />
                   <StageForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="4">
@@ -60,8 +60,8 @@ export default class StageTabs extends React.Component {
                   <StageForm />
                 </Tab.Pane>
                 <Tab.Pane eventKey="5">
-                  <PainPoints />
                   <QualifiedScore />
+                  <InfoTabDash />
                   <StageForm />
                 </Tab.Pane>
               </Tab.Content>

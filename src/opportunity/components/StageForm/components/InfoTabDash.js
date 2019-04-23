@@ -2,21 +2,20 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Goals from "./Goals";
+import PainPoints from "./PainPoints";
 
-import AllStageScore from "../AllStageScore/AllStageScore";
-import DisplayNews from "../DisplayNews";
-
-export default class Dashboard extends React.Component {
+export default class InfoTabDash extends React.Component {
   render() {
     return (
-      <Container style={{ marginBottom: "2rem" }}>
+      <Container style={{ marginTop: "2rem" }}>
         <Row>
           <Col>
-            <AllStageScore />
+            <Goals />
           </Col>
 
           <Col>
-            <DisplayNews />
+            <PainPoints />
           </Col>
         </Row>
       </Container>

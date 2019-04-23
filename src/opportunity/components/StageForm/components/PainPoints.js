@@ -27,10 +27,6 @@ export default class PainPoints extends React.PureComponent {
           <Card>
             <CardBody>
               <ListGroup variant="flush">
-                <ListGroup.Item variant="primary">
-                  Metrics: "Lorem Ipsum je demonstrativní výplňový text
-                  používaný v tiskařském a knihařském průmyslu. "
-                </ListGroup.Item>
                 <ListGroup.Item variant="danger">
                   Problems: "Lorem Ipsum，也称乱数假文或者哑元文本，
                   是印刷及排版领域所常用的虚拟文字。"{" "}
@@ -38,10 +34,6 @@ export default class PainPoints extends React.PureComponent {
                 <ListGroup.Item variant="warning">
                   Painpoints: "Lorem Ipsum jest tekstem stosowanym jako
                   przykładowy wypełniacz w przemyśle poligraficznym. "
-                </ListGroup.Item>
-                <ListGroup.Item variant="warning">
-                  Need: "Lorem Ipsum jest tekstem stosowanym jako przykładowy
-                  wypełniacz w przemyśle poligraficznym. "
                 </ListGroup.Item>
                 <ListGroup.Item variant="warning">
                   Implications: "O Lorem Ipsum é um texto modelo da indústria
