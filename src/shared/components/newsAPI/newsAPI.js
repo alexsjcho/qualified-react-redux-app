@@ -12,13 +12,11 @@ import axios from "axios";
 // });
 
 const KEY = "a310131ea6924d1591c9630b13d83e68";
-let companyNews = `q=${companyName}`;
 let dateToday = new Date().toLocaleDateString();
 
 export default axios.create({
   baseURL: "https://newsapi.org/v2/top-headlines",
   params: {
-    query: companyNews,
     from: dateToday,
     totalResults: 3,
     key: KEY
