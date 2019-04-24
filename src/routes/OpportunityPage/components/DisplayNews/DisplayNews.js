@@ -1,7 +1,7 @@
 import React from "react";
 import NewsSearchBar from "./components/NewsSearchBar";
 import NewsList from "./components/NewsList";
-import newsAPI from "../../../../shared/components/newsAPI/newsAPI";
+import newsAPI from "./newsAPI/newsAPI";
 
 export default class DisplayNews extends React.Component {
   state = {
