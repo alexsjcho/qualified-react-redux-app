@@ -35,14 +35,14 @@ export default class StageForm extends React.PureComponent {
     const { stageSettings } = this.props
     return (
       <Form onSubmit={this.handleSubmit}>
-        <h2>{stageSettings.stageLabel}</h2>
+        <h1>{stageSettings.stageLabel}</h1>
         {stageSettings.sections.map((sectionSetting, index) => {
           return (
             <Section
               settings={sectionSetting}
-              section={this.getSectionValues()}
+              section={this.getSectionValues(sectionSetting.sectionId)}
               sectionIndex={index}
-              key={section.sectionId}
+              key={sectionSetting.sectionId}
               updateSection={this.updateSection}
             />)
         })}
