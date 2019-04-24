@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import Dashboard from "../Dashboard/index";
-import StageTabs from "../StageTabs";
-import Navbar from "react-bootstrap/Navbar";
+import React from 'react'
+import Dashboard from '../Dashboard/index'
+import StageTabs from '../StageTabs'
+import Navbar from 'react-bootstrap/Navbar'
 
-class Opportunity extends Component {
-  render() {
-    const { opportunity, stageSettings } = this.props;
+class Opportunity extends React.PureComponent {
+  render () {
+    const { stageSettings, stageId, stage } = this.props
     return (
       <div>
         <Navbar />
         <Dashboard />
-        <StageTabs opportunity={this.props.opportunity} />
+        <StageTabs stage={stage} stageId={stageId} stageSettings={stageSettings} />
       </div>
-    );
+    )
   }
 }
 
-export default Opportunity;
+export default Opportunity
