@@ -25,13 +25,9 @@ export const getCurrentStageSettings = createSelector(
 export const getOpportunityStage = createSelector(
   [getStageId, getOpportunityData],
   (stageId, opportunity) => {
-    if (opportunity && opportunity.get('stages')) {
-      return opportunity.get('stages').find(stage => {
-        return stage.get('stageId') === stageId
-      })
-    } else {
-      return null
-    }
+    return opportunity.get('stages').find(stage => {
+      return stage.get('stageId') === stageId
+    })
   }
 )
 
