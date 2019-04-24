@@ -21,10 +21,9 @@ export default class StageForm extends React.PureComponent {
     })
   }
 
-  getSectionValues (sectionId) {
+  getSectionValues (index) {
     const sections = this.state.stage.sections || []
-    const sectionValue = sections.find(section => section.sectionId === sectionId) || {}
-    return sectionValue
+    return sections[index] || {}
   }
 
   // TODO: add action and save stage in opportunity
@@ -39,7 +38,7 @@ export default class StageForm extends React.PureComponent {
           return (
             <Section
               settings={sectionSetting}
-              section={this.getSectionValues(sectionSetting.sectionId)}
+              section={this.getSectionValues(index)}
               sectionIndex={index}
               key={sectionSetting.sectionId}
               updateSection={this.updateSection}

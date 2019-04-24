@@ -6,6 +6,8 @@ export default class Section extends React.PureComponent {
   updateQuestion = (questionIndex, question) => {
     const { section, updateSection, sectionIndex } = this.props;
     const newSection = { ...section };
+    const questions = newSection.question || []
+    newSection.questions = questions
     newSection.questions[questionIndex] = question;
     updateSection(sectionIndex, newSection);
   };

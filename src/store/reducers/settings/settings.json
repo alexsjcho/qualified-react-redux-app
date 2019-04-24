@@ -22,7 +22,7 @@
                   "points": 0
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "Please add comments here",
               "required": true,
               "hasPersonas": true
             }
