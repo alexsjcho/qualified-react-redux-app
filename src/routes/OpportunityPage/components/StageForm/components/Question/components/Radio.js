@@ -15,7 +15,7 @@ export default class Radio extends React.PureComponent {
   } 
 
   render () {
-    const { settings, questionId } = this.props
+    const { settings, questionId, required } = this.props
     return (
       <FormGroup>
         {settings.options.map((optionSetting, index) => {
@@ -28,6 +28,7 @@ export default class Radio extends React.PureComponent {
                 checked={option.value === optionSetting.value}
                 value={optionSetting.value}
                 onChange={this.onChange}
+                required={required}
               />
               {optionSetting.value}
             </Label>
