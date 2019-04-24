@@ -5,7 +5,7 @@ import Accounts from "./routes/Accounts";
 import Home from "./routes/Home";
 import NotFound from "./routes/NotFound";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import OpportunityPage from "./routes/OpportunityPage/OpportunityPage";
+import OpportunityPage from "./routes/OpportunityPage";
 import AppNavBar from "./shared/components/AppNavBar";
 
 class App extends Component {

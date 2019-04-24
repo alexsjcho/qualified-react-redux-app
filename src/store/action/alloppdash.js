@@ -1,7 +1,7 @@
 import {
   insertOpportunity,
-  getAllOpportunities,
-  removeOpportunity
+  getAllOpportunities
+  // removeOpportunity
 } from "../../shared/utils";
 
 export const ACTION_TYPES = {

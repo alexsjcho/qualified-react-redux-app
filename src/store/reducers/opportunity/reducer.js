@@ -1,6 +1,10 @@
-// import { fromJS } from "immutable";
-// import { ACTION_TYPES } from '../../action/opportunity'
+import { fromJS } from "immutable";
+import { ACTION_TYPES } from "../../action/opportunity";
 
-let reducer = {}
+let reducer = {};
 
-export default reducer
+reducer[ACTION_TYPES.SET_OPPORTUNITY] = (state, { opportunity }) => {
+  return state.set("data", fromJS(opportunity));
+};
+
+export default reducer;

@@ -39,7 +39,7 @@ export default class AllOppDash extends React.PureComponent {
               <td>{opportunityNameData}</td>
               <td>{companyNameData}</td>
               <td> {closeDateData}</td>
-              <td>{moneyValueData}</td>
+              <td>${moneyValueData}</td>
               <td>{currentStageData}</td>
               <td>{scoreData}</td>
             </tr>

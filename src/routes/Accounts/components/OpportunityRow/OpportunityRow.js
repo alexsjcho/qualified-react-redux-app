@@ -32,7 +32,7 @@ export default class OpportunityRow extends React.PureComponent {
         <td>{opportunityName}</td>
         <td>{companyName}</td>
         <td>{closeDate}</td>
-        <td>{moneyValue}</td>
+        <td>${moneyValue}</td>
         <td>{currentStage}</td>
         <td>{`${stagesScore}/${allStageTotalScore}`}</td>
         <td>
