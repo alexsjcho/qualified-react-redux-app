@@ -1,5 +1,7 @@
 import { createSelector } from "reselect";
 
+// TODO: Refactor selectors to use getIn where applicable
+
 const getSettingStages = state => state.get("settings").get("stages");
 const getStageId = (state, props) =>
   props.stageId || (props.match && props.match.params.stageId);
@@ -12,10 +14,21 @@ export const getCreatedOpportunityId = state =>
 export const getOpportunitiesList = state =>
   state.get("allOppDash").get("opportunitiesList");
 
+export const getOpportunityData = state => state.getIn(["opportunity", "data"]);
+
 export const getCurrentStageSettings = createSelector(
   [getSettingStages, getStageId],
   (stages, stageId) => {
     return stages.find(stage => stage.get("stageId") === stageId);
+  }
+);
+
+export const getOpportunityStage = createSelector(
+  [getStageId, getOpportunityData],
+  (stageId, opportunity) => {
+    return opportunity.get("stages").find(stage => {
+      return stage.get("stageId") === stageId;
+    });
   }
 );
 

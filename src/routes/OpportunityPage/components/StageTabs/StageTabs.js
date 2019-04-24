@@ -7,6 +7,7 @@ import Container from "react-bootstrap/Container";
 import StageForm from "../StageForm";
 import QualifiedScore from "../QualifiedScore/QualifiedScore";
 import InfoTabDash from "../StageForm/components/InfoTabDash";
+import { Link } from "react-router-dom";
 
 // import Question from "../../../routes/Settings/components/Question";
 // import Stage from "../../../routes/Settings/components/Stage";
@@ -21,59 +22,28 @@ export default class StageTabs extends React.Component {
             <Col sm={3}>
               <Nav variant="tabs" className="flex-column">
                 <Nav.Item>
-                  <Nav.Link eventKey="1">Qualification</Nav.Link>
+                  <Link to="qualification">Qualification</Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="2">Discovery</Nav.Link>
+                  <Link to="discovery">Discovery</Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="3">Demo</Nav.Link>
+                  <Link to="demo">Demo</Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="4">Obstacles</Nav.Link>
+                  <Link to="obstacles">Obstacles</Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="5">Negotiation</Nav.Link>
+                  <Link to="negotiation">Negotiation</Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link eventKey="6">Summary</Nav.Link>
+                  <Link to="summary">Summary</Link>
                 </Nav.Item>
               </Nav>
             </Col>
             <Col sm={9}>
-              <Tab.Content>
-                <Tab.Pane eventKey="1">
-                  {/* <Question question={question} /> */}
-                  {/* <Stage stage={stage} submitStage={submitStage} /> */}
-                  <QualifiedScore />
-                  <StageForm />
-                </Tab.Pane>
-
-                <Tab.Pane eventKey="2">
-                  <QualifiedScore />
-                  <StageForm />
-                </Tab.Pane>
-                <Tab.Pane eventKey="3">
-                  <QualifiedScore />
-                  <InfoTabDash />
-                  <StageForm />
-                </Tab.Pane>
-                <Tab.Pane eventKey="4">
-                  <QualifiedScore />
-                  <InfoTabDash />
-                  <StageForm />
-                </Tab.Pane>
-                <Tab.Pane eventKey="5">
-                  <QualifiedScore />
-                  <InfoTabDash />
-                  <StageForm />
-                </Tab.Pane>
-                <Tab.Pane eventKey="6">
-                  <QualifiedScore />
-                  <InfoTabDash />
-                  <StageForm />
-                </Tab.Pane>
-              </Tab.Content>
+              <QualifiedScore />
+              <StageForm />
             </Col>
           </Row>
         </Tab.Container>

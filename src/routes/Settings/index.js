@@ -1,9 +1,9 @@
 import Settings from "./Settings";
 import { connect } from "react-redux";
 import {
-  getCurrentStage,
+  getCurrentStageSettings,
   getSettings,
-  getTotalStageScore
+  getMaxPossibleStageScore
 } from "../../shared/selectors";
 import { submitStage, updateStageScore } from "../../store/action/settings";
 import withImmutablePropsToJS from "with-immutable-props-to-js";
@@ -15,9 +15,9 @@ const mapDispatchToProps = {
 
 function mapStateToProps(state, ownProps) {
   return {
-    stage: getCurrentStage(state, ownProps),
+    stage: getCurrentStageSettings(state, ownProps),
     settings: getSettings(state),
-    totalScore: getTotalStageScore(state, ownProps)
+    totalScore: getMaxPossibleStageScore(state, ownProps)
   };
 }
 

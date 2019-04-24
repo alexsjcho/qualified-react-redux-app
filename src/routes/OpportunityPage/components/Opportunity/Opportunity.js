@@ -5,11 +5,12 @@ import Navbar from "react-bootstrap/Navbar";
 
 class Opportunity extends Component {
   render() {
+    const { opportunity, stageSettings } = this.props;
     return (
       <div>
         <Navbar />
         <Dashboard />
-        <StageTabs />
+        <StageTabs opportunity={this.props.opportunity} />
       </div>
     );
   }
