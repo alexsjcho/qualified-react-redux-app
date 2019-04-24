@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import StageForm from '../StageForm'
 import QualifiedScore from '../QualifiedScore/QualifiedScore'
-import InfoTabDash from '../StageForm/components/InfoTabDash'
+// import InfoTabDash from '../StageForm/components/InfoTabDash'
 import { Link } from 'react-router-dom'
 
 // import Question from "../../../routes/Settings/components/Question";

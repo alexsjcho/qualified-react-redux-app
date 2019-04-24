@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
+import { Button, Form } from 'reactstrap'
 import Section from './components/Section'
 
 export default class StageForm extends React.PureComponent {
@@ -31,7 +31,6 @@ export default class StageForm extends React.PureComponent {
   handleSubmit = (event) => { event.preventDefault(); console.log('submit'); }
   
   render () {
-    const { stage } = this.state.stage
     const { stageSettings } = this.props
     return (
       <Form onSubmit={this.handleSubmit}>
