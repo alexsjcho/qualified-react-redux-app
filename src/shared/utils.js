@@ -63,3 +63,14 @@ export function getAllOpportunities() {
 
   return opportunities;
 }
+
+/**
+ * Deletes an opportunity for the Account AllOppDash
+ * @param {Object} loadAllOpportunities
+ * @returns {state} The remaining undeleted opportunities
+ */
+export function removeOpportunity() {
+  let remainingOpportunities = loadOpportunity();
+
+  return remainingOpportunities;
+}
