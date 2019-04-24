@@ -8,8 +8,8 @@ import withImmutablePropsToJS from "with-immutable-props-to-js";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    stageSettings: getCurrentStageSettings(state, ownProps),
-    stage: getOpportunityStage(state, ownProps)
+    stageSettings: getCurrentStageSettings(state, ownProps)
+    // stage: getOpportunityStage(state, ownProps)
   };
 };
 

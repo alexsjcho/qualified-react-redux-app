@@ -55,7 +55,8 @@ export function loadOpportunity(opportunityId) {
 
 /**
  * This function loads all opportunities from localstorage to AllOppDash
- * TODO: Add docs
+ * @param {Object} getAllOpportunities
+ * @returns {state} of all the existing opportunities
  */
 export function getAllOpportunities() {
   let opportunities = window.localStorage.getItem(OPPORTUNITIES_KEY) || "[]";

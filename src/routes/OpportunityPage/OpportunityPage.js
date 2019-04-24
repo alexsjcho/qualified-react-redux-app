@@ -26,7 +26,6 @@ export default class OpportunityPage extends React.PureComponent {
           opportunity={this.props.opportunity}
           stageId={this.props.stageId}
         />
-        )}
       </div>
     )
   }

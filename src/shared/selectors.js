@@ -1,18 +1,17 @@
 import { createSelector } from 'reselect'
 
-// TODO: Refactor selectors to use getIn where applicable
-
 const getSettingStages = state => state.get('settings').get('stages')
-const getStageId = (state, props) =>
+
+export const getStageId = (state, props) =>
   props.stageId || (props.match && props.match.params.stageId)
 
 export const getSettings = state => state.get('settings')
 
 export const getCreatedOpportunityId = state =>
-  state.get('allOppDash').get('createdOpportunityId')
+  state.getIn(['allOppDash', 'createdOpportunityId'])
 
 export const getOpportunitiesList = state =>
-  state.get('allOppDash').get('opportunitiesList')
+  state.getIn(['allOppDash', 'opportunitiesList'])
 
 export const getOpportunityData = state => state.getIn(['opportunity', 'data'])
 
