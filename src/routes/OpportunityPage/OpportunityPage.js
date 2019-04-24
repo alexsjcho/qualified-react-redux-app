@@ -1,34 +1,33 @@
-import React from "react";
-import Opportunity from "./components/Opportunity";
-import AppNavBar from "../../shared/components/AppNavBar";
+import React from 'react'
+import Opportunity from './components/Opportunity'
+import AppNavBar from '../../shared/components/AppNavBar'
 
 export default class OpportunityPage extends React.PureComponent {
-  componentDidMount() {
+  componentDidMount () {
     // call the action that loads opportunity
 
-    this.props.loadOpportunityData(this.props.match.params.opportunityId);
+    this.props.loadOpportunityData(this.props.match.params.opportunityId)
   }
 
-  componentDidUpdate(prevProps) {
-    const { history, stageId, opportunity } = this.props;
+  componentDidUpdate (prevProps) {
+    const { history, stageId, opportunity } = this.props
     if (opportunity.opportunityId && !stageId) {
       history.replace(
         `/opportunity/${opportunity.opportunityId}/${opportunity.currentStage}`
-      );
+      )
     }
   }
 
-  render() {
+  render () {
     return (
       <div>
         <AppNavBar />
-        {this.props.opportunity && this.props.opportunity.stages && (
-          <Opportunity
-            opportunity={this.props.opportunity}
-            stageId={this.props.stageId}
-          />
+        <Opportunity
+          opportunity={this.props.opportunity}
+          stageId={this.props.stageId}
+        />
         )}
       </div>
-    );
+    )
   }
 }
