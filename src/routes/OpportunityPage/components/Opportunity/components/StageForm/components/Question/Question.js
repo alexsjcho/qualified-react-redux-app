@@ -4,11 +4,11 @@ import { Input } from "reactstrap";
 import Select from "./components/Select";
 
 export default class Question extends React.PureComponent {
-  setQuestionValue = userInput => {
+  setQuestionValue = (userInput, scoreDifference) => {
     const { index, question, updateQuestion } = this.props;
     const newQuestion = { ...question };
     newQuestion.userInput = userInput;
-    updateQuestion(index, newQuestion);
+    updateQuestion(index, newQuestion, scoreDifference);
   };
 
   setCommentValue = event => {

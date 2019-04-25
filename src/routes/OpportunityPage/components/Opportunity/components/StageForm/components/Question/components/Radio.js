@@ -4,9 +4,10 @@ import { Label, Input, FormGroup } from 'reactstrap'
 export default class Radio extends React.PureComponent {
 
   onChange = (event) => {
-    const { settings, setQuestionValue } = this.props
+    const { userInput, settings, setQuestionValue } = this.props
     const option = settings.options.find(option => option.value === event.target.value)
-    setQuestionValue(option)
+    const scoreDifference = option.points - userInput.points
+    setQuestionValue(option, scoreDifference)
   }
 
   render () {

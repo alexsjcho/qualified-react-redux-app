@@ -10,11 +10,12 @@ export default class StageForm extends React.PureComponent {
     }
   }
 
-  updateSection = (sectionIndex, section) => {
+  updateSection = (sectionIndex, section, scoreDifference = 0) => {
     this.setState(prevState => {
       const nextStage = { ...prevState.stage };
       nextStage.sections = nextStage.sections || []
       nextStage.sections[sectionIndex] = section
+      nextStage.score += scoreDifference
       return {
         stage: nextStage
       }
@@ -33,7 +34,10 @@ export default class StageForm extends React.PureComponent {
     const { stageSettings } = this.props
     return (
       <Form onSubmit={this.handleSubmit}>
-        <h1>{stageSettings.stageLabel}</h1>
+        <div style={{display: 'flex', justifyContent: 'space-between'}}>
+          <h1>{stageSettings.stageLabel}</h1>
+          <span style={{fontSize: '2.5rem'}}>{this.state.stage.score || 0}</span>
+        </div>
         {stageSettings.sections.map((sectionSetting, index) => {
           return (
             <Section

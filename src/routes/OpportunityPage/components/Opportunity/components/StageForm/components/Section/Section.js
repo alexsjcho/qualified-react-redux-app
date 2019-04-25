@@ -3,13 +3,13 @@ import { FormGroup } from "reactstrap";
 import Question from "../Question";
 
 export default class Section extends React.PureComponent {
-  updateQuestion = (questionIndex, question) => {
+  updateQuestion = (questionIndex, question, scoreDifference = 0) => {
     const { section, updateSection, sectionIndex } = this.props;
     const newSection = { ...section };
     const questions = newSection.question || [];
     newSection.questions = questions;
     newSection.questions[questionIndex] = question;
-    updateSection(sectionIndex, newSection);
+    updateSection(sectionIndex, newSection, scoreDifference);
   };
 
   getQuestionValue(index) {
