@@ -28,9 +28,8 @@ export default class StageForm extends React.PureComponent {
   }
 
   handleSubmit = (event) => {
-    // 1. create an action that gets called after the submit
-    // 2. the reducer will pickup on that action
-    // 3. the reducer will store the information on the redux state
+    const { saveOpportunityStage } = this.props
+    saveOpportunityStage(this.state.stage)
   }
   
   render () {

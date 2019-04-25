@@ -1,5 +1,6 @@
 import Opportunity from './Opportunity'
 import { connect } from 'react-redux'
+import { saveOpportunityStage } from '../../../../store/action/opportunity'
 import {
   getCurrentStageSettings,
   getOpportunityStage
@@ -13,7 +14,13 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = {}
+const mapDispatchToProps = (dispatch, ownProps) => {
+  return {
+    saveOpportunityStage: (stage) => {
+      dispatch(saveOpportunityStage(ownProps.opportunityId, stage))
+    }
+  }
+}
 
 export default connect(
   mapStateToProps,

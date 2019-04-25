@@ -23,7 +23,7 @@ export default class OpportunityPage extends React.PureComponent {
       <div>
         <AppNavBar />
         {this.props.stageId && (
-          <Opportunity stageId={this.props.stageId} />
+          <Opportunity oportunityId={this.props.opportunity.opportunityId} stageId={this.props.stageId} />
         )}
       </div>
     )
