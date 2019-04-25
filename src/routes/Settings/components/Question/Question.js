@@ -12,14 +12,6 @@ export default class Question extends React.PureComponent {
     updateQuestion(index, newQuestion)
   };
 
-  onLabelChange = event => {
-    const { updateQuestion, index, question } = this.props
-    const value = event.target.value;
-    const newQuestion = { ...question }
-    newQuestion.label = value
-    updateQuestion(index, newQuestion)
-  };
-
   onInputTypeChange = event => {
     const { updateQuestion, index, question } = this.props
     const value = event.target.value;
@@ -80,15 +72,6 @@ export default class Question extends React.PureComponent {
           name="question"
           id={`${questionId}-question`}
           value={question.question}
-        />
-
-        <Label for={`${questionId}-input-label`}>Input label</Label>
-        <Input
-          onChange={this.onLabelChange}
-          type="text"
-          name="inputlabel"
-          id={`${questionId}-input-label`}
-          value={question.label}
         />
 
         <Input
