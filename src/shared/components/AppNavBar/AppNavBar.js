@@ -20,10 +20,7 @@ export default class AppNavBar extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Link to="/opportunity"> Opportunities </Link>
-
               <Link to="/accounts"> Accounts </Link>
-
               <Link to="/settings"> Setting </Link>
             </Nav>
           </Navbar.Collapse>

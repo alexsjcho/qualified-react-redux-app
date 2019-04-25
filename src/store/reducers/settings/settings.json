@@ -9,20 +9,27 @@
           "label": "Situational Questions",
           "questions": [
             {
-              "label": "Set questions to understand client's situation",
               "question": "Why are you considering our company's product?",
               "type": "radio",
               "options": [
                 {
-                  "value": "yes",
+                  "value": "Just exploring, no urgent need, nice to have",
+                  "points": 5
+                },
+                {
+                  "value": "My manager instructed me to explore your solution as an option to fix our department problem",
                   "points": 10
                 },
                 {
-                  "value": "no",
-                  "points": 0
+                  "value": "The executive team noticed that we are having this problem on multiple department levels",
+                  "points": 15
+                },
+                {
+                  "value": "Our CXO made your solution a potential fix to our problems because it affects the entire company",
+                  "points": 20
                 }
               ],
-              "commentPlaceholder": "Please add comments here",
+              "commentPlaceholder": "Client's company is losing a lot of time and money because of their problem and the entire executive leadership team holds this solution in high priority",
               "required": true,
               "hasPersonas": true
             }
@@ -33,9 +40,8 @@
           "label": "Problem",
           "questions": [
             {
-              "label": "What are their problems? What is their payout?",
-              "question": "how much money are you losing per month?",
-              "type": "select",
+              "question": "how much money and time are you losing/spending per month?",
+              "type": "radio",
               "options": [
                 {
                   "value": "less than $500",
@@ -50,7 +56,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "Client is losing $12,000 and spending combined 1000 hours of engineering time per month ",
               "required": true,
               "hasPersonas": true
             }
@@ -61,24 +67,23 @@
           "label": "Implications",
           "questions": [
             {
-              "label": "Consequences of customer's problems",
-              "question": "how much money are you losing per month?",
-              "type": "select",
+              "question": "If you continue to have this problem, what would happen?",
+              "type": "radio",
               "options": [
                 {
-                  "value": "less than $500",
+                  "value": "Your solution is nice to have, we won't see ramifications until 3+ years out",
                   "points": 5
                 },
                 {
-                  "value": "$500 - $2000",
+                  "value": "Your solution is needed, however, its not an, urgent high priority, we won't see ramifications 2+ years out ",
                   "points": 10
                 },
                 {
-                  "value": "more than $2000",
+                  "value": "Your solution is an urgent need right now, without your solution, negative ramifications will happen in < 1 year ",
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "Client said that our solution is an immediate urgent need that will solve their immediate problems now",
               "required": true,
               "hasPersonas": true
             }
@@ -89,24 +94,23 @@
           "label": "Need for Change",
           "questions": [
             {
-              "label": "Why do you need to change and fix this problem?",
-              "question": "how much money are you losing per month?",
+              "question": "What need does our solution satisfy for your business?",
               "type": "radio",
               "options": [
                 {
-                  "value": "less than $500",
+                  "value": "Your solution is nice to have because it does not directly impact our bottom line business product",
                   "points": 5
                 },
                 {
-                  "value": "$500 - $2000",
+                  "value": "Your solution aligns with minior dependencies of our core business product, however, its not a direct solution",
                   "points": 10
                 },
                 {
-                  "value": "more than $2000",
+                  "value": "Your solution is fundamental to our business's core product and without it, we will lose revenue and profit",
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "Client said without our solution, their core product will collapse, their customers will churn, and it will negatively impact their revenue",
               "required": true,
               "hasPersonas": true
             }
@@ -117,20 +121,23 @@
           "label": "Timeline",
           "questions": [
             {
-              "label": "Set deal close timeline",
-              "question": "when do you want this change to happen?",
+              "question": "When do you want this change to happen?",
               "type": "radio",
               "options": [
                 {
-                  "value": "yes",
+                  "value": "This change is a nice to have, an individual contributor wants this change, but not that important or urgent to managers or executives, 1+ year timeline",
+                  "points": 5
+                },
+                {
+                  "value": "This change is a priority from managers, but not that important or urgent to executives, 6+ months timeline",
                   "points": 10
                 },
                 {
-                  "value": "no",
-                  "points": 0
+                  "value": "This change is a priority from multiple executives, <6 months timeline",
+                  "points": 20
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "The client's executive leadership is onboard in implementing our solution and making a change",
               "required": true,
               "hasPersonas": true
             }
@@ -141,24 +148,23 @@
           "label": "Objections",
           "questions": [
             {
-              "label": "What is the severity of concern?",
-              "question": "What concerns the client has?",
-              "type": "select",
+              "question": "What concerns does the client have?",
+              "type": "radio",
               "options": [
                 {
-                  "value": "big",
+                  "value": "Big: deal breaker, solution does not fit their needs",
+                  "points": -15
+                },
+                {
+                  "value": "Medium: this needs to be addressed before purchase",
+                  "points": -10
+                },
+                {
+                  "value": "Small: requested changes or features nice to have, but not an obstacle for deal to close",
                   "points": -5
-                },
-                {
-                  "value": "medium",
-                  "points": -4
-                },
-                {
-                  "value": "small",
-                  "points": -3
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "The client said that this objection is a deal breaker. X is a big deal",
               "required": true,
               "hasPersonas": true
             }
@@ -169,20 +175,27 @@
           "label": "Next Meeting",
           "questions": [
             {
-              "label": "Set next meeting",
-              "question": "When is your next meeting?",
+              "question": "When is your next meeting and with who?",
               "type": "radio",
               "options": [
                 {
-                  "value": "yes",
+                  "value": "Individual Contributor",
+                  "points": 5
+                },
+                {
+                  "value": "Manager",
                   "points": 10
                 },
                 {
-                  "value": "no",
-                  "points": 0
+                  "value": "Executive",
+                  "points": 15
+                },
+                {
+                  "value": "CXO",
+                  "points": 20
                 }
               ],
-              "commentPlaceholder": "Placeholder",
+              "commentPlaceholder": "Client agreed for a meeting next week with an executive sponsor on 04/25/2019 at 14:00 PST",
               "required": true,
               "hasPersonas": true
             }
@@ -202,10 +215,23 @@
           "label": "Customer Success Metrics",
           "questions": [
             {
-              "label": "Set ideal customer personal?",
-              "question": "who makes the buying decision?",
-              "type": "text input",
-              "commentPlaceholder": "Placeholder",
+              "question": "Who are involved in making the buying decision?",
+              "type": "radio",
+              "options": [
+                {
+                  "value": "Influencers, they directly benefit from the solution, but not involved in buying decision",
+                  "points": 5
+                },
+                {
+                  "value": "Champions, they are manager level, have some influence in buying decision, but not main buying decision maker",
+                  "points": 10
+                },
+                {
+                  "value": "Decision Maker, they are executive level, they make the purchase decision",
+                  "points": 20
+                }
+              ],
+              "commentPlaceholder": "Client said that the VP of Engineering needs to agree to purchase and VP Finance provides the budget",
               "required": true,
               "hasPersonas": true
             }
@@ -216,7 +242,6 @@
           "label": "Economic Buyer",
           "questions": [
             {
-              "label": "Economic Buyer",
               "question": "Who's in charge of the budget for this project?",
               "type": "text",
               "options": [
@@ -241,7 +266,6 @@
           "commentPlaceholder": "Placeholder",
           "questions": [
             {
-              "label": "Configure budget target",
               "question": "Does this company has $15,000 budget?",
               "type": "radio",
               "options": [
@@ -265,7 +289,6 @@
           "label": "Decision Criteria",
           "questions": [
             {
-              "label": "What's The Decision Making Checklist?",
               "question": "what are the top 3 must have for you to purchase a solution?",
               "type": "text-area",
               "options": [
@@ -289,7 +312,6 @@
           "label": "Decision Process",
           "questions": [
             {
-              "label": "Decision Process and Steps",
               "question": "how long is the decision making process and what are the steps?",
               "type": "list",
               "options": [
@@ -313,7 +335,6 @@
           "label": "Identify Pain",
           "questions": [
             {
-              "label": "What are their problems? What is their payout?",
               "question": "how much money are you losing per month? | how much time are you losing? | how many employees are quiting?",
               "type": "select",
               "options": [
@@ -341,7 +362,6 @@
           "label": "Economic Buyer",
           "questions": [
             {
-              "label": "Champion",
               "question": "Besides yourself, who else is pushing for this change?",
               "type": "select",
               "options": [
@@ -369,7 +389,6 @@
           "label": "Objections",
           "questions": [
             {
-              "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
               "type": "select",
               "options": [
@@ -397,7 +416,6 @@
           "label": "Next Meeting",
           "questions": [
             {
-              "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "radio",
               "options": [
@@ -430,7 +448,6 @@
           "label": "Demo",
           "questions": [
             {
-              "label": "Configure budget target",
               "question": "Does this company has $15,000 budget?",
               "type": "radio",
               "options": [
@@ -454,7 +471,6 @@
           "label": "Objections",
           "questions": [
             {
-              "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
               "type": "select",
               "options": [
@@ -482,7 +498,6 @@
           "label": "Next Meeting",
           "questions": [
             {
-              "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "radio",
               "options": [
@@ -515,7 +530,6 @@
           "label": "Handle Obstacles",
           "questions": [
             {
-              "label": "What is the severity of concern?",
               "question": "What concerns the client has?",
               "type": "select",
               "options": [
@@ -539,7 +553,6 @@
           "label": "Need for Change",
           "questions": [
             {
-              "label": "Why do you need to change and fix this problem?",
               "question": "how much money are you losing per month?",
               "type": "select",
               "options": [
@@ -563,7 +576,6 @@
           "label": "Impact of Purchase",
           "questions": [
             {
-              "label": "Consequences of customer's problems",
               "question": "how much money are you losing per month?",
               "type": "select",
               "options": [
@@ -591,7 +603,6 @@
           "label": "Access to Buyer Authority",
           "questions": [
             {
-              "label": "Buying Decision Maker",
               "question": "Who are in charge of making this buying decision?",
               "type": "text",
               "options": [
@@ -619,7 +630,6 @@
           "label": "Timeline",
           "questions": [
             {
-              "label": "Set deal close timeline",
               "question": "when do you want this change to happen?",
               "type": "radio",
               "options": [
@@ -647,7 +657,6 @@
           "label": "Next Meeting",
           "questions": [
             {
-              "label": "Set next meeting",
               "question": "When is your next meeting?",
               "type": "radio",
               "options": [
@@ -684,7 +693,6 @@
           "label": "Product Retail Value",
           "questions": [
             {
-              "label": "Seller Pricing Tier",
               "type": "select",
               "options": [
                 {
@@ -711,7 +719,6 @@
           "label": "Buyer Price Request",
           "questions": [
             {
-              "label": "Buyer Purchase Price Tier",
               "type": "select",
               "options": [
                 {
