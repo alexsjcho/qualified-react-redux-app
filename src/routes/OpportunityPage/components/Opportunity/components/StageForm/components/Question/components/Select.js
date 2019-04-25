@@ -11,7 +11,7 @@ export default class Select extends React.PureComponent {
   };
 
   render() {
-    const { settings, questionId, userInput } = this.props;
+    const { questionId } = this.props;
     return (
       <FormGroup>
         return (
@@ -33,3 +33,5 @@ export default class Select extends React.PureComponent {
     );
   }
 }
+
+//Might not need to add Select component, to make app more simple, because core feature is points based scoring form, the radio buttons are enough to help score the form

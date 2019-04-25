@@ -33,6 +33,7 @@ export default class Question extends React.PureComponent {
             setQuestionValue={this.setQuestionValue}
           />
         )}
+        {/* Might not need to add Select component, to make app more simple, because core feature is points based scoring form, the radio buttons are enough to help score the form */}
         {settings.type === "select" && (
           <span>
             <Select />{" "}
