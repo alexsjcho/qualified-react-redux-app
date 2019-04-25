@@ -6,7 +6,7 @@ export default class StageForm extends React.PureComponent {
   constructor (props) {
     super(props)
     this.state = {
-      stage: props.stage || { score: 0 }
+      stage: props.stage || { stageId: props.stageSettings.stageId, score: 0 }
     }
   }
 
@@ -27,8 +27,11 @@ export default class StageForm extends React.PureComponent {
     return sections[index] || {}
   }
 
-  // TODO: add action and save stage in opportunity
-  handleSubmit = (event) => { event.preventDefault(); console.log('submit'); }
+  handleSubmit = (event) => {
+    // 1. create an action that gets called after the submit
+    // 2. the reducer will pickup on that action
+    // 3. the reducer will store the information on the redux state
+  }
   
   render () {
     const { stageSettings } = this.props
