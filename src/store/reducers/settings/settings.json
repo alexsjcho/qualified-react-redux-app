@@ -8,6 +8,8 @@
         {
           "sectionId": "situation",
           "label": "Situational Questions",
+          "isGoal": false,
+          "isPainPoint": true,
           "questions": [
             {
               "question": "Why are you considering our company's product?",
@@ -54,6 +56,8 @@
         {
           "sectionId": "problem",
           "label": "Problem",
+          "isGoal": false,
+          "isPainPoint": true,
           "questions": [
             {
               "question": "how much money and time are you losing/spending per month?",
@@ -81,6 +85,8 @@
         {
           "sectionId": "implication",
           "label": "Implications",
+          "isGoal": false,
+          "isPainPoint": true,
           "questions": [
             {
               "question": "If you continue to have this problem, what would happen?",
@@ -108,6 +114,8 @@
         {
           "sectionId": "need",
           "label": "Need for Change",
+          "isGoal": true,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "What need does our solution satisfy for your business?",
@@ -135,6 +143,8 @@
         {
           "sectionId": "timeline",
           "label": "Timeline",
+          "isGoal": true,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "When do you want this change to happen?",
@@ -162,6 +172,8 @@
         {
           "sectionId": "objections",
           "label": "Objections",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "What concerns does the client have?",
@@ -189,6 +201,8 @@
         {
           "sectionId": "nextMeeting",
           "label": "Next Meeting",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "When is your next meeting and with who?",
@@ -230,6 +244,8 @@
         {
           "sectionId": "metrics",
           "label": "Success Metrics",
+          "isGoal": true,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "What company goals are you trying to achieve by purchasing this solution?",
@@ -257,6 +273,8 @@
         {
           "sectionId": "economicBuyer",
           "label": "Economic Buyer",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "Who is involved in making the buying decision?",
@@ -285,6 +303,8 @@
           "sectionId": "budget",
           "label": "Budget",
           "commentPlaceholder": "Placeholder",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "Does this company have minimum $15,000 budget for our normal tier product?",
@@ -312,6 +332,8 @@
         {
           "sectionId": "decisonCriteria",
           "label": "Decision Criteria",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "What are your buying criterias?",
@@ -339,6 +361,8 @@
         {
           "sectionId": "decisonProcess",
           "label": "Decision Process",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "how long is the decision making process and what are the steps?",
@@ -366,6 +390,8 @@
         {
           "sectionId": "identifyPain",
           "label": "Identify Pain",
+          "isGoal": false,
+          "isPainPoint": true,
           "questions": [
             {
               "question": "What areas are these challenges affecting your business?",
@@ -393,6 +419,8 @@
         {
           "sectionId": "champion",
           "label": "Economic Buyer",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "Who is involved in making the buying decision?",
@@ -420,6 +448,8 @@
         {
           "sectionId": "objections",
           "label": "Objections",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "What concerns does the client have?",
@@ -447,6 +477,8 @@
         {
           "sectionId": "nextMeeting",
           "label": "Next Meeting",
+          "isGoal": false,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "When is your next meeting and with who?",
