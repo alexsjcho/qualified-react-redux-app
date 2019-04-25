@@ -29,6 +29,21 @@
                   "points": 20
                 }
               ],
+              "roles": [
+                {
+                  "value": "Individual Contributor"
+                },
+                {
+                  "value": "Manager"
+                },
+                {
+                  "value": "Executive"
+                },
+                {
+                  "value": "CXO"
+                }
+              ],
+
               "commentPlaceholder": "Client's company is losing a lot of time and money because of their problem and the entire executive leadership team holds this solution in high priority",
               "required": true,
               "hasPersonas": true

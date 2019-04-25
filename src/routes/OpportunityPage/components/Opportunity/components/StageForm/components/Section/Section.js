@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { FormGroup } from "reactstrap";
 import Question from "../Question";
 
@@ -6,16 +6,16 @@ export default class Section extends React.PureComponent {
   updateQuestion = (questionIndex, question) => {
     const { section, updateSection, sectionIndex } = this.props;
     const newSection = { ...section };
-    const questions = newSection.question || []
-    newSection.questions = questions
+    const questions = newSection.question || [];
+    newSection.questions = questions;
     newSection.questions[questionIndex] = question;
     updateSection(sectionIndex, newSection);
   };
 
-  getQuestionValue (index) {
+  getQuestionValue(index) {
     const { section } = this.props;
-    const questions = section.questions || []
-    return questions[index] || {}
+    const questions = section.questions || [];
+    return questions[index] || {};
   }
 
   render() {

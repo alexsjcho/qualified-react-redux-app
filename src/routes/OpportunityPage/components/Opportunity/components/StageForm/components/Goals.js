@@ -21,7 +21,7 @@ export default class Goals extends React.PureComponent {
           color="success"
           onClick={this.toggle}
           style={{ marginBottom: "1rem" }}>
-          Customer Goals
+          Goals
         </Button>
         <Collapse isOpen={this.state.collapse}>
           <Card>
