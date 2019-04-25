@@ -23,7 +23,7 @@ export default class Question extends React.PureComponent {
     const questionId = `${sectionId}-${index}`;
     return (
       <div>
-        <span>{settings.question}</span>
+        <span style={{fontWeight: 'bold'}}>{settings.question}</span>
         {settings.type === "radio" && (
           <Radio
             required={settings.required}
