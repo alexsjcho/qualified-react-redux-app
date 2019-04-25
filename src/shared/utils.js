@@ -100,8 +100,10 @@ export function saveStage (opportunityId, stage) {
   const opportunity = loadOpportunity(opportunityId)
   const stageIndex = opportunity.stages.findIndex(currStage => currStage.stageId === stage.stageId)
   if (stageIndex === -1) {
+    opportunity.currentStage = stage.stageId
     opportunity.stages.push(stage) // insert a new stage
   } else {
+    opportunity.currentStage = stage.stageId
     opportunity.stages[stageIndex] = stage // updates an existing stage
   }
   updateOpportunity(opportunity)
