@@ -6,7 +6,7 @@ export default class Radio extends React.PureComponent {
   onChange = (event) => {
     const { userInput, settings, setQuestionValue } = this.props
     const option = settings.options.find(option => option.value === event.target.value)
-    const scoreDifference = option.points - userInput.points
+    const scoreDifference = option.points - (userInput.points || 0)
     setQuestionValue(option, scoreDifference)
   }
 
