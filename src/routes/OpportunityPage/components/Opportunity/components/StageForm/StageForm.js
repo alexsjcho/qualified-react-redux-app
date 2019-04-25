@@ -6,7 +6,7 @@ export default class StageForm extends React.PureComponent {
   constructor (props) {
     super(props)
     this.state = {
-      stage: props.stage || {}
+      stage: props.stage || { score: 0 }
     }
   }
 
