@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 
 class Opportunity extends React.PureComponent {
   render () {
-    const { stageSettings, stageId, stage, saveOpportunityStage } = this.props
+    const { stageSettings, stageId, stage, saveOpportunityStage, isSavingStage } = this.props
     return (
       <div>
         <Navbar />
@@ -15,6 +15,7 @@ class Opportunity extends React.PureComponent {
           stageId={stageId}
           stageSettings={stageSettings}
           saveOpportunityStage={saveOpportunityStage}
+          isSavingStage={isSavingStage}
         />
       </div>
     )

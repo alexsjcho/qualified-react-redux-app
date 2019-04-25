@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 
 export default class StageTabs extends React.PureComponent {
   render () {
-    const { stageSettings, stageId, stage, saveOpportunityStage } = this.props
+    const { stageSettings, stageId, stage, saveOpportunityStage, isSavingStage } = this.props
     return (
       <Container>
         <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
@@ -50,6 +50,7 @@ export default class StageTabs extends React.PureComponent {
                 stageId={stageId}
                 stageSettings={stageSettings}
                 saveOpportunityStage={saveOpportunityStage}
+                isSavingStage={isSavingStage}
               />
             </Col>
           </Row>

@@ -39,6 +39,10 @@ export default class StageForm extends React.PureComponent {
         stage: this.props.stage || { stageId: this.props.stageSettings.stageId, score: 0 }
       })
     }
+    // If isSavingStage went from true to false
+    if (prevProps.isSavingStage && !this.props.isSavingStage) {
+      alert('Stage saved successfully')
+    }
   }
 
   render () {

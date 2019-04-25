@@ -10,7 +10,8 @@ import withImmutablePropsToJS from 'with-immutable-props-to-js'
 const mapStateToProps = (state, ownProps) => {
   return {
     stageSettings: getCurrentStageSettings(state, ownProps),
-    stage: getOpportunityStage(state, ownProps)
+    stage: getOpportunityStage(state, ownProps),
+    isSavingStage: state.get('opportunity').get('isSavingStage') // TODO: Replace with selector
   }
 }
 
