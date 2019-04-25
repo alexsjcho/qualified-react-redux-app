@@ -51,6 +51,7 @@ export default class StageTabs extends React.PureComponent {
                 stageSettings={stageSettings}
                 saveOpportunityStage={saveOpportunityStage}
                 isSavingStage={isSavingStage}
+                history={this.props.history}
               />
             </Col>
           </Row>

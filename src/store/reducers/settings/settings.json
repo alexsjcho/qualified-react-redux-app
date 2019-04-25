@@ -3,6 +3,7 @@
     {
       "stageId": "qualification",
       "stageLabel": "Qualification",
+      "nextStageId": "discovery",
       "sections": [
         {
           "sectionId": "situation",
@@ -224,6 +225,7 @@
     {
       "stageId": "discovery",
       "stageLabel": "Discovery",
+      "nextStageId": "demo",
       "sections": [
         {
           "sectionId": "metrics",
@@ -481,6 +483,7 @@
     {
       "stageId": "demo",
       "stageLabel": "Demo",
+      "nextStageId": "obstacles",
       "sections": [
         {
           "sectionId": "objections",
@@ -548,6 +551,7 @@
     {
       "stageId": "obstacles",
       "stageLabel": "Obstacles",
+      "nextStageId": "negotiation",
       "sections": [
         {
           "sectionId": "obstacles",

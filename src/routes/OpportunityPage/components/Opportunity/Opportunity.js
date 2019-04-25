@@ -16,6 +16,7 @@ class Opportunity extends React.PureComponent {
           stageSettings={stageSettings}
           saveOpportunityStage={saveOpportunityStage}
           isSavingStage={isSavingStage}
+          history={this.props.history}
         />
       </div>
     )
