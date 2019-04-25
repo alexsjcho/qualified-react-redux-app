@@ -24,7 +24,7 @@ export default class Radio extends React.PureComponent {
                 onChange={this.onChange}
                 required={required}
               />
-              {optionSetting.value}
+              {`${optionSetting.value} [${optionSetting.points}pts]`}
             </Label>
           )
         })}
