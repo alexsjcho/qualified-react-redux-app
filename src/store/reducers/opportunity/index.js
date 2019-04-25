@@ -2,7 +2,7 @@ import { fromJS } from 'immutable'
 import reducer from './reducer'
 
 const initialState = fromJS({
-  data: {},
+  data: { stages: [] },
   isSavingStage: false
 })
 

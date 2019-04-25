@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import { saveOpportunityStage } from '../../../../store/action/opportunity'
 import {
   getCurrentStageSettings,
-  getOpportunityStage
+  getOpportunityStage,
+  getGoalsAndPainPoints
 } from '../../../../shared/selectors'
 import withImmutablePropsToJS from 'with-immutable-props-to-js'
 
@@ -11,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     stageSettings: getCurrentStageSettings(state, ownProps),
     stage: getOpportunityStage(state, ownProps),
-    isSavingStage: state.get('opportunity').get('isSavingStage') // TODO: Replace with selector
+    isSavingStage: state.get('opportunity').get('isSavingStage'), // TODO: Replace with selector
+    goalsAndPainPoints: getGoalsAndPainPoints(state, ownProps)
   }
 }
 

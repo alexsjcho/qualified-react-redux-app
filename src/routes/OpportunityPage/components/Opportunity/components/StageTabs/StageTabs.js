@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom'
 
 export default class StageTabs extends React.PureComponent {
   render () {
-    const { stageSettings, stageId, stage, saveOpportunityStage, isSavingStage } = this.props
+    const { stageSettings, stageId, stage, saveOpportunityStage, isSavingStage, goalsAndPainPoints } = this.props
     return (
       <Container>
         <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
@@ -44,7 +44,7 @@ export default class StageTabs extends React.PureComponent {
             <Col sm={9}>
               {/* TODO: Pass down appropriate props to render this component. Remember to handle the case where the stage doesn't exist yet. */}
               <QualifiedScore />
-              <InfoTabDash />
+              <InfoTabDash goalsAndPainPoints={goalsAndPainPoints} />
               <StageForm
                 stage={stage}
                 stageId={stageId}

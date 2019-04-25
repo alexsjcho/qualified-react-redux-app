@@ -15,6 +15,8 @@ export const getOpportunitiesList = state =>
 
 export const getOpportunityData = state => state.getIn(['opportunity', 'data'])
 
+const getAllOpportunityStages = state => state.getIn(['opportunity', 'data', 'stages'])
+
 export const getCurrentStageSettings = createSelector(
   [getSettingStages, getStageId],
   (stages, stageId) => {
@@ -69,5 +71,32 @@ export const getAllStageTotalScore = createSelector(
         accumulator + (parseInt(stage.get('score').get('totalScore')) || 0)
       )
     }, 0)
+  }
+)
+
+export const getGoalsAndPainPoints = createSelector(
+  [getSettingStages, getAllOpportunityStages],
+  (settingsStages, opportunityStages) => {
+    const goalsAndPainPoints = {
+      goals: [],
+      painPoints: []
+    }
+    opportunityStages.forEach((stage, stageIndex) => {
+      stage.get('sections').forEach((section, sectionIndex) => {
+        let arrayName
+        if (settingsStages.getIn([stageIndex, 'sections', sectionIndex, 'isGoal'])) {
+          arrayName = 'goals'
+        } else if (settingsStages.getIn([stageIndex, 'sections', sectionIndex, 'isPainPoint'])) {
+          arrayName = 'painPoints'
+        }
+        if (arrayName) {
+          section.get('questions').forEach(question => {
+            goalsAndPainPoints[arrayName].push(
+              `${question.getIn(['userInput', 'value'])} [${question.getIn(['userInput', 'points'])}pts]\n${question.get('comment') || ''}`)
+          })
+        }
+      })
+    })
+    return goalsAndPainPoints
   }
 )
