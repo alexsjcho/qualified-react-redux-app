@@ -33,6 +33,6 @@ function setOpportunityStage (stage) {
 export function saveOpportunityStage (opportunityId, stage) {
   return dispatch => {
     saveStage(opportunityId, stage)
-    dispatch(setOpportunityStage)
+    dispatch(setOpportunityStage())
   }
 }

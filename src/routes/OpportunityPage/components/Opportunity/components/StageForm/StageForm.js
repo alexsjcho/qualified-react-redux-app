@@ -28,10 +28,19 @@ export default class StageForm extends React.PureComponent {
   }
 
   handleSubmit = (event) => {
+    event.preventDefault()
     const { saveOpportunityStage } = this.props
     saveOpportunityStage(this.state.stage)
   }
-  
+
+  componentDidUpdate (prevProps) {
+    if (prevProps.stage !== this.props.stage) {
+      this.setState({
+        stage: this.props.stage || { stageId: this.props.stageSettings.stageId, score: 0 }
+      })
+    }
+  }
+
   render () {
     const { stageSettings } = this.props
     return (
