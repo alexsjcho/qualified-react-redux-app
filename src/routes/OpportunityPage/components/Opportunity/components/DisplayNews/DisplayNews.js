@@ -12,7 +12,7 @@ import Form from "react-bootstrap/Form";
 export default class DisplayNews extends React.Component {
   state = {
     newsItems: [],
-    searchQuery: "Square"
+    searchQuery: "Salesforce"
   };
 
   componentDidMount() {
@@ -32,7 +32,6 @@ export default class DisplayNews extends React.Component {
 
   onFormSubmit = event => {
     event.preventDefault();
-
     this.fetchNewsData();
   };
 
@@ -41,7 +40,7 @@ export default class DisplayNews extends React.Component {
     return (
       <div>
         <h4 style={{ marginTop: "2rem" }} className="text-center">
-          Search News
+          Search TechCrunch News
         </h4>
         <Container style={{ marginBottom: "1rem" }}>
           <Form

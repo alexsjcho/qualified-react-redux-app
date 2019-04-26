@@ -3,8 +3,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-// TODO: convert to functional component
-
 export default class NewsSearchBar extends React.Component {
   onInputChange = event => {
     event.preventDefault();
