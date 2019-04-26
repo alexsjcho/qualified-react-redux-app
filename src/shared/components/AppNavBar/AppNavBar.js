@@ -21,7 +21,7 @@ export default class AppNavBar extends React.Component {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Link to="/accounts"> Accounts </Link>
-              <Link to="/settings"> Setting </Link>
+              <Link to="/settingspage"> Setting </Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

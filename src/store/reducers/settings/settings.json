@@ -826,16 +826,11 @@
               "options": [
                 {
                   "value": "Yes",
-                  "points": 1000
+                  "points": 0
                 },
 
                 {
                   "value": "No",
-                  "points": -500
-                },
-
-                {
-                  "value": "None",
                   "points": 0
                 }
               ],
