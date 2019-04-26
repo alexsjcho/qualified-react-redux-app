@@ -55,6 +55,7 @@ export default class StageTabs extends React.PureComponent {
               <InfoTabDash
                 goalsAndPainPoints={goalsAndPainPoints}
                 objectionsInfo={objectionsInfo}
+                stage={stage}
               />
               <StageForm
                 stage={stage}
