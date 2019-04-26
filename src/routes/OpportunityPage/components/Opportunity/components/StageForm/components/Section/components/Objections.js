@@ -15,7 +15,7 @@ export default class Objections extends React.PureComponent {
   }
 
   render () {
-    const { objections, resolvedObjections = [] } = this.props
+    const { objections, resolvedObjections = [{stageId: 'qualification', questionIndex: 0}] } = this.props
     return (
       <Container>
         <Button
@@ -30,11 +30,15 @@ export default class Objections extends React.PureComponent {
               <ListGroup variant='flush'>
                 {objections.map((objection, index) => {
                   const itemStyle = {
-                    textDecoration: resolvedObjections.includes(/* objection.questionIndex */index) ? 'line-through' : 'none'
+                    textDecoration: resolvedObjections.find(resolvedObjection => {
+                      return resolvedObjection.stageId === objection.stageId && resolvedObjection.questionIndex === objection.questionIndex
+                    })
+                    ? 'line-through'
+                    : 'none'
                   }
                   return (
                     <ListGroup.Item variant='warning' key={index}>
-                      {objection.split('\n').map((line, index) => {
+                      {objection.text.split('\n').map((line, index) => {
                         return <p style={itemStyle} key={index}>{line}</p>
                       })}
                     </ListGroup.Item>
