@@ -10,7 +10,10 @@ export default class InfoTabDash extends React.PureComponent {
     const { goalsAndPainPoints, objectionsInfo } = this.props;
     return (
       <Container style={{ marginTop: "2rem" }}>
-        <Row>
+        <h2 style={{ paddingTop: "2rem" }} className="text-center">
+          Customer's
+        </h2>
+        <Row className="text-center">
           <Goals goals={goalsAndPainPoints.goals} />
           <PainPoints painPoints={goalsAndPainPoints.painPoints} />
           <Objections objections={objectionsInfo.objections} />

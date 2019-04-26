@@ -19,13 +19,15 @@ export default class AllOppDash extends React.PureComponent {
 
     return (
       <Container>
-        <h1>All Accounts</h1>
+        <h2 style={{ paddingTop: "2rem" }} className="text-center">
+          All Accounts
+        </h2>
         <Table striped bordered hover responsive size="sm">
           <thead>
             <tr>
               <th>#</th>
-              <th>Opportunity</th>
               <th>Company</th>
+              <th>Opportunity</th>
               <th>Close Date</th>
               <th>Dollar Value</th>
               <th>Stage</th>
@@ -36,8 +38,8 @@ export default class AllOppDash extends React.PureComponent {
           <tbody>
             <tr>
               <td>{indexData}</td>
-              <td>{opportunityNameData}</td>
               <td>{companyNameData}</td>
+              <td>{opportunityNameData}</td>
               <td> {closeDateData}</td>
               <td>${moneyValueData}</td>
               <td>{currentStageData}</td>

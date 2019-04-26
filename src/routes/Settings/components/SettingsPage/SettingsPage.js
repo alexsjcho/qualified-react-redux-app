@@ -10,7 +10,6 @@ export default class SettingsPage extends React.PureComponent {
     return (
       <Container>
         <AppNavBar />
-
         <ListGroup>
           <h2 style={{ marginTop: "2rem" }} className="text-center">
             Settings Page{" "}
