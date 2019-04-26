@@ -172,6 +172,7 @@
         {
           "sectionId": "objections",
           "label": "Objections",
+          "isObjection": true,
           "isGoal": false,
           "isPainPoint": false,
           "questions": [
@@ -180,19 +181,19 @@
               "type": "radio",
               "options": [
                 {
-                  "value": "Big: deal breaker, solution does not fit their needs",
-                  "points": -15
+                  "value": "Big: this depends on client's situation whether they will purchase",
+                  "points": -50
                 },
                 {
-                  "value": "Medium: this needs to be addressed before purchase",
-                  "points": -10
+                  "value": "Medium: our company needs to address this issue before purchase",
+                  "points": -25
                 },
                 {
                   "value": "Small: requested changes or features nice to have, but not an obstacle for deal to close",
-                  "points": -5
+                  "points": -10
                 }
               ],
-              "commentPlaceholder": "Ex. The client said that this objection is a deal breaker. X is a big deal",
+              "commentPlaceholder": "Ex. The client said that X is a deal breaker. X is a big deal",
               "required": true,
               "hasPersonas": true
             }
@@ -448,6 +449,7 @@
         {
           "sectionId": "objections",
           "label": "Objections",
+          "isObjection": true,
           "isGoal": false,
           "isPainPoint": false,
           "questions": [
@@ -456,16 +458,16 @@
               "type": "radio",
               "options": [
                 {
-                  "value": "Big: deal breaker, solution does not fit their needs",
-                  "points": -15
+                  "value": "Big: this depends on client's situation whether they will purchase",
+                  "points": -50
                 },
                 {
-                  "value": "Medium: this needs to be addressed before purchase",
-                  "points": -10
+                  "value": "Medium: our company needs to address this issue before purchase",
+                  "points": -25
                 },
                 {
                   "value": "Small: requested changes or features nice to have, but not an obstacle for deal to close",
-                  "points": -5
+                  "points": -10
                 }
               ],
               "commentPlaceholder": "Ex. The client said that a couple issues needs to be addressed prior to purchase",
@@ -520,22 +522,23 @@
         {
           "sectionId": "objections",
           "label": "Objections",
+          "isObjection": true,
           "questions": [
             {
               "question": "What concerns does the client have?",
               "type": "radio",
               "options": [
                 {
-                  "value": "Big: deal breaker, solution does not fit their needs",
-                  "points": -15
+                  "value": "Big: this depends on client's situation whether they will purchase",
+                  "points": -50
                 },
                 {
-                  "value": "Medium: this needs to be addressed before purchase",
-                  "points": -10
+                  "value": "Medium: our company needs to address this issue before purchase",
+                  "points": -25
                 },
                 {
                   "value": "Small: requested changes or features nice to have, but not an obstacle for deal to close",
-                  "points": -5
+                  "points": -10
                 }
               ],
               "commentPlaceholder": "Ex. Client asked for influence in next product feature iteration, but current solution is fine for purchase",
@@ -812,59 +815,31 @@
             }
           ]
         },
+
         {
-          "sectionId": "objections",
-          "label": "Objections",
+          "sectionId": "outcome",
+          "label": "Outcome",
           "questions": [
             {
-              "question": "What concerns does the client have?",
+              "question": "Was there a sale?",
               "type": "radio",
               "options": [
                 {
-                  "value": "Big: deal breaker, solution does not fit their needs",
-                  "points": -15
+                  "value": "Yes",
+                  "points": 1000
                 },
+
                 {
-                  "value": "Medium: this needs to be addressed before purchase",
-                  "points": -10
+                  "value": "No",
+                  "points": -500
                 },
+
                 {
-                  "value": "Small: requested changes or features nice to have, but not an obstacle for deal to close",
-                  "points": -5
+                  "value": "None",
+                  "points": 0
                 }
               ],
-              "commentPlaceholder": "Ex. Client asked for influence in next product feature iteration, but current solution is fine for purchase",
-              "required": true,
-              "hasPersonas": true
-            }
-          ]
-        },
-        {
-          "sectionId": "nextMeeting",
-          "label": "Next Meeting",
-          "questions": [
-            {
-              "question": "When is your next meeting and with who?",
-              "type": "radio",
-              "options": [
-                {
-                  "value": "Individual Contributor",
-                  "points": 5
-                },
-                {
-                  "value": "Manager",
-                  "points": 10
-                },
-                {
-                  "value": "Executive",
-                  "points": 15
-                },
-                {
-                  "value": "CXO",
-                  "points": 20
-                }
-              ],
-              "commentPlaceholder": "Ex. Meeting with 2 executive stakeholders on 05/12/2019 at 13:00 PST for Final Negotiation and Verbal",
+              "commentPlaceholder": "Ex. Buyer gave a verbal agreement to purchase solution",
               "required": true,
               "hasPersonas": true
             }

@@ -1,25 +1,21 @@
-import React from 'react'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Goals from './Goals'
-import PainPoints from './PainPoints'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Goals from "./Goals";
+import PainPoints from "./PainPoints";
+import Objections from "./Section/components/Objections";
 
 export default class InfoTabDash extends React.PureComponent {
-  render () {
-    const { goalsAndPainPoints } = this.props
+  render() {
+    const { goalsAndPainPoints, objectionsInfo } = this.props;
     return (
-      <Container style={{ marginTop: '2rem' }}>
+      <Container style={{ marginTop: "2rem" }}>
         <Row>
-          <Col>
-            <Goals goals={goalsAndPainPoints.goals} />
-          </Col>
-
-          <Col>
-            <PainPoints painPoints={goalsAndPainPoints.painPoints} />
-          </Col>
+          <Goals goals={goalsAndPainPoints.goals} />
+          <PainPoints painPoints={goalsAndPainPoints.painPoints} />
+          <Objections objections={objectionsInfo.objections} />
         </Row>
       </Container>
-    )
+    );
   }
 }

@@ -3,7 +3,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import { Collapse, Button, CardBody, Card } from "reactstrap";
 
-export default class Goals extends React.PureComponent {
+export default class Objections extends React.PureComponent {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -15,23 +15,23 @@ export default class Goals extends React.PureComponent {
   }
 
   render() {
-    const { goals } = this.props;
+    const { objections } = this.props;
     return (
       <Container>
         <Button
-          color="success"
+          color="warning"
           onClick={this.toggle}
           style={{ marginBottom: "1rem" }}>
-          Goals
+          Objections
         </Button>
         <Collapse isOpen={this.state.collapse}>
           <Card>
             <CardBody>
               <ListGroup variant="flush">
-                {goals.map((goal, index) => {
+                {objections.map((objection, index) => {
                   return (
-                    <ListGroup.Item variant="success" key={index}>
-                      {goal.split("\n").map((line, index) => {
+                    <ListGroup.Item variant="warning" key={index}>
+                      {objection.split("\n").map((line, index) => {
                         return <p key={index}>{line}</p>;
                       })}
                     </ListGroup.Item>
