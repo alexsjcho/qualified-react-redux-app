@@ -12,12 +12,16 @@ class Opportunity extends React.PureComponent {
       saveOpportunityStage,
       isSavingStage,
       goalsAndPainPoints,
-      objectionsInfo
+      objectionsInfo,
+      maxPossibleStageScore
     } = this.props;
     return (
       <div>
         <Navbar />
-        <Dashboard />
+        <Dashboard
+          stage={stage}
+          maxPossibleStageScore={maxPossibleStageScore}
+        />
         <StageTabs
           stage={stage}
           stageId={stageId}
@@ -27,6 +31,7 @@ class Opportunity extends React.PureComponent {
           history={this.props.history}
           goalsAndPainPoints={goalsAndPainPoints}
           objectionsInfo={objectionsInfo}
+          maxPossibleStageScore={maxPossibleStageScore}
         />
       </div>
     );

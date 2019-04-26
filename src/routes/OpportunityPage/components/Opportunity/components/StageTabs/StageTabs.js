@@ -18,7 +18,8 @@ export default class StageTabs extends React.PureComponent {
       saveOpportunityStage,
       isSavingStage,
       goalsAndPainPoints,
-      objectionsInfo
+      objectionsInfo,
+      maxPossibleStageScore
     } = this.props;
     return (
       <Container>
@@ -45,7 +46,12 @@ export default class StageTabs extends React.PureComponent {
             </Col>
             <Col sm={9}>
               {/* TODO: Pass down appropriate props to render this component. Remember to handle the case where the stage doesn't exist yet. */}
-              <QualifiedScore />
+              <QualifiedScore
+                stageSettings={stageSettings}
+                stage={stage}
+                stageId={stageId}
+                maxPossibleStageScore={maxPossibleStageScore}
+              />
               <InfoTabDash
                 goalsAndPainPoints={goalsAndPainPoints}
                 objectionsInfo={objectionsInfo}
