@@ -47,7 +47,7 @@
                 }
               ],
 
-              "commentPlaceholder": "Client's company is losing a lot of time and money because of their problem and the entire executive leadership team holds this solution in high priority",
+              "commentPlaceholder": "Ex. Client's company is losing a lot of time and money because of their problem and the entire executive leadership team holds this solution in high priority",
               "required": true,
               "hasPersonas": true
             }
@@ -76,7 +76,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client is losing $12,000 and spending combined 1000 hours of engineering time per month ",
+              "commentPlaceholder": "Ex. Client is losing $12,000 and spending combined 1000 hours of engineering time per month ",
               "required": true,
               "hasPersonas": true
             }
@@ -105,7 +105,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said that our solution is an immediate urgent need that will solve their immediate problems now",
+              "commentPlaceholder": "Ex. Client said that our solution is an immediate urgent need that will solve their immediate problems now",
               "required": true,
               "hasPersonas": true
             }
@@ -134,7 +134,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said without our solution, their core product will collapse, their customers will churn, and it will negatively impact their revenue",
+              "commentPlaceholder": "Ex. Client said without our solution, their core product will collapse, their customers will churn, and it will negatively impact their revenue",
               "required": true,
               "hasPersonas": true
             }
@@ -163,7 +163,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "The client's executive leadership is onboard in implementing our solution and making a change",
+              "commentPlaceholder": "Ex. The client's executive leadership is onboard in implementing our solution and making a change",
               "required": true,
               "hasPersonas": true
             }
@@ -192,7 +192,7 @@
                   "points": -5
                 }
               ],
-              "commentPlaceholder": "The client said that this objection is a deal breaker. X is a big deal",
+              "commentPlaceholder": "Ex. The client said that this objection is a deal breaker. X is a big deal",
               "required": true,
               "hasPersonas": true
             }
@@ -225,7 +225,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Meeting with manager on 04/25/2019 at 14:00 PST for a technical demo",
+              "commentPlaceholder": "Ex. Meeting with manager on 04/25/2019 at 14:00 PST for a technical demo",
               "required": true,
               "hasPersonas": true
             }
@@ -264,7 +264,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said that they are considering our solution because it aligns with top company goals",
+              "commentPlaceholder": "Ex. Client said that they are considering our solution because it aligns with top company goals",
               "required": true,
               "hasPersonas": true
             }
@@ -293,7 +293,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said that the VP of Engineering needs to agree to purchase and VP Finance provides the budget ",
+              "commentPlaceholder": "Ex. Client said that the VP of Engineering needs to agree to purchase and VP Finance provides the budget ",
               "required": true,
               "hasPersonas": true
             }
@@ -323,7 +323,7 @@
                   "points": 0
                 }
               ],
-              "commentPlaceholder": "Client has enough budget for our solutions retail, asking price",
+              "commentPlaceholder": "Ex. Client has enough budget for our solutions retail, asking price",
               "required": true,
               "hasPersonas": true
             }
@@ -352,7 +352,7 @@
                   "points": 5
                 }
               ],
-              "commentPlaceholder": "Client says that as long as our solution solves their business needs",
+              "commentPlaceholder": "Ex. Client says that as long as our solution solves their business needs",
               "required": true,
               "hasPersonas": true
             }
@@ -381,7 +381,7 @@
                   "points": 5
                 }
               ],
-              "commentPlaceholder": "Clients says that the decision making process only involves 2 stakeholders from 2 departments",
+              "commentPlaceholder": "Ex. Clients says that the decision making process only involves 2 stakeholders from 2 departments",
               "required": true,
               "hasPersonas": true
             }
@@ -410,7 +410,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "We are losing $15,000 per month because of this problem",
+              "commentPlaceholder": "Ex. We are losing $15,000 per month because of this problem",
               "required": true,
               "hasPersonas": true
             }
@@ -439,7 +439,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client confirms that the VP of Engineering needs to agree to purchase and VP Finance provides the budget ",
+              "commentPlaceholder": "Ex. Client confirms that the VP of Engineering needs to agree to purchase and VP Finance provides the budget ",
               "required": true,
               "hasPersonas": true
             }
@@ -468,7 +468,7 @@
                   "points": -5
                 }
               ],
-              "commentPlaceholder": "The client said that a couple issues needs to be addressed prior to purchase",
+              "commentPlaceholder": "Ex. The client said that a couple issues needs to be addressed prior to purchase",
               "required": true,
               "hasPersonas": true
             }
@@ -481,7 +481,7 @@
           "isPainPoint": false,
           "questions": [
             {
-              "question": "When is your next meeting and with who?",
+              "question": "Ex. When is your next meeting and with who?",
               "type": "radio",
               "options": [
                 {
@@ -501,7 +501,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Meeting with an executive sponsor on 04/29/2019 at 16:00 PST to handle technical obstacles",
+              "commentPlaceholder": "Ex. Meeting with an executive sponsor on 04/29/2019 at 16:00 PST to handle technical obstacles",
               "required": true,
               "hasPersonas": true
             }
@@ -538,7 +538,7 @@
                   "points": -5
                 }
               ],
-              "commentPlaceholder": "Client asked for influence in next product feature iteration, but current solution is fine for purchase",
+              "commentPlaceholder": "Ex. Client asked for influence in next product feature iteration, but current solution is fine for purchase",
               "required": true,
               "hasPersonas": true
             }
@@ -569,7 +569,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Meeting with 2 executive stakeholders on 05/01/2019 at 17:00 PST for 1st Negotiation round",
+              "commentPlaceholder": "Ex. Meeting with 2 executive stakeholders on 05/01/2019 at 17:00 PST for 1st Negotiation round",
               "required": true,
               "hasPersonas": true
             }
@@ -605,7 +605,7 @@
                   "points": -5
                 }
               ],
-              "commentPlaceholder": "Client said that there are a couple issues that need answers prior to purchase",
+              "commentPlaceholder": "Ex. Client said that there are a couple issues that need answers prior to purchase",
               "required": true,
               "hasPersonas": true
             }
@@ -632,7 +632,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said that there might be a risk of losing $1 Million dollars if this solution was not implemented within 1 year",
+              "commentPlaceholder": "Ex. Client said that there might be a risk of losing $1 Million dollars if this solution was not implemented within 1 year",
               "required": true,
               "hasPersonas": true
             }
@@ -660,7 +660,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said they will 10x their ROI if they implemented our solution",
+              "commentPlaceholder": "Ex. Client said they will 10x their ROI if they implemented our solution",
               "required": true,
               "hasPersonas": true
             }
@@ -687,7 +687,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "The CEO ultimately makes the purchasing decision",
+              "commentPlaceholder": "Ex. The CEO ultimately makes the purchasing decision",
               "required": true,
               "hasPersonas": true
             }
@@ -714,7 +714,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Client said that their executive team bought in on this solution and wants to implement within 3 months",
+              "commentPlaceholder": "Ex. Client said that their executive team bought in on this solution and wants to implement within 3 months",
               "required": true,
               "hasPersonas": true
             }
@@ -745,7 +745,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Meeting with an CEO on 05/29/2019 at 16:00 PST for verbal purchase confirmation",
+              "commentPlaceholder": "Ex. Meeting with an CEO on 05/29/2019 at 16:00 PST for verbal purchase confirmation",
               "required": true,
               "hasPersonas": true
             }
@@ -780,7 +780,7 @@
                   "points": 5
                 }
               ],
-              "commentPlaceholder": "We weant $20,000 because our solution is a pain killer for their problems, not a vitamin",
+              "commentPlaceholder": "Ex. We want $20,000 because our solution is a pain killer for their problems, not a vitamin",
               "required": true,
               "hasPersonas": true
             }
@@ -806,7 +806,7 @@
                   "points": 5
                 }
               ],
-              "commentPlaceholder": "Client ask for this price because they aren't convinced of ROI for cost",
+              "commentPlaceholder": "Ex. Client ask for this price because they aren't convinced of ROI for cost",
               "required": true,
               "hasPersonas": true
             }
@@ -833,7 +833,7 @@
                   "points": -5
                 }
               ],
-              "commentPlaceholder": "Client asked for influence in next product feature iteration, but current solution is fine for purchase",
+              "commentPlaceholder": "Ex. Client asked for influence in next product feature iteration, but current solution is fine for purchase",
               "required": true,
               "hasPersonas": true
             }
@@ -864,7 +864,7 @@
                   "points": 20
                 }
               ],
-              "commentPlaceholder": "Meeting with 2 executive stakeholders on 05/12/2019 at 13:00 PST for Final Negotiation and Verbal",
+              "commentPlaceholder": "Ex. Meeting with 2 executive stakeholders on 05/12/2019 at 13:00 PST for Final Negotiation and Verbal",
               "required": true,
               "hasPersonas": true
             }
