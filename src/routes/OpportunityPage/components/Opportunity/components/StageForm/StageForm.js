@@ -47,6 +47,8 @@ export default class StageForm extends React.PureComponent {
       alert("Stage saved successfully");
       if (this.props.stageSettings.nextStageId) {
         this.props.history.push(this.props.stageSettings.nextStageId);
+      } else {
+        this.props.history.push('/accounts');
       }
     }
   }
