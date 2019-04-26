@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react'
 
-import Container from "react-bootstrap/Container";
-import AllOppDash from "./components/AllOppDash";
-import CreateOppModalForm from "./components/CreateOppModalForm";
-import AppNavBar from "../../shared/components/AppNavBar";
+import Container from 'react-bootstrap/Container'
+import AllOppDash from './components/AllOppDash'
+import CreateOppModalForm from './components/CreateOppModalForm'
+import AppNavBar from '../../shared/components/AppNavBar'
 
 export default class Accounts extends React.PureComponent {
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps) {
     if (
       this.props.createdOpportunityId &&
       prevProps.createdOpportunityId !== this.props.createdOpportunityId
     ) {
       this.props.history.push(
         `/opportunity/${this.props.createdOpportunityId}`
-      );
+      )
     }
   }
 
-  componentDidMount() {
-    this.props.loadAllOpportunities();
+  componentDidMount () {
+    this.props.loadAllOpportunities()
   }
 
-  render() {
+  render () {
     return (
       <Container>
         <AppNavBar />
@@ -29,9 +29,10 @@ export default class Accounts extends React.PureComponent {
           allStageTotalScore={this.props.allStageTotalScore}
           opportunitiesList={this.props.opportunitiesList || []}
           history={this.props.history}
+          deleteOpportunity={this.props.deleteOpportunity}
         />
         <CreateOppModalForm createOpportunity={this.props.createOpportunity} />
       </Container>
-    );
+    )
   }
 }

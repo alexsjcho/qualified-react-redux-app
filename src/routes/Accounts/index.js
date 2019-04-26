@@ -1,29 +1,31 @@
-import Accounts from "./Accounts";
-import { connect } from "react-redux";
+import Accounts from './Accounts'
+import { connect } from 'react-redux'
 import {
   createOpportunity,
-  loadAllOpportunities
-} from "../../store/action/alloppdash";
+  loadAllOpportunities,
+  deleteOpportunity
+} from '../../store/action/alloppdash'
 import {
   getCreatedOpportunityId,
   getOpportunitiesList,
   getAllStageTotalScore
-} from "../../shared/selectors";
-import withImmutablePropsToJS from "with-immutable-props-to-js";
+} from '../../shared/selectors'
+import withImmutablePropsToJS from 'with-immutable-props-to-js'
 
-function mapStateToProps(state) {
+function mapStateToProps (state) {
   return {
     createdOpportunityId: getCreatedOpportunityId(state),
     opportunitiesList: getOpportunitiesList(state),
     allStageTotalScore: getAllStageTotalScore(state)
-  };
+  }
 }
 const mapDispatchToProps = {
   createOpportunity,
-  loadAllOpportunities
-};
+  loadAllOpportunities,
+  deleteOpportunity
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(withImmutablePropsToJS(Accounts));
+)(withImmutablePropsToJS(Accounts))

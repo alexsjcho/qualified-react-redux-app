@@ -1,11 +1,11 @@
-import React from "react";
-import Container from "react-bootstrap/Container";
-import Table from "react-bootstrap/Table";
-import OpportunityRow from "../OpportunityRow";
-import account from "../../data/account.json";
+import React from 'react'
+import Container from 'react-bootstrap/Container'
+import Table from 'react-bootstrap/Table'
+import OpportunityRow from '../OpportunityRow'
+import account from '../../data/account.json'
 
 export default class AllOppDash extends React.PureComponent {
-  render() {
+  render () {
     const {
       closeDateData,
       companyNameData,
@@ -15,14 +15,14 @@ export default class AllOppDash extends React.PureComponent {
       currentStageData,
       scoreData,
       indexData
-    } = account;
+    } = account
 
     return (
       <Container>
-        <h2 style={{ paddingTop: "2rem" }} className="text-center">
+        <h2 style={{ paddingTop: '2rem' }} className='text-center'>
           All Accounts
         </h2>
-        <Table striped bordered hover responsive size="sm">
+        <Table striped bordered hover responsive size='sm'>
           <thead>
             <tr>
               <th>#</th>
@@ -54,12 +54,13 @@ export default class AllOppDash extends React.PureComponent {
                   opportunity={opportunity}
                   allStageTotalScore={this.props.allStageTotalScore}
                   history={this.props.history}
+                  deleteOpportunity={this.props.deleteOpportunity}
                 />
-              );
+              )
             })}
           </tbody>
         </Table>
       </Container>
-    );
+    )
   }
 }

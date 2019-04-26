@@ -1,7 +1,7 @@
 import {
   insertOpportunity,
-  getAllOpportunities
-  // removeOpportunity
+  getAllOpportunities,
+  removeOpportunity
 } from '../../shared/utils'
 
 export const ACTION_TYPES = {
@@ -34,14 +34,23 @@ export function loadAllOpportunities () {
       allOpportunities
     }
   }
+}
 
-  // export function deleteOpportunity() {
-  //   const remainingOpportunities = removeOpportunity();
+function deleteOpportunityFromState (opportunityId) {
+  return {
+    type: ACTION_TYPES.DELETE_OPPORTUNITY,
+    payload: {
+      opportunityId
+    }
+  }
+}
 
-  //   return {
-  //     type: ACTION_TYPES.DELETE_OPPORTUNITY,
-  //     payload: {
-  //       remainingOpportunities
-  //     }
-  //   };
+export function deleteOpportunity (opportunityId) {
+  return dispatch => {
+    if (removeOpportunity(opportunityId)) {
+      dispatch(deleteOpportunityFromState(opportunityId))
+    } else {
+      console.error(new Error('Failed to delete opportunity with id: ' + opportunityId))
+    }
+  }
 }

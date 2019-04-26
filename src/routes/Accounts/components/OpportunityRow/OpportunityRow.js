@@ -9,6 +9,10 @@ export default class OpportunityRow extends React.PureComponent {
     history.push(`/opportunity/${opportunityId}`);
   };
 
+  deleteOpportunity = e => {
+    this.props.deleteOpportunity(this.props.opportunity.opportunityId)
+  }
+
   render() {
     const {
       opportunity: {
@@ -39,7 +43,7 @@ export default class OpportunityRow extends React.PureComponent {
           <button type="button" onClick={this.goToOpportunity}>
             Edit
           </button>
-          <button type="button">Delete</button>
+          <button type="button" onClick={this.deleteOpportunity}>Delete</button>
         </td>
       </tr>
     );
