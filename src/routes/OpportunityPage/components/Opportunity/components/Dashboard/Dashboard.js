@@ -8,12 +8,15 @@ import DisplayNews from "../DisplayNews/DisplayNews";
 
 export default class Dashboard extends React.Component {
   render() {
-    const { allStageTotalScore } = this.props;
+    const { allStageTotalScore, allCurrentStageScore } = this.props;
     return (
       <Container style={{ marginBottom: "2rem" }}>
         <Row>
           <Col>
-            <AllStageScore allStageTotalScore={allStageTotalScore} />
+            <AllStageScore
+              allStageTotalScore={allStageTotalScore}
+              allCurrentStageScore={allCurrentStageScore}
+            />
           </Col>
         </Row>
         <Row>

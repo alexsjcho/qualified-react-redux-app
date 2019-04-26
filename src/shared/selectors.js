@@ -75,6 +75,15 @@ export const getAllStageTotalScore = createSelector(
   }
 );
 
+export const getAllCurrentStageScore = createSelector(
+  [getAllOpportunityStages],
+  stages => {
+    return stages.reduce((accumulator, stage) => {
+      return accumulator + parseInt(stage.get("score"));
+    }, 0);
+  }
+);
+
 export const getGoalsAndPainPoints = createSelector(
   [getSettingStages, getAllOpportunityStages],
   (settingsStages, opportunityStages) => {

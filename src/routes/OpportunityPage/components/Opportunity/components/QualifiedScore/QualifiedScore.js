@@ -13,7 +13,6 @@ export default class QualifiedScore extends React.Component {
     const { stageSettings, maxPossibleStageScore } = this.props;
 
     let valueLabel = 1;
-    let maxLabel = 5;
 
     return (
       <div>

@@ -1,21 +1,28 @@
 import React from "react";
 
-import { Progress } from "reactstrap";
+import { Progress, Badge } from "reactstrap";
 import Container from "react-bootstrap/Container";
 
 export default class AllStageScore extends React.Component {
   render() {
-    const { allStageTotalScore } = this.props;
+    const { allStageTotalScore, allCurrentStageScore } = this.props;
     return (
       <Container>
-        <div className="text-center">
-          Total Opportunity Score (40) of {allStageTotalScore}
-        </div>
+        <h3 className="text-center">
+          <Badge color="info">
+            Total Opportunity Score {""}
+            {allStageTotalScore}
+          </Badge>
+        </h3>
         <Progress multi>
-          <Progress bar color="danger" value="5" max={allStageTotalScore}>
-            5
+          <Progress
+            bar
+            color="danger"
+            value={allCurrentStageScore}
+            max={allStageTotalScore}>
+            {allCurrentStageScore} of {allStageTotalScore}
           </Progress>
-          <Progress bar color="warning" value="15" max={allStageTotalScore}>
+          {/* <Progress bar color="warning" value="15" max={allStageTotalScore}>
             15
           </Progress>
           <Progress bar color="info" value="10" max={allStageTotalScore}>
@@ -26,7 +33,7 @@ export default class AllStageScore extends React.Component {
           </Progress>
           <Progress bar color="success" value="10" max={allStageTotalScore}>
             10
-          </Progress>
+          </Progress> */}
         </Progress>
       </Container>
     );
