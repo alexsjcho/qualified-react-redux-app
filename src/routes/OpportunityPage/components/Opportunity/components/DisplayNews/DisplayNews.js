@@ -26,7 +26,7 @@ export default class DisplayNews extends React.Component {
 
   fetchNewsData = () => {
     fetchData(this.state.searchQuery).then(data => {
-      this.setState({ newsItems: data.articles });
+      this.setState({ newsItems: data.articles || [] });
     });
   };
 
