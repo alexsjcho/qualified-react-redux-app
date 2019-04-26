@@ -1,10 +1,10 @@
 import React from "react";
-import NewsSearchBar from "./components/NewsSearchBar";
-
-import { fetchData } from "./newsAPI/newsAPI";
-
+import { Badge } from "reactstrap";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+
+import NewsSearchBar from "./components/NewsSearchBar";
+import { fetchData } from "./newsAPI/newsAPI";
 import NewsItem from "./components/NewsItem";
 
 import Form from "react-bootstrap/Form";
@@ -39,9 +39,9 @@ export default class DisplayNews extends React.Component {
     const { newsItems, searchQuery } = this.state;
     return (
       <div>
-        <h4 style={{ marginTop: "2rem" }} className="text-center">
-          Search TechCrunch News
-        </h4>
+        <h3 className="text-center" style={{ marginTop: "2rem" }}>
+          <Badge color="secondary">Search TechCrunch News</Badge>
+        </h3>
         <Container style={{ marginBottom: "1rem" }}>
           <Form
             onSubmit={this.onFormSubmit}
