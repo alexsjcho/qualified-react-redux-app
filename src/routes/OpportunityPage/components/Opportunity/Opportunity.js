@@ -13,15 +13,13 @@ class Opportunity extends React.PureComponent {
       isSavingStage,
       goalsAndPainPoints,
       objectionsInfo,
-      maxPossibleStageScore
+      maxPossibleStageScore,
+      allStageTotalScore
     } = this.props;
     return (
       <div>
         <Navbar />
-        <Dashboard
-          stage={stage}
-          maxPossibleStageScore={maxPossibleStageScore}
-        />
+        <Dashboard stage={stage} allStageTotalScore={allStageTotalScore} />
         <StageTabs
           stage={stage}
           stageId={stageId}

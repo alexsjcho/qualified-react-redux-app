@@ -6,7 +6,8 @@ import {
   getOpportunityStage,
   getGoalsAndPainPoints,
   getObjectionsInfo,
-  getMaxPossibleStageScore
+  getMaxPossibleStageScore,
+  getAllStageTotalScore
 } from "../../../../shared/selectors";
 import withImmutablePropsToJS from "with-immutable-props-to-js";
 
@@ -17,7 +18,8 @@ const mapStateToProps = (state, ownProps) => {
     isSavingStage: state.get("opportunity").get("isSavingStage"), // TODO: Replace with selector
     goalsAndPainPoints: getGoalsAndPainPoints(state, ownProps),
     objectionsInfo: getObjectionsInfo(state, ownProps),
-    maxPossibleStageScore: getMaxPossibleStageScore(state, ownProps)
+    maxPossibleStageScore: getMaxPossibleStageScore(state, ownProps),
+    allStageTotalScore: getAllStageTotalScore(state, ownProps)
   };
 };
 
