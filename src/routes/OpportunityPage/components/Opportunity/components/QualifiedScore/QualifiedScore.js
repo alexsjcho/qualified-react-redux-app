@@ -1,30 +1,21 @@
-import React from "react";
-import { Progress, Badge } from "reactstrap";
+import React from 'react'
+import { Progress, Badge } from 'reactstrap'
 
-export default class QualifiedScore extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      stage: props.stage || { stageId: props.stageSettings.stageId, score: 0 }
-    };
-  }
-
-  render() {
-    const { stageSettings, maxPossibleStageScore } = this.props;
-
-    let valueLabel = 1;
+export default class QualifiedScore extends React.PureComponent {
+  render () {
+    const { stageSettings, maxPossibleStageScore, stage = {} } = this.props
 
     return (
       <div>
-        <h3 className="text-center">
-          <Badge color="primary">{stageSettings.stageLabel} Stage</Badge>
+        <h3 className='text-center'>
+          <Badge color='primary'>{stageSettings.stageLabel} Stage</Badge>
         </h3>
         <Progress
-          value={this.state.stage.score || 0}
+          value={stage.score || 0}
           max={maxPossibleStageScore}>
-          {valueLabel} of {maxPossibleStageScore}
+          {stage.score || 0} of {maxPossibleStageScore}
         </Progress>
       </div>
-    );
+    )
   }
 }
