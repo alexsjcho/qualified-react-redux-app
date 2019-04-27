@@ -4,12 +4,22 @@ import { Progress, Badge } from "reactstrap";
 import Container from "react-bootstrap/Container";
 
 export default class AllStageScore extends React.PureComponent {
+  progressBarColor(allCurrentStageScore) {
+    if (allCurrentStageScore <= 50) {
+      return "danger";
+    } else if (allCurrentStageScore <= 100) {
+      return "warning";
+    } else if (allCurrentStageScore <= 200) {
+      return "info";
+    } else if (allCurrentStageScore <= 300) {
+      return "primary";
+    } else {
+      return "success";
+    }
+  }
+
   render() {
     const { allStageTotalScore, allCurrentStageScore } = this.props;
-
-    // progressBarCurrentColor = () => {
-    //   const dangerColor = { allCurrentStageScore } === 42;
-    // };
 
     return (
       <Container>
@@ -19,23 +29,11 @@ export default class AllStageScore extends React.PureComponent {
         <Progress multi>
           <Progress
             bar
-            color="danger"
+            color={this.progressBarColor(allCurrentStageScore)}
             value={allCurrentStageScore}
             max={allStageTotalScore}>
             {allCurrentStageScore} of {allStageTotalScore}
           </Progress>
-          {/* <Progress bar color="warning" value="15" max={allStageTotalScore}>
-            15
-          </Progress>
-          <Progress bar color="info" value="10" max={allStageTotalScore}>
-            10
-          </Progress>
-          <Progress bar color="primary" value="10" max={allStageTotalScore}>
-            10
-          </Progress>
-          <Progress bar color="success" value="10" max={allStageTotalScore}>
-            10
-          </Progress> */}
         </Progress>
       </Container>
     );
