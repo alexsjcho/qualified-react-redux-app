@@ -19,20 +19,12 @@ export default class Section extends React.PureComponent {
     return questions[index] || {};
   }
 
-  stageBadgeColorRender() {
-    const { goalsAndPainPoints, objectionsInfo } = this.props;
-    const isPainPointColor = goalsAndPainPoints.painPoints;
-    const isGoalsColor = goalsAndPainPoints.goals;
-    const isObjectionColors = objectionsInfo.objections;
-
-    if (isPainPointColor) {
+  stageBadgeColorRender(settings) {
+    if (settings.isPainPoint) {
       return "danger";
-    }
-    if (isGoalsColor) {
+    } else if (settings.isGoal) {
       return "success";
-    }
-
-    if (isObjectionColors) {
+    } else if (settings.isObjection) {
       return "warning";
     } else {
       return "dark";
@@ -45,7 +37,9 @@ export default class Section extends React.PureComponent {
     return (
       <FormGroup>
         <h3 className="text-center" style={{ marginTop: "2rem" }}>
-          <Badge color="dark">{settings.label}</Badge>
+          <Badge color={this.stageBadgeColorRender(settings)}>
+            {settings.label}
+          </Badge>
         </h3>
 
         {settings.questions.map((questionSettings, index) => {
