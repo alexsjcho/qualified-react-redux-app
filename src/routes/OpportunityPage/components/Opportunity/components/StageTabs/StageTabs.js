@@ -4,10 +4,12 @@ import Tab from "react-bootstrap/Tab";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import { Link } from "react-router-dom";
+import { Badge } from "reactstrap";
+
 import StageForm from "../StageForm";
 import QualifiedScore from "../QualifiedScore/QualifiedScore";
 import InfoTabDash from "../StageForm/components/InfoTabDash";
-import { Link } from "react-router-dom";
 
 export default class StageTabs extends React.PureComponent {
   render() {
@@ -27,25 +29,37 @@ export default class StageTabs extends React.PureComponent {
           <Row>
             <Col sm={3}>
               <Nav variant="tabs" className="flex-column">
-                <Nav.Item>
-                  <Link to="qualification">Qualification</Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Link to="discovery">Discovery</Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Link to="demo">Demo</Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Link to="obstacles">Obstacles</Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Link to="negotiation">Negotiation</Link>
-                </Nav.Item>
+                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                  <Nav.Item>
+                    <Link to="qualification">Qualification</Link>
+                  </Nav.Item>
+                </Badge>
+                <Nav.Item />
+                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                  <Nav.Item>
+                    <Link to="discovery">Discovery</Link>
+                  </Nav.Item>
+                </Badge>
+                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                  <Nav.Item>
+                    <Link to="demo">Demo</Link>
+                  </Nav.Item>
+                </Badge>
+
+                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                  <Nav.Item>
+                    <Link to="obstacles">Obstacles</Link>
+                  </Nav.Item>
+                </Badge>
+
+                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                  <Nav.Item>
+                    <Link to="negotiation">Negotiation</Link>
+                  </Nav.Item>
+                </Badge>
               </Nav>
             </Col>
             <Col sm={9}>
-              {/* TODO: Pass down appropriate props to render this component. Remember to handle the case where the stage doesn't exist yet. */}
               <QualifiedScore
                 stageSettings={stageSettings}
                 stage={stage}

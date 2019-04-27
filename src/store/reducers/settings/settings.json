@@ -590,6 +590,8 @@
       "sections": [
         {
           "sectionId": "obstacles",
+          "label": "Concerns",
+          "isObjection": true,
           "questions": [
             {
               "question": "What concerns need to be addressed before purchase?",
@@ -617,6 +619,8 @@
         {
           "sectionId": "need",
           "label": "Need for Change",
+          "isGoal": true,
+          "isPainPoint": false,
           "questions": [
             {
               "question": "What is the urgency to implement this solution?",
@@ -644,6 +648,8 @@
         {
           "sectionId": "economicImpact",
           "label": "Impact of Purchase",
+          "isGoal": false,
+          "isPainPoint": true,
           "questions": [
             {
               "question": "What is the positive impact of this purchasing this solution?",
@@ -696,33 +702,7 @@
             }
           ]
         },
-        {
-          "sectionId": "timeline",
-          "label": "Timeline",
-          "questions": [
-            {
-              "question": "When do you want this change to happen?",
-              "type": "radio",
-              "options": [
-                {
-                  "value": "This change is a nice to have, an individual contributor wants this change, but not that important or urgent to managers or executives, 1+ year timeline",
-                  "points": 5
-                },
-                {
-                  "value": "This change is a priority from managers, but not that important or urgent to executives, 6+ months timeline",
-                  "points": 10
-                },
-                {
-                  "value": "This change is a priority from multiple executives, <6 months timeline",
-                  "points": 20
-                }
-              ],
-              "commentPlaceholder": "Ex. Client said that their executive team bought in on this solution and wants to implement within 3 months",
-              "required": true,
-              "hasPersonas": true
-            }
-          ]
-        },
+
         {
           "sectionId": "nextMeeting",
           "label": "Next Meeting",
@@ -756,7 +736,7 @@
         }
       ],
       "score": {
-        "totalScore": "100"
+        "totalScore": "80"
       }
     },
     {
@@ -797,11 +777,11 @@
               "type": "radio",
               "options": [
                 {
-                  "value": "$15,000",
+                  "value": "$20,000",
                   "points": 15
                 },
                 {
-                  "value": "$12,500",
+                  "value": "$15,000",
                   "points": 10
                 },
                 {
