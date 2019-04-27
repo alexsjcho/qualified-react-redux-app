@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import { Badge } from "reactstrap";
 
 export default class AppNavBar extends React.Component {
   render() {
@@ -15,13 +16,20 @@ export default class AppNavBar extends React.Component {
           collapseOnSelect
           expand="lg">
           <Navbar.Brand>
-            <Link to="/"> Qualified </Link>
+            <Badge color="light">
+              <Link to="/"> Qualified </Link>
+            </Badge>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Link to="/accounts"> Accounts </Link>
-              <Link to="/settingspage"> Setting </Link>
+              <Badge color="dark">
+                <Link to="/accounts"> Accounts </Link>
+              </Badge>
+
+              <Badge color="dark">
+                <Link to="/settingspage"> Setting </Link>
+              </Badge>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

@@ -1,26 +1,26 @@
-import uuid from 'uuid'
+import uuid from "uuid";
 
-const SETTINGS_KEY = 'settings'
-const OPPORTUNITIES_KEY = 'opportunities'
+const SETTINGS_KEY = "settings";
+const OPPORTUNITIES_KEY = "opportunities";
 
-export const SUPPORTED_INPUTS = ['radio']
+export const SUPPORTED_INPUTS = ["radio"];
 
 /**
  * Save the settings state into localStorage
  * @param  {Object} settings The settings object to save
  */
-export function saveSettings (settings) {
-  console.log('SETTINGS BEING SAVED')
-  window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings))
+export function saveSettings(settings) {
+  console.log("SETTINGS BEING SAVED");
+  window.localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
 }
 
 /**
  * Get the settings object from localStorage
  * @return {Object} The settings from locaStorage or null if not available
  */
-export function getSettings () {
-  let settings = window.localStorage.getItem(SETTINGS_KEY)
-  return settings ? JSON.parse(settings) : null
+export function getSettings() {
+  let settings = window.localStorage.getItem(SETTINGS_KEY);
+  return settings ? JSON.parse(settings) : null;
 }
 
 /**
@@ -32,12 +32,12 @@ export function getSettings () {
  * @param {Number} initialOpportunityValues.moneyValue
  * @returns {String} The ID of the new function
  */
-export function insertOpportunity (initialOpportunityValues) {
-  const opportunityId = uuid()
-  let opportunities = getAllOpportunities()
-  opportunities.push({ ...initialOpportunityValues, opportunityId })
-  writeAllOpportunites(opportunities)
-  return opportunityId
+export function insertOpportunity(initialOpportunityValues) {
+  const opportunityId = uuid();
+  let opportunities = getAllOpportunities();
+  opportunities.push({ ...initialOpportunityValues, opportunityId });
+  writeAllOpportunites(opportunities);
+  return opportunityId;
 }
 
 /**
@@ -45,27 +45,27 @@ export function insertOpportunity (initialOpportunityValues) {
  * @param  {String} opportunityId Identification for the target opportunity
  * @return {Object|null}               The opportunity or null if not found
  */
-export function loadOpportunity (opportunityId) {
-  let opportunities = getAllOpportunities()
-  let opportunity = opportunities.find(function (opportunity) {
-    return opportunity.opportunityId === opportunityId
-  })
+export function loadOpportunity(opportunityId) {
+  let opportunities = getAllOpportunities();
+  let opportunity = opportunities.find(function(opportunity) {
+    return opportunity.opportunityId === opportunityId;
+  });
 
-  return opportunity || null
+  return opportunity || null;
 }
 
 /**
  * It updates the opportunity at localStorage
  * @param  {Object} opportunity The opportunity to update
  */
-function updateOpportunity (opportunity) {
-  let opportunities = getAllOpportunities()
+function updateOpportunity(opportunity) {
+  let opportunities = getAllOpportunities();
   // opportunityIndex will never be -1. Opportunity will always be found in the array
-  let opportunityIndex = opportunities.findIndex(function (currOpportunity) {
-    return currOpportunity.opportunityId === opportunity.opportunityId
-  })
-  opportunities[opportunityIndex] = opportunity
-  writeAllOpportunites(opportunities)
+  let opportunityIndex = opportunities.findIndex(function(currOpportunity) {
+    return currOpportunity.opportunityId === opportunity.opportunityId;
+  });
+  opportunities[opportunityIndex] = opportunity;
+  writeAllOpportunites(opportunities);
 }
 
 /**
@@ -73,11 +73,11 @@ function updateOpportunity (opportunity) {
  * @param {Object} getAllOpportunities
  * @returns {Array} of all the existing opportunities
  */
-export function getAllOpportunities () {
-  let opportunities = window.localStorage.getItem(OPPORTUNITIES_KEY) || '[]'
-  opportunities = JSON.parse(opportunities)
+export function getAllOpportunities() {
+  let opportunities = window.localStorage.getItem(OPPORTUNITIES_KEY) || "[]";
+  opportunities = JSON.parse(opportunities);
 
-  return opportunities
+  return opportunities;
 }
 
 /**
@@ -85,9 +85,9 @@ export function getAllOpportunities () {
  * @param  {Array<Object>} opportunities The opportunites to write
  * @return {Boolean}                     Whether the write was successful or not
  */
-function writeAllOpportunites (opportunities) {
-  window.localStorage.setItem(OPPORTUNITIES_KEY, JSON.stringify(opportunities))
-  return true
+function writeAllOpportunites(opportunities) {
+  window.localStorage.setItem(OPPORTUNITIES_KEY, JSON.stringify(opportunities));
+  return true;
 }
 
 /**
@@ -95,16 +95,16 @@ function writeAllOpportunites (opportunities) {
  * @param {Object} loadAllOpportunities
  * @returns {Boolean} Whether the delete was successful or not
  */
-export function removeOpportunity (opportunityId) {
-  let opportunities = getAllOpportunities()
+export function removeOpportunity(opportunityId) {
+  let opportunities = getAllOpportunities();
   let opportunityIndex = opportunities.findIndex(currOpportunity => {
-    return currOpportunity.opportunityId === opportunityId
-  })
+    return currOpportunity.opportunityId === opportunityId;
+  });
   if (opportunityIndex === -1) {
-    return false
+    return false;
   } else {
-    opportunities.splice(opportunityIndex, 1)
-    return writeAllOpportunites(opportunities)
+    opportunities.splice(opportunityIndex, 1);
+    return writeAllOpportunites(opportunities);
   }
 }
 
@@ -113,17 +113,17 @@ export function removeOpportunity (opportunityId) {
  * @param  {String} opportunityId The id of the opportunity
  * @param  {Object} stage         The stage to be saved
  */
-export function saveStage (opportunityId, stage) {
-  const opportunity = loadOpportunity(opportunityId)
+export function saveStage(opportunityId, stage) {
+  const opportunity = loadOpportunity(opportunityId);
   const stageIndex = opportunity.stages.findIndex(
     currStage => currStage.stageId === stage.stageId
-  )
+  );
   if (stageIndex === -1) {
-    opportunity.currentStage = stage.stageId
-    opportunity.stages.push(stage) // insert a new stage
+    opportunity.currentStage = stage.stageId;
+    opportunity.stages.push(stage); // insert a new stage
   } else {
-    opportunity.currentStage = stage.stageId
-    opportunity.stages[stageIndex] = stage // updates an existing stage
+    opportunity.currentStage = stage.stageId;
+    opportunity.stages[stageIndex] = stage; // updates an existing stage
   }
-  updateOpportunity(opportunity)
+  updateOpportunity(opportunity);
 }

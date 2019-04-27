@@ -48,19 +48,16 @@ export default class StageForm extends React.PureComponent {
       if (this.props.stageSettings.nextStageId) {
         this.props.history.push(this.props.stageSettings.nextStageId);
       } else {
-        this.props.history.push('/accounts');
+        this.props.history.push("/accounts");
       }
     }
   }
 
   render() {
     const { stageSettings } = this.props;
-    const currentStageScore = this.state.stage.score || 0;
+
     return (
       <Form onSubmit={this.handleSubmit}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <span style={{ fontSize: "2.5rem" }}>{currentStageScore}</span>
-        </div>
         {stageSettings.sections.map((sectionSetting, index) => {
           return (
             <Section

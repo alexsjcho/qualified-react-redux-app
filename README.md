@@ -33,7 +33,7 @@ Start by creating an objective with a start and end date, objective statement, a
 
 ## 3RD PARTY API
 
-1. [Google News](https://newsapi.org/s/google-news-api)
+1. [News API](https://newsapi.org/s/google-news-api)
 
 ## REACT LIBRARIES USED
 

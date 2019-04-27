@@ -19,6 +19,7 @@ export default class Goals extends React.PureComponent {
     return (
       <Container>
         <Button
+          outline
           color="success"
           onClick={this.toggle}
           style={{ marginBottom: "1rem" }}>
