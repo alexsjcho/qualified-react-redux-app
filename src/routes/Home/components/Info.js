@@ -5,13 +5,16 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import Badge from "react-bootstrap/Badge";
 
 const Info = () => {
   return (
     <Fragment>
       <Container>
-        <Container className="d-flex justify-content-center bg-light">
-          <h3>About This Project</h3>
+        <Container className="d-flex justify-content-center ">
+          <Badge variant="secondary">
+            <h3>About This Project</h3>
+          </Badge>
         </Container>
         <br />
         <Row>
@@ -19,7 +22,7 @@ const Info = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="https://images.zapier.com/storage/photos/af6bf297d0e53599a420441668e92111.png?format=jpg"
+                src="https://media.giphy.com/media/4Jn9m3jXsmeZi/giphy.gif"
               />
               <Card.Body>
                 <Card.Title>Project Management </Card.Title>
@@ -28,9 +31,11 @@ const Info = () => {
                   this project
                 </Card.Text>
                 <Button variant="warning">
-                  <a href="https://trello.com/b/aQDwaNUn/smartokrs">
+                  <a
+                    style={{ color: "white" }}
+                    href="https://trello.com/b/aQDwaNUn/smartokrs">
                     Trello Board
-                  </a>{" "}
+                  </a>
                 </Button>
               </Card.Body>
             </Card>
@@ -40,7 +45,7 @@ const Info = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="https://cdn.productplan.com/wp-content/uploads/2014/03/Sample-roadmap.png"
+                src="https://cdn.productplan.com/wp-content/uploads/2017/02/Filter-Product-Roadmap.gif"
               />
               <Card.Body>
                 <Card.Title> Product Roadmap </Card.Title>
@@ -48,8 +53,9 @@ const Info = () => {
                   Check out my Google Sheet product development planning
                 </Card.Text>
                 <Button variant="primary">
-                  {" "}
-                  <a href="https://docs.google.com/spreadsheets/d/1TXtMZzuoYQbTcidbsaGsN8lnYE67iHUw5Hx8yiXkN7E/edit?usp=sharing">
+                  <a
+                    style={{ color: "white" }}
+                    href="https://docs.google.com/spreadsheets/d/1TXtMZzuoYQbTcidbsaGsN8lnYE67iHUw5Hx8yiXkN7E/edit?usp=sharing">
                     Google Sheets
                   </a>{" "}
                 </Button>
@@ -61,7 +67,7 @@ const Info = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="https://i.ytimg.com/vi/OEGm7LXAN_c/maxresdefault.jpg"
+                src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
               />
               <Card.Body>
                 <Card.Title>Source Code</Card.Title>
@@ -71,7 +77,9 @@ const Info = () => {
                   project
                 </Card.Text>
                 <Button variant="success">
-                  <a href="https://github.com/alexsjcho/smart-okr-react-app">
+                  <a
+                    style={{ color: "white" }}
+                    href="https://github.com/alexsjcho/smart-okr-react-app">
                     GitHub Repo
                   </a>
                 </Button>
@@ -83,17 +91,19 @@ const Info = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="https://www.mraddoil.com/wp-content/uploads/2019/02/OKR-Goal-Management-Framework.png"
+                src="https://www.mraddoil.com/wp-content/uploads/2018/12/SaaS-Sales-Right-for-You_.png"
               />
               <Card.Body>
                 <Card.Title>Blog</Card.Title>
                 <Card.Text>
-                  Check out my blog post I wrote about my OKR goal management
-                  strategy and OKR Google Sheet template
+                  Check out my blog post I wrote about my experience in software
+                  sales
                 </Card.Text>
                 <Button variant="info">
                   {" "}
-                  <a href="https://www.mraddoil.com/2019/02/10/okrs-goal-management-framework/">
+                  <a
+                    style={{ color: "white" }}
+                    href="https://www.mraddoil.com/2019/02/10/okrs-goal-management-framework/">
                     Read Blog
                   </a>{" "}
                 </Button>

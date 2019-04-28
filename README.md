@@ -12,7 +12,7 @@ Something similar to how Marketo grades marketing leads.
 1. [Link to Live Demo App - COMING SOON](https://friendly-wiles-9707cf.netlify.com/)
 2. [Qualified Product Development Roadmap Google Sheet ](https://docs.google.com/spreadsheets/d/1rEqcpEd8b2sCHKsGvMcy7s1Rh6V66-jFo1X5c5EcSOE/edit?usp=sharing)
 3. [Trello Board: Project Management](https://trello.com/b/Wxv7FAQB/qualified-react-crm)
-4. [My Blog On Topic](https://www.mraddoil.com/2019/02/10/okrs-goal-management-framework/)
+4. [My Blog ](https://www.mraddoil.com/2018/12/23/is-software-sales-right-for-you/)
 
 ## APP OVERVIEW
 
@@ -29,7 +29,7 @@ Start by creating an objective with a start and end date, objective statement, a
 3. Javascript
 4. Bootstrap
 5. React
-6. Redux (Redux Thunk)
+6. Redux
 
 ## 3RD PARTY API
 
@@ -39,6 +39,7 @@ Start by creating an objective with a start and end date, objective statement, a
 
 1. [React Moments](https://github.com/headzoo/react-moment#readme)
 2. [React BootStrap](https://react-bootstrap.github.io/)
+3. [Immutable](https://github.com/immutable-js/immutable-js)
 
 ## TESTING TOOLS
 
