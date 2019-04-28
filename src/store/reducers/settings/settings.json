@@ -598,16 +598,16 @@
               "type": "radio",
               "options": [
                 {
-                  "value": "Big: deal breaker, solution does not fit their needs",
-                  "points": -15
+                  "value": "Big: this depends on client's situation whether they will purchase",
+                  "points": -50
                 },
                 {
-                  "value": "Medium: this needs to be addressed before purchase",
-                  "points": -10
+                  "value": "Medium: our company needs to address this issue before purchase",
+                  "points": -25
                 },
                 {
                   "value": "Small: requested changes or features nice to have, but not an obstacle for deal to close",
-                  "points": -5
+                  "points": -10
                 }
               ],
               "commentPlaceholder": "Ex. Client said that there are a couple issues that need answers prior to purchase",
