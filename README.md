@@ -68,7 +68,7 @@ This settings page allows you to customize questions, points, etc of each sale s
 
 This stage settings page allows you to customize questions, points, etc of that stage
 
-<img src= "images/stagesettings" width ="400" height="400">
+<img src= "images/stagesettings.png" width ="400" height="400">
 
 # TECHNOLOGIES USED
 
