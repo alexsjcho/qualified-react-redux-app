@@ -5,6 +5,8 @@ import Col from "react-bootstrap/Col";
 const NewsItem = props => {
   const { title, author, url, urlToImage, description, publishedAt } = props;
 
+  const date = new Date(publishedAt).toLocaleDateString("en-US");
+
   return (
     <Col>
       <Card>
@@ -19,7 +21,7 @@ const NewsItem = props => {
               <cite title="Source Title">{author}</cite>
             </footer>
           </blockquote>
-          <Card.Link style={{ fontSize: ".65rem" }}>{publishedAt}</Card.Link>
+          <Card.Link style={{ fontSize: ".65rem" }}>{date}</Card.Link>
         </Card.Body>
       </Card>
     </Col>
