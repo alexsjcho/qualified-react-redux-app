@@ -18,6 +18,10 @@ const Problem = () => {
       <Row>
         <Col>
           <Card className="p-3">
+            <Card.Img
+              variant="top"
+              src="https://media.giphy.com/media/26gJzZgwf03hHuwFO/giphy.gif"
+            />
             <blockquote className="blockquote mb-0 card-body">
               <p>
                 "I'm tired of relying on my gut feeling for a sale only to find
@@ -34,6 +38,10 @@ const Problem = () => {
         </Col>
         <Col>
           <Card className="p-3">
+            <Card.Img
+              variant="top"
+              src="https://media.giphy.com/media/TIiATEizlRKUWVgIWR/giphy.gif"
+            />
             <blockquote className="blockquote mb-0 card-body">
               <p>
                 " It's hard to manage my reps because we don't have clear
@@ -53,6 +61,10 @@ const Problem = () => {
 
         <Col>
           <Card className="p-3">
+            <Card.Img
+              variant="top"
+              src="https://media.giphy.com/media/3d8JUdvItt6OA/giphy.gif"
+            />
             <blockquote className="blockquote mb-0 card-body">
               <p>
                 "I am worried that our sales team don't understand the metrics
