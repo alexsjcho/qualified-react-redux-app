@@ -14,7 +14,8 @@ export function createOpportunity (initialOpportunityValues) {
   const opportunityId = insertOpportunity({
     ...initialOpportunityValues,
     currentStage: 'qualification',
-    stages: []
+    stages: [],
+    resolvedObjections: []
   })
 
   return {

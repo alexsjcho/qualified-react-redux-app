@@ -138,7 +138,7 @@ export function saveStage (opportunityId, stage) {
  */
 export function writeObjectionResolvedToggle (objection, opportunityId) {
   const opportunity = loadOpportunity(opportunityId)
-  const resolvedObjections = [ ...opportunity.resolvedObjections ]
+  const resolvedObjections = opportunity.resolvedObjections || []
   const objectionIndex = resolvedObjections.findIndex(currObjection => {
     return currObjection.stageId === objection.stageId
         && currObjection.sectionId === objection.sectionId

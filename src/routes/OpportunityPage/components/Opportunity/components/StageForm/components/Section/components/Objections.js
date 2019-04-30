@@ -16,7 +16,7 @@ export default class Objections extends React.PureComponent {
 
   toggleObjectionState = event => {
     event.preventDefault()
-    const index = event.target.dataSet.index
+    const index = event.target.dataset.index
     const { toggleOpportunityObjectionResolved, objections } = this.props
     const objection = {
       stageId: objections[index].stageId,
@@ -30,7 +30,7 @@ export default class Objections extends React.PureComponent {
   render() {
     const {
       objections,
-      resolvedObjections = [{ stageId: "qualification", questionIndex: 0 }]
+      resolvedObjections
     } = this.props;
     return (
       <Container>
@@ -46,24 +46,24 @@ export default class Objections extends React.PureComponent {
             <CardBody>
               <ListGroup variant="flush">
                 {objections.map((objection, index) => {
-                  const itemStyle = {
-                    textDecoration: resolvedObjections.find(
-                      resolvedObjection => {
-                        return (
-                          resolvedObjection.stageId === objection.stageId &&
-                          resolvedObjection.questionIndex ===
-                            objection.questionIndex
-                        );
-                      }
-                    )
-                      ? "line-through"
-                      : "none"
-                  };
+                  // const itemStyle = {
+                  //   textDecoration: resolvedObjections.find(
+                  //     resolvedObjection => {
+                  //       return (
+                  //         resolvedObjection.stageId === objection.stageId &&
+                  //         resolvedObjection.questionIndex ===
+                  //           objection.questionIndex
+                  //       );
+                  //     }
+                  //   )
+                  //     ? "line-through"
+                  //     : "none"
+                  // };
                   return (
-                    <ListGroup.Item variant="warning" key={index}>
+                    <ListGroup.Item variant="warning" key={index} >
                       {objection.text.split("\n").map((line, index) => {
                         return (
-                          <p style={itemStyle} key={index}>
+                          <p key={index} data-index={index} onClick={this.toggleObjectionState} >
                             {line}
                           </p>
                         );
