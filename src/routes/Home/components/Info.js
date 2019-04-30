@@ -33,7 +33,7 @@ const Info = () => {
                 <Button variant="warning">
                   <a
                     style={{ color: "white" }}
-                    href="https://trello.com/b/aQDwaNUn/smartokrs">
+                    href="https://trello.com/b/Wxv7FAQB/qualified-react-crm">
                     Trello Board
                   </a>
                 </Button>
@@ -55,7 +55,7 @@ const Info = () => {
                 <Button variant="primary">
                   <a
                     style={{ color: "white" }}
-                    href="https://docs.google.com/spreadsheets/d/1TXtMZzuoYQbTcidbsaGsN8lnYE67iHUw5Hx8yiXkN7E/edit?usp=sharing">
+                    href="https://docs.google.com/spreadsheets/d/1rEqcpEd8b2sCHKsGvMcy7s1Rh6V66-jFo1X5c5EcSOE/edit?usp=sharing">
                     Google Sheets
                   </a>{" "}
                 </Button>
@@ -79,7 +79,7 @@ const Info = () => {
                 <Button variant="success">
                   <a
                     style={{ color: "white" }}
-                    href="https://github.com/alexsjcho/smart-okr-react-app">
+                    href="https://github.com/alexsjcho/qualified-react-redux-app">
                     GitHub Repo
                   </a>
                 </Button>
@@ -103,7 +103,7 @@ const Info = () => {
                   {" "}
                   <a
                     style={{ color: "white" }}
-                    href="https://www.mraddoil.com/2019/02/10/okrs-goal-management-framework/">
+                    href="https://www.mraddoil.com/2018/12/23/is-software-sales-right-for-you/">
                     Read Blog
                   </a>{" "}
                 </Button>
