@@ -1,6 +1,8 @@
 import { createSelector } from 'reselect'
 
-const getSettingStages = state => state.get('settings').get('stages')
+const getResolvedObjections = state => state.getIn(['data', 'resolvedObjections'])
+
+const getSettingStages = state => state.getIn(['settings', 'stages'])
 
 export const getStageId = (state, props) =>
   props.stageId || (props.match && props.match.params.stageId)
@@ -143,12 +145,14 @@ export const getObjectionsInfo = createSelector(
         ) {
           arrayName = 'objections'
         }
+        const sectionId = settingsStages.getIn([stageIndex, 'sections', sectionIndex, 'sectionId'])
         if (arrayName) {
           section.get('questions').forEach((question, questionIndex) => {
             objectionsInfo[arrayName].push({
-              text: `${question.getIn(['userInput', 'value'])} [${question.getIn(['userInput', 'points'])}pts]\n${question.get('comment') || ''}`,
               stageId: stage.get('stageId'),
+              sectionId,
               questionIndex,
+              text: `${question.getIn(['userInput', 'value'])} [${question.getIn(['userInput', 'points'])}pts]\n${question.get('comment') || ''}`,
               points: question.getIn(['userInput', 'points'])
             }
             )
@@ -157,5 +161,14 @@ export const getObjectionsInfo = createSelector(
       })
     })
     return objectionsInfo
+  }
+)
+
+export const resolvedObjectionsScore = createSelector(
+  [getResolvedObjections],
+  (resolvedObjections) => {
+    return resolvedObjections.reduce((accumulator, objection) => {
+      return accumulator + objection.get('questionPoints')
+    }, 0)
   }
 )
