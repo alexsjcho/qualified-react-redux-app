@@ -95,3 +95,8 @@ This stage settings page allows you to customize questions, points, etc of that 
 2. Redux Chrome Extension
 3. Chrome Dev Tools
 4. Jest, Enzyme
+
+# MENTORS
+
+1. [Justin Tieu - Software Engineer Eversight](https://www.linkedin.com/in/justintieu/)
+2. [Mario Retana Rojas - Software Engineer Eversight](https://www.linkedin.com/in/marioretana/) (Primary Mentor)

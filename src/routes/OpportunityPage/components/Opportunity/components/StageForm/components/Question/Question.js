@@ -2,7 +2,7 @@ import React from "react";
 import Radio from "./components/Radio";
 import { Input } from "reactstrap";
 import Select from "./components/Select";
-import { isResolvedObjection } from '../../../../../../../../shared/helpers'
+import { isResolvedObjection } from "../../../../../../../../shared/helpers";
 
 export default class Question extends React.PureComponent {
   setQuestionValue = (userInput, scoreDifference) => {
@@ -19,8 +19,14 @@ export default class Question extends React.PureComponent {
     updateQuestion(index, newQuestion);
   };
 
-  isInputDisabled () {
-    const { isObjection, stageId, sectionId, index, question, resolvedObjections } = this.props
+  isInputDisabled() {
+    const {
+      isObjection,
+      stageId,
+      sectionId,
+      index,
+      resolvedObjections
+    } = this.props;
 
     if (isObjection) {
       // NICE_TO_HAVE: Create objection class
@@ -28,10 +34,10 @@ export default class Question extends React.PureComponent {
         stageId,
         sectionId,
         questionIndex: index
-      }
-      return isResolvedObjection(objection, resolvedObjections)
+      };
+      return isResolvedObjection(objection, resolvedObjections);
     } else {
-      return false
+      return false;
     }
   }
 
