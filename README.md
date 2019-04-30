@@ -83,10 +83,11 @@ This stage settings page allows you to customize questions, points, etc of that 
 
 1. [News API](https://newsapi.org/s/google-news-api)
 
-# REACT LIBRARIES USED
+#LIBRARIES USED
 
 1. [React BootStrap](https://react-bootstrap.github.io/)
 2. [Immutable](https://github.com/immutable-js/immutable-js)
+3. [Reselect](https://github.com/reduxjs/reselect)
 
 # TESTING TOOLS
 
