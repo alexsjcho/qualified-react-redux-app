@@ -8,7 +8,8 @@ import {
   getObjectionsInfo,
   getMaxPossibleStageScore,
   getAllStageTotalScore,
-  getAllCurrentStageScore
+  getAllCurrentStageScore,
+  getResolvedObjections
 } from '../../../../shared/selectors'
 import withImmutablePropsToJS from 'with-immutable-props-to-js'
 
@@ -21,7 +22,8 @@ const mapStateToProps = (state, ownProps) => {
     objectionsInfo: getObjectionsInfo(state, ownProps),
     maxPossibleStageScore: getMaxPossibleStageScore(state, ownProps),
     allStageTotalScore: getAllStageTotalScore(state, ownProps),
-    allCurrentStageScore: getAllCurrentStageScore(state, ownProps)
+    allCurrentStageScore: getAllCurrentStageScore(state, ownProps),
+    resolvedObjections: getResolvedObjections(state, ownProps)
   }
 }
 

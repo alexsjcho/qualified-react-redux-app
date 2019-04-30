@@ -16,7 +16,8 @@ class Opportunity extends React.PureComponent {
       maxPossibleStageScore,
       allStageTotalScore,
       allCurrentStageScore,
-      toggleOpportunityObjectionResolved
+      toggleOpportunityObjectionResolved,
+      resolvedObjections
     } = this.props
     return (
       <div>
@@ -37,6 +38,7 @@ class Opportunity extends React.PureComponent {
           objectionsInfo={objectionsInfo}
           maxPossibleStageScore={maxPossibleStageScore}
           toggleOpportunityObjectionResolved={toggleOpportunityObjectionResolved}
+          resolvedObjections={resolvedObjections}
         />
       </div>
     )

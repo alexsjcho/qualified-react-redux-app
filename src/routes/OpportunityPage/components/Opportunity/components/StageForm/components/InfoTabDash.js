@@ -10,7 +10,7 @@ import Objections from './Section/components/Objections'
 
 export default class InfoTabDash extends React.PureComponent {
   render () {
-    const { toggleOpportunityObjectionResolved, goalsAndPainPoints, objectionsInfo, stage = {} } = this.props
+    const { toggleOpportunityObjectionResolved, goalsAndPainPoints, objectionsInfo, resolvedObjections } = this.props
 
     return (
       <Container style={{ marginTop: '2rem' }}>
@@ -31,7 +31,7 @@ export default class InfoTabDash extends React.PureComponent {
           <Col>
             <Objections
               objections={objectionsInfo.objections}
-              resolvedObjections={stage.resolvedObjections}
+              resolvedObjections={resolvedObjections}
               toggleOpportunityObjectionResolved={toggleOpportunityObjectionResolved}
             />
           </Col>

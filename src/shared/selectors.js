@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 
-const getResolvedObjections = state => state.getIn(['data', 'resolvedObjections'])
+export const getResolvedObjections = state => state.getIn(['opportunity', 'data', 'resolvedObjections'])
 
 const getSettingStages = state => state.getIn(['settings', 'stages'])
 

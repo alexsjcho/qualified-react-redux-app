@@ -2,6 +2,7 @@ import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
 import Container from "react-bootstrap/Container";
 import { Collapse, Button, CardBody, Card } from "reactstrap";
+import { isResolvedObjection } from '../../../../../../../../../shared/helpers'
 
 export default class Objections extends React.PureComponent {
   constructor(props) {
@@ -14,16 +15,22 @@ export default class Objections extends React.PureComponent {
     this.setState(state => ({ collapse: !state.collapse }));
   }
 
-  toggleObjectionState = event => {
-    event.preventDefault()
-    const index = event.target.dataset.index
-    const { toggleOpportunityObjectionResolved, objections } = this.props
+  getObjection (index) {
+    const { objections } = this.props
     const objection = {
       stageId: objections[index].stageId,
       sectionId: objections[index].sectionId,
       questionIndex: objections[index].questionIndex,
       questionPoints: objections[index].points
     }
+    return objection
+  }
+
+  toggleObjectionState = event => {
+    event.preventDefault()
+    const index = event.target.dataset.index
+    const { toggleOpportunityObjectionResolved } = this.props
+    const objection = this.getObjection(index)
     toggleOpportunityObjectionResolved(objection)
   }
 
@@ -46,24 +53,16 @@ export default class Objections extends React.PureComponent {
             <CardBody>
               <ListGroup variant="flush">
                 {objections.map((objection, index) => {
-                  // const itemStyle = {
-                  //   textDecoration: resolvedObjections.find(
-                  //     resolvedObjection => {
-                  //       return (
-                  //         resolvedObjection.stageId === objection.stageId &&
-                  //         resolvedObjection.questionIndex ===
-                  //           objection.questionIndex
-                  //       );
-                  //     }
-                  //   )
-                  //     ? "line-through"
-                  //     : "none"
-                  // };
+                  const itemStyle = {
+                    textDecoration: isResolvedObjection(this.getObjection(index), resolvedObjections)
+                      ? "line-through"
+                      : "none"
+                  };
                   return (
                     <ListGroup.Item variant="warning" key={index} >
                       {objection.text.split("\n").map((line, index) => {
                         return (
-                          <p key={index} data-index={index} onClick={this.toggleObjectionState} >
+                          <p style={itemStyle} key={index} data-index={index} onClick={this.toggleObjectionState} >
                             {line}
                           </p>
                         );

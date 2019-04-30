@@ -22,7 +22,8 @@ export default class StageTabs extends React.PureComponent {
       goalsAndPainPoints,
       objectionsInfo,
       maxPossibleStageScore,
-      toggleOpportunityObjectionResolved
+      toggleOpportunityObjectionResolved,
+      resolvedObjections
     } = this.props
     return (
       <Container>
@@ -70,7 +71,7 @@ export default class StageTabs extends React.PureComponent {
               <InfoTabDash
                 goalsAndPainPoints={goalsAndPainPoints}
                 objectionsInfo={objectionsInfo}
-                stage={stage}
+                resolvedObjections={resolvedObjections}
                 toggleOpportunityObjectionResolved={toggleOpportunityObjectionResolved}
               />
               <StageForm
