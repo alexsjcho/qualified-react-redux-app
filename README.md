@@ -85,9 +85,8 @@ This stage settings page allows you to customize questions, points, etc of that 
 
 # REACT LIBRARIES USED
 
-1. [React Moments](https://github.com/headzoo/react-moment#readme)
-2. [React BootStrap](https://react-bootstrap.github.io/)
-3. [Immutable](https://github.com/immutable-js/immutable-js)
+1. [React BootStrap](https://react-bootstrap.github.io/)
+2. [Immutable](https://github.com/immutable-js/immutable-js)
 
 # TESTING TOOLS
 
