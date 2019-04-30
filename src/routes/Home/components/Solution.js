@@ -16,7 +16,7 @@ const Solution = () => {
       <br />
       <Row>
         <Col>
-          <Card>
+          <Card className="p-3">
             <Card.Img
               variant="top"
               src="https://www.extradigital.co.uk/marketing-assets/articles/articles-l/metrics-lg.png"
@@ -36,7 +36,7 @@ const Solution = () => {
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card className="p-3">
             <Card.Img
               variant="top"
               src="https://www.1point21gws.com/insights/wp-content/uploads/2017/02/analytics_cover.png"
@@ -57,7 +57,7 @@ const Solution = () => {
           </Card>
         </Col>
         <Col>
-          <Card>
+          <Card className="p-3">
             <Card.Img
               variant="top"
               src="https://marketingland.com/wp-content/ml-loads/2018/07/rocket-rockets-blast-off-shutterstock_566814361.jpg"
