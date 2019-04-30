@@ -32,7 +32,7 @@ export default class Section extends React.PureComponent {
   }
 
   render() {
-    const { settings } = this.props;
+    const { settings, resolvedObjections, stageId } = this.props;
 
     return (
       <FormGroup>
@@ -51,6 +51,9 @@ export default class Section extends React.PureComponent {
               sectionId={settings.sectionId}
               key={`${settings.sectionId}-question-${index}`}
               updateQuestion={this.updateQuestion}
+              resolvedObjections={resolvedObjections}
+              isObjection={settings.isObjection}
+              stageId={stageId}
             />
           );
         })}

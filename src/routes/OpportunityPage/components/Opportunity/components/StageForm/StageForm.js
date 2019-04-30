@@ -54,7 +54,7 @@ export default class StageForm extends React.PureComponent {
   }
 
   render() {
-    const { stageSettings } = this.props;
+    const { stageSettings, resolvedObjections } = this.props;
 
     return (
       <Form onSubmit={this.handleSubmit}>
@@ -66,6 +66,8 @@ export default class StageForm extends React.PureComponent {
               sectionIndex={index}
               key={sectionSetting.sectionId}
               updateSection={this.updateSection}
+              resolvedObjections={resolvedObjections}
+              stageId={this.state.stage.stageId}
             />
           );
         })}
