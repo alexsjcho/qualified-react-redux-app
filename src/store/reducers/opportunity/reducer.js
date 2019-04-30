@@ -31,4 +31,22 @@ reducer[ACTION_TYPES.SET_OPPORTUNITY_STAGE] = (state, { stage }) => {
   }
 }
 
+reducer[ACTION_TYPES.SET_OPPORTUNITY_OBJECTION_RESOLVED] = (state, { objection }) => {
+  const resolvedObjections = state.getIn(['data', 'resolvedObjections'])
+  const objectionIndex = resolvedObjections.findIndex(currObjection => {
+    return currObjection.get('stageId') === objection.stageId
+        && currObjection.get('sectionId') === objection.sectionId
+        && currObjection.get('questionIndex') === objection.questionIndex
+  })
+  if (objectionIndex === -1) {
+    // We're gonna add it there
+    const newResolvedObjections = resolvedObjections.push(fromJS(objection))
+    return state.setIn(['data', 'resolvedObjections'], newResolvedObjections)
+  } else {
+    // We're gonna take it out
+    // Normal JS equivalent of the path = state.data.resolvedObjection[objectionIndex]
+    return state.deleteIn(['data', 'resolvedObjections', objectionIndex])
+  }
+}
+
 export default reducer
