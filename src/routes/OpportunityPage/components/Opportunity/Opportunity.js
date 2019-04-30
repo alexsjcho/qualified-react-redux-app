@@ -17,15 +17,16 @@ class Opportunity extends React.PureComponent {
       allStageTotalScore,
       allCurrentStageScore,
       toggleOpportunityObjectionResolved,
-      resolvedObjections
+      resolvedObjections,
+      resolvedObjectionsScore
     } = this.props
     return (
       <div>
         <Navbar />
         <Dashboard
           stage={stage}
-          allStageTotalScore={allStageTotalScore}
-          allCurrentStageScore={allCurrentStageScore}
+          allStageTotalScore={allStageTotalScore - resolvedObjectionsScore}
+          allCurrentStageScore={allCurrentStageScore - resolvedObjectionsScore}
         />
         <StageTabs
           stage={stage}
@@ -39,6 +40,7 @@ class Opportunity extends React.PureComponent {
           maxPossibleStageScore={maxPossibleStageScore}
           toggleOpportunityObjectionResolved={toggleOpportunityObjectionResolved}
           resolvedObjections={resolvedObjections}
+          resolvedObjectionsScore={resolvedObjectionsScore}
         />
       </div>
     )

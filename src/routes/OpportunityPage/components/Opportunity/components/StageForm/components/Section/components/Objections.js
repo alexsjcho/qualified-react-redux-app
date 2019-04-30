@@ -56,7 +56,8 @@ export default class Objections extends React.PureComponent {
                   const itemStyle = {
                     textDecoration: isResolvedObjection(this.getObjection(index), resolvedObjections)
                       ? "line-through"
-                      : "none"
+                      : "none",
+                    cursor: 'pointer'
                   };
                   return (
                     <ListGroup.Item variant="warning" key={index} >

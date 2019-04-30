@@ -164,7 +164,7 @@ export const getObjectionsInfo = createSelector(
   }
 )
 
-export const resolvedObjectionsScore = createSelector(
+export const getResolvedObjectionsScore = createSelector(
   [getResolvedObjections],
   (resolvedObjections) => {
     return resolvedObjections.reduce((accumulator, objection) => {
