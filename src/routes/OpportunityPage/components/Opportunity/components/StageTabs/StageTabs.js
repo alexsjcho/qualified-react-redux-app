@@ -1,18 +1,18 @@
-import React from "react";
-import Nav from "react-bootstrap/Nav";
-import Tab from "react-bootstrap/Tab";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
-import { Badge } from "reactstrap";
+import React from 'react'
+import Nav from 'react-bootstrap/Nav'
+import Tab from 'react-bootstrap/Tab'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+import { Link } from 'react-router-dom'
+import { Badge } from 'reactstrap'
 
-import StageForm from "../StageForm";
-import QualifiedScore from "../QualifiedScore/QualifiedScore";
-import InfoTabDash from "../StageForm/components/InfoTabDash";
+import StageForm from '../StageForm'
+import QualifiedScore from '../QualifiedScore/QualifiedScore'
+import InfoTabDash from '../StageForm/components/InfoTabDash'
 
 export default class StageTabs extends React.PureComponent {
-  render() {
+  render () {
     const {
       stageSettings,
       stageId,
@@ -21,40 +21,41 @@ export default class StageTabs extends React.PureComponent {
       isSavingStage,
       goalsAndPainPoints,
       objectionsInfo,
-      maxPossibleStageScore
-    } = this.props;
+      maxPossibleStageScore,
+      toggleOpportunityObjectionResolved
+    } = this.props
     return (
       <Container>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <Tab.Container id='left-tabs-example' defaultActiveKey='first'>
           <Row>
             <Col sm={3}>
-              <Nav variant="tabs" className="flex-column">
-                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+              <Nav variant='tabs' className='flex-column'>
+                <Badge style={{ marginBottom: '15px' }} color='light' pill>
                   <Nav.Item>
-                    <Link to="qualification">Qualification</Link>
+                    <Link to='qualification'>Qualification</Link>
                   </Nav.Item>
                 </Badge>
                 <Nav.Item />
-                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                <Badge style={{ marginBottom: '15px' }} color='light' pill>
                   <Nav.Item>
-                    <Link to="discovery">Discovery</Link>
+                    <Link to='discovery'>Discovery</Link>
                   </Nav.Item>
                 </Badge>
-                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                <Badge style={{ marginBottom: '15px' }} color='light' pill>
                   <Nav.Item>
-                    <Link to="demo">Demo</Link>
-                  </Nav.Item>
-                </Badge>
-
-                <Badge style={{ marginBottom: "15px" }} color="light" pill>
-                  <Nav.Item>
-                    <Link to="obstacles">Obstacles</Link>
+                    <Link to='demo'>Demo</Link>
                   </Nav.Item>
                 </Badge>
 
-                <Badge style={{ marginBottom: "15px" }} color="light" pill>
+                <Badge style={{ marginBottom: '15px' }} color='light' pill>
                   <Nav.Item>
-                    <Link to="negotiation">Negotiation</Link>
+                    <Link to='obstacles'>Obstacles</Link>
+                  </Nav.Item>
+                </Badge>
+
+                <Badge style={{ marginBottom: '15px' }} color='light' pill>
+                  <Nav.Item>
+                    <Link to='negotiation'>Negotiation</Link>
                   </Nav.Item>
                 </Badge>
               </Nav>
@@ -70,6 +71,7 @@ export default class StageTabs extends React.PureComponent {
                 goalsAndPainPoints={goalsAndPainPoints}
                 objectionsInfo={objectionsInfo}
                 stage={stage}
+                toggleOpportunityObjectionResolved={toggleOpportunityObjectionResolved}
               />
               <StageForm
                 stage={stage}
@@ -83,6 +85,6 @@ export default class StageTabs extends React.PureComponent {
           </Row>
         </Tab.Container>
       </Container>
-    );
+    )
   }
 }

@@ -1,10 +1,10 @@
-import React from "react";
-import Dashboard from "./components/Dashboard";
-import StageTabs from "./components/StageTabs";
-import Navbar from "react-bootstrap/Navbar";
+import React from 'react'
+import Dashboard from './components/Dashboard'
+import StageTabs from './components/StageTabs'
+import Navbar from 'react-bootstrap/Navbar'
 
 class Opportunity extends React.PureComponent {
-  render() {
+  render () {
     const {
       stageSettings,
       stageId,
@@ -15,8 +15,9 @@ class Opportunity extends React.PureComponent {
       objectionsInfo,
       maxPossibleStageScore,
       allStageTotalScore,
-      allCurrentStageScore
-    } = this.props;
+      allCurrentStageScore,
+      toggleOpportunityObjectionResolved
+    } = this.props
     return (
       <div>
         <Navbar />
@@ -35,10 +36,11 @@ class Opportunity extends React.PureComponent {
           goalsAndPainPoints={goalsAndPainPoints}
           objectionsInfo={objectionsInfo}
           maxPossibleStageScore={maxPossibleStageScore}
+          toggleOpportunityObjectionResolved={toggleOpportunityObjectionResolved}
         />
       </div>
-    );
+    )
   }
 }
 
-export default Opportunity;
+export default Opportunity

@@ -14,6 +14,19 @@ export default class Objections extends React.PureComponent {
     this.setState(state => ({ collapse: !state.collapse }));
   }
 
+  toggleObjectionState = event => {
+    event.preventDefault()
+    const index = event.target.dataSet.index
+    const { toggleOpportunityObjectionResolved, objections } = this.props
+    const objection = {
+      stageId: objections[index].stageId,
+      sectionId: objections[index].sectionId,
+      questionIndex: objections[index].questionIndex,
+      questionPoints: objections[index].points
+    }
+    toggleOpportunityObjectionResolved(objection)
+  }
+
   render() {
     const {
       objections,
