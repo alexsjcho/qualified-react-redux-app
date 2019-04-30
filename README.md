@@ -1,6 +1,6 @@
 # QUALIFIED MVP BACKSTORY
 
-[Link to Live Demo App - COMING SOON](https://friendly-wiles-9707cf.netlify.com/)
+[Link to Live Demo App ](https://nifty-hugle-cf06c5.netlify.com)
 This MVP was inspired by Salesforce, Marketo, and Outreach.io
 
 This project was inspired when I was a software sales rep. I wish I had a tool that graded the quality of an opportunity with numerical, quantifable metrics versus gut feelings about an opportunity.
@@ -9,7 +9,7 @@ Something similar to how Marketo grades marketing leads, similar to how Salesfor
 
 # PROJECT JOURNEY INSIGHTS
 
-1. [Link to Live Demo App - COMING SOON](https://friendly-wiles-9707cf.netlify.com/)
+1. [Link to Live Demo App ](https://nifty-hugle-cf06c5.netlify.com)
 2. [Qualified Product Development Roadmap Google Sheet ](https://docs.google.com/spreadsheets/d/1rEqcpEd8b2sCHKsGvMcy7s1Rh6V66-jFo1X5c5EcSOE/edit?usp=sharing)
 3. [Trello Board: Project Management](https://trello.com/b/Wxv7FAQB/qualified-react-crm)
 4. [My Blog ](https://www.mraddoil.com/2018/12/23/is-software-sales-right-for-you/)

@@ -19,7 +19,7 @@ const Solution = () => {
           <Card>
             <Card.Img
               variant="top"
-              src="http://irmatlab.ir/en/wp-content/uploads/2018/11/eda11.png"
+              src="https://www.extradigital.co.uk/marketing-assets/articles/articles-l/metrics-lg.png"
             />
             <Card.Body>
               <Card.Title>1. Managers Set Metrics</Card.Title>
