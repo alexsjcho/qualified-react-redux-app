@@ -172,3 +172,12 @@ export const getResolvedObjectionsScore = createSelector(
     }, 0)
   }
 )
+
+const getTargetPoints = (state, props) => props.targetPoints
+
+export const getOptionsValuesByPoints = createSelector(
+  [getTargetPoints],
+  (targetPoints) => {
+    // TODO: implement code in here
+  }
+)
