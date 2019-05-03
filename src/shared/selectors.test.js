@@ -27,7 +27,7 @@ describe('Selectors tests', () => {
     const newOption = { value: 'A test option', points: 13 }
     const nextState = state.setIn(['settings', 'stages', 1, 'sections', 0, 'questions', 0, 'options', 0], fromJS(newOption))
     const testProps = { targetPoints: 13 }
-    const optionsValues = selectors.getOptionsValuesByPoints(state, testProps)
+    const optionsValues = selectors.getOptionsValuesByPoints(nextState, testProps)
     expect(optionsValues).toBeDefined()
     expect(optionsValues.constructor).toBe(Array)
     expect(optionsValues.length).toEqual(1)
@@ -38,7 +38,7 @@ describe('Selectors tests', () => {
     const newOption = { value: 'A test option', points: 20 }
     const nextState = state.setIn(['settings', 'stages', 1, 'sections', 0, 'questions', 0, 'options', 0], fromJS(newOption))
     const testProps = { targetPoints: 20 }
-    const optionsValues = selectors.getOptionsValuesByPoints(state, testProps)
+    const optionsValues = selectors.getOptionsValuesByPoints(nextState, testProps)
     expect(optionsValues).toBeDefined()
     expect(optionsValues.constructor).toBe(Array)
     expect(optionsValues.length).toEqual(18)
