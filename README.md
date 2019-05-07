@@ -96,7 +96,21 @@ This stage settings page allows you to customize questions, points, etc of that 
 3. Chrome Dev Tools
 4. Jest, Enzyme
 
+## CHALLENGES
+
+1. Priority Management: Figuring out which features are worth the time and core to product. Ex. Whether the Settings page was worth making in order to create an MVP that was sufficient to demo a proof of concept.
+2. Time Management: Keeping app within 2 weeks scope
+3. Focus: Dedicating more time on one particular skill, specifically, JavaScript over other technologies. Therefore, for styling and other features, delegate it to other libraries or frameworks.
+4. Ignorance and Inexperience: Unsure of what actual technologies, time, and effort is needed to create an MVP that is sufficient for a proof of concept
+5. Drinking Out Of Firehose: This project, I was stretched a lot by trying out Immutable.js based on my mentor's recommendation. It was hard to rely on this dependency because it affected the entire codebase in the redux state. However, it did teach me the importance of immutabilty in JavaScript. Next, learning how to use Redux selectors to select specific data from the Redux store.
+
+## FUTURE IMPROVEMENTS
+
+1. Database: Add database to allow for unique user profiles and their respective sales account. During project, did consider using Firebase
+2. Authentication: To allow users to login via Google OAuth, etc
+3. Create Full Stack App: Build an actual backend to reduce everything being burdened on the frontend
+
 # MENTORS
 
 1. [Justin Tieu - Software Engineer Eversight](https://www.linkedin.com/in/justintieu/)
-2. [Mario Retana Rojas - Software Engineer Eversight](https://www.linkedin.com/in/marioretana/) (Primary Mentor)
+2. [Mario Retana Rojas - Software Engineer Akurey ](https://www.linkedin.com/in/marioretana/) (Primary Mentor)
